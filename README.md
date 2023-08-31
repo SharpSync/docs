@@ -20,5 +20,5 @@ Branding - who's going to be looking at building the brand?
 
 Important concepts:
 
-* [Getting started] (getting_started.md)
+* [Getting started](getting_started.md)
 * [Subscriptions](subscriptions.md)
