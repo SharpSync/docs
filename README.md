@@ -1,10 +1,10 @@
 # SharpSync
  
-## What is Sharpsync?
+## What is SharpSync?
 
-Sharpsync is a premium data synchronization system that is:
-* Easy to use and intuitive
-* Fully cloud based 
+SharpSync is a cloud based data synchronization application:
+* Easy to use
+* Intuitive
 * Let's you moves data
   * From CAD => ERP or
   * From PDM => ERP or
