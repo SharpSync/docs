@@ -34,7 +34,42 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
         * Read Only - When checked, BOM column will not be editable
         * Show in Totals - The total for that column will be shown in the Totals row at the bottom of the BOM
         * Visible - When unchecked, column will not be visible, but user cna unhide from the BOM column context menu
+4. Click Save to finish.  
 
-![Alt text](../images/PropertyMapping4.png "Rendering")  
-4. Click Save to finish.
+![Alt text](../images/PropertyMapping4.png "Rendering")
+
 ### Configure Property Mapping Rules
+Property Mapping Rules are used to define the format for the BOM data. When a rule is applied, the cells for each column will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border. Click on list icon in the Rules column for the Property Mapping desired to begin.  
+#### Rule Setup
+![Alt text](../images/PropertyMapping5.png "Rules Module")
+
+1. Select the rule desired. Be sure to select the type of rule that best matches the data type. (Text, Numeric, JavaScript expression, Json value)
+2. Select display, import or export to determine when the rule is applied:
+    * Display applies the rule in the SharpSync BOM.
+    * Import applies the rule as data is being imported into the SharpSync BOM.
+    * Export applies the rule as data is being exported from the SharpSync BOM.
+3. Click on Add Rule to show the rule in the list.
+4. This icon tells you what type of rule it is:
+    * Data Validation - Evaluates validity cell data.
+    * Data Transformation - Changes cell data to match rule type.
+5. This header shows the rule action, and the arrows allows you to move the rule up or down the list.
+    * Rules are evaluated top to bottom. If you want one rule to execute before another, ensure it is ordered correctly.
+6. Saves any changes you make to the rule.
+7. Deletes the rule from the list.
+8. Rule name with ( :information_source: ) tooltip explanation at right
+9. Rule criteria
+    * A textbox may be present to allow the user to define the rule parameter.
+    * A description will be present if the parameter is not required.
+10. On Rule Failure Action - Warning(s) will be present in the cell overlay when the rule fails.
+    * Select pass to allow the user to still process the BOM.
+    * Select block to require the user to fix the cell data before processing the BOM.
+11. Depending on the rule selected, the bottom line may display options for processing the rule. Select the Datasources that will be updated.
+12. Closes and saves the Rules module. Rules in the list will be saved and applied to the BOM.
+
+
+
+<figcaption style="text-align:center">
+
+![Alt text](../images/PropertyMapping6.png "BOM Rules Result")Cell overlay for part A4 - Base Plate (Red Arrow)
+
+</figcaption>
