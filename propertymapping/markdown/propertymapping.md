@@ -29,11 +29,11 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
         * FreeText - Enter text
         * List - Select from a list. Enter the list set in the textbox and separate each entry with a Vertical Pipe (see example below)
         * Url - Web address hyperlink
-    * The remaining checkboxes affect the way the column display and interface:
+    * The remaining checkboxes affect the columns' display and interface:
         * Enabled - When unchecked the column will not be visible in the BOM nor any related mapping rule will be processed
         * Read Only - When checked, BOM column will not be editable
         * Show in Totals - The total for that column will be shown in the Totals row at the bottom of the BOM
-        * Visible - When unchecked, column will not be visible, but user cna unhide from the BOM column context menu
+        * Visible - When unchecked, column will not be visible, but user can unhide from the BOM column context menu
 4. Click Save to finish.  
 
 ![Alt text](../images/PropertyMapping4.png "Rendering")
@@ -50,13 +50,13 @@ Property Mapping Rules are used to define the format for the BOM data. When a ru
     * Export applies the rule as data is being exported from the SharpSync BOM.
 3. Click on Add Rule to show the rule in the list.
 4. This icon tells you what type of rule it is:
-    * Data Validation - Evaluates validity cell data.
-    * Data Transformation - Changes cell data to match rule type.
-5. This header shows the rule action, and the arrows allows you to move the rule up or down the list.
-    * Rules are evaluated top to bottom. If you want one rule to execute before another, ensure it is ordered correctly.
+    * Data Validation - Evaluates validity of the cell data.
+    * Data Transformation - Changes cell data to match the rule type.
+5. This header shows the rule action, and the arrows allow you to move the rule up or down the list.
+    * Rules are evaluated from top to bottom. If you want one rule to execute before another, ensure it is ordered correctly.
 6. Saves any changes you make to the rule.
 7. Deletes the rule from the list.
-8. Rule name with ( :information_source: ) tooltip explanation at right
+8. Rule name with :information_source: tooltip explanation at right.
 9. Rule criteria
     * A textbox may be present to allow the user to define the rule parameter.
     * A description will be present if the parameter is not required.
