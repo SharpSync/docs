@@ -1,4 +1,9 @@
 # Property Mapping
+## Table of Contents  
+1. [Adding Property Mappings](#adding-property-mappings)
+2. [Configure Settings](#configure-settings)
+3. [Configure Rules](#configure-rules)  
+
 ![Alt text](../images/PropertyMapping.png "Property Mapping")  
 Property Mapping defines the way BOM data is displayed in SharpSync. Property Mappings can display a variety of CAD information including (but not limited to) BOM columns, Part or Assembly properties, Configurations, or CAD model data. SharpSync has built-in rules and settings for each property mapping. These rules and settings are used to help codify, standardize, and push changes to the selected datasources.
 
@@ -13,7 +18,7 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
 2. Once you have selected the property mappings that you want to appear in the SharpSync BOM, confirm that the Accessors, Primary Datasource Accessors, and Secondary Datasource Accessors columns are correct. You can double click on the cells in each column to change the value SharpSync will be matching. The accessor must be present in the appropriate datasource.
 
 ![Alt text](../images/PropertyMapping2.png "Check Accessors")
-### Configure Property Mapping Settings
+### Configure Settings
 #### Update Datasource
 1. To change the settings of each Property Mapping, click on the gear in the Settings column.
 2. Verify that the accessor for each Datasource is correct. Click on the checkbox "Update Source on Submit" for each Datasource that you want to make changes to from SharpSync.
@@ -38,7 +43,7 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
 
 ![Alt text](../images/PropertyMapping4.png "Rendering")
 
-### Configure Property Mapping Rules
+### Configure Rules
 Property Mapping Rules are used to define the format for the BOM data. When a rule is applied, the cells for each column will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border. Click on list icon in the Rules column for the Property Mapping desired to begin.  
 #### Rule Setup
 ![Alt text](../images/PropertyMapping5.png "Rules Module")
