@@ -44,10 +44,9 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
 ![Alt text](../images/PropertyMapping4.png "Rendering")
 
 ### Configure Rules
-Property Mapping Rules are used to define the format for the BOM data. When a rule is applied, the cells for each column will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border. Click on list icon in the Rules column for the Property Mapping desired to begin.  
-#### Rule Setup
-![Alt text](../images/PropertyMapping5.png "Rules Module")
+Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For a comprehensive list of Rules, click the following link: [List of Property Mapping Rules](rules)    
 
+![Alt text](../images/PropertyMapping5.png "Rules Module")  
 1. Select the rule desired. Be sure to select the type of rule that best matches the data type. (Text, Numeric, JavaScript expression, Json value)
 2. Select display, import or export to determine when the rule is applied:
     * Display applies the rule in the SharpSync BOM.
@@ -70,11 +69,9 @@ Property Mapping Rules are used to define the format for the BOM data. When a ru
     * Select block to require the user to fix the cell data before processing the BOM.
 11. Depending on the rule selected, the bottom line may display options for processing the rule. Select the Datasources that will be updated.
 12. Closes and saves the Rules module. Rules in the list will be saved and applied to the BOM.
-
-
-
+  
 <figcaption style="text-align:center">
 
-![Alt text](../images/PropertyMapping6.png "BOM Rules Result")Cell overlay for part A4 - Base Plate (Red Arrow)
+![Alt text](../images/PropertyMapping6.png "BOM Rules Result")BOM with list of pass/fail Rules on overlay for part A4 - Base Plate (Red Arrow)
 
 </figcaption>

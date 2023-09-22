@@ -1,4 +1,6 @@
-# Property Mapping Rules
+# List of Property Mapping Rules
+Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. Below is a comprehensive list of each Property Mapping Rule. Expand the Table of Contents and click a specific rule to jump to that rule. Learn more about Rule setup: [Configure Rules](propertymapping#configure-rules)  
+
 <details>
 <summary>Table of Contents</summary>
 
@@ -33,12 +35,18 @@
 
 ### Append text
 ![Alt text](../images/rule_appendText.png "Append Text")  
-Text  
+Appends text to the end of the cell value.  
+Example:  
+* Cell value: "this"
+* Rule value: "-item" (applied to all cells in column)
+* Final value: "this-item"  
+
 [Return to Top](#property-mapping-rules)  
 
 ### Calculate Number
 ![Alt text](../images/rule_calcNumber.png "Calculate Number")  
 Text  
+
 [Return to Top](#property-mapping-rules)  
 
 ### Cell value evaluation
