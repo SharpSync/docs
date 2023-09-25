@@ -49,7 +49,7 @@ Below is a comprehensive list of seach Property Mapping Rule. Expand the Table o
 
 ## Display Rules
 ### Cell value evaluation
-![Alt text](../images/rule_cellValueEval.png "Cell value evaluation")  
+![Alt text](../images/ruleCellValueEval.png "Cell value evaluation")  
 Evaluates the cell value given the javascript expression. Available parameters:  
 * s (original value)
 * rowData (the existing row containing rowData.cells which is the accessors)  
@@ -57,7 +57,7 @@ Evaluates the cell value given the javascript expression. Available parameters:
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Maximum text length
-![Alt text](../images/rule_maxTextLength.png "Maximum text length")  
+![Alt text](../images/ruleMaxTextLength.png "Maximum text length")  
 Limits the length of the cell value text to a number of characters.  
 <details>
     <summary>Example</summary>  
@@ -70,7 +70,7 @@ Limits the length of the cell value text to a number of characters.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Minimum text length
-![Alt text](../images/rule_minTextLength.png "Minimum text length")  
+![Alt text](../images/ruleMinTextLength.png "Minimum text length")  
 The number of characters in the cell value must be greater than the specified number.  
 <details>
     <summary>Example</summary>  
@@ -83,7 +83,7 @@ The number of characters in the cell value must be greater than the specified nu
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Number between
-![Alt text](../images/rule_numberBetween.png "Number between")  
+![Alt text](../images/ruleNumberBetween.png "Number between")  
 Converts cell value to a number and evaluates if number is within a range of values, and ignores text listed in textbox.  
 <details>
     <summary>Example</summary>  
@@ -99,7 +99,7 @@ Converts cell value to a number and evaluates if number is within a range of val
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text length must be between
-![Alt text](../images/rule_textLengthBetween.png "Text length must be between")  
+![Alt text](../images/ruleTextLengthBetween.png "Text length must be between")  
 The number of characters in the cell value must be between the lower and upper limit.  
 <details>
     <summary>Example</summary>  
@@ -115,7 +115,7 @@ The number of characters in the cell value must be between the lower and upper l
 
 ## Import/Export Rules
 ### Append text
-![Alt text](../images/rule_appendText.png "Append Text")  
+![Alt text](../images/ruleAppendText.png "Append Text")  
 Adds the specified text to the end of the cell value.  
 <details>
     <summary>Example</summary>  
@@ -128,7 +128,7 @@ Adds the specified text to the end of the cell value.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Calculate Number
-![Alt text](../images/rule_calcNumber.png "Calculate Number")  
+![Alt text](../images/ruleCalcNumber.png "Calculate Number")  
 Uses the cell value and performs a calculation. The result of the calculation replaces the cell value.  
 <details>
     <summary>Example</summary>  
@@ -141,7 +141,7 @@ Uses the cell value and performs a calculation. The result of the calculation re
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Cell value manipulation
-![Alt text](../images/rule_cellValueMani.png "Cell value manipulation")  
+![Alt text](../images/ruleCellValueMani.png "Cell value manipulation")  
 Manipulates (and returns the result of) the cell value given the javascript expression. Available parameters:  
 * s (original value)
 * rowData (the existing row containing rowData.cells which is the accessors)  
@@ -149,7 +149,7 @@ Manipulates (and returns the result of) the cell value given the javascript expr
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Format as decimal number
-![Alt text](../images/rule_formatDecNum.png "Format as decimal number")  
+![Alt text](../images/ruleFormatDecNum.png "Format as decimal number")  
 Converts the cell value to a number and adds the specified number of decimals. This formats the number as it is viewed and does not round it. Any text specified to be removed will be replaced/ignored during the number format.  
 <details>
     <summary>Example</summary>  
@@ -164,13 +164,13 @@ Converts the cell value to a number and adds the specified number of decimals. T
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Parse JSON
-![Alt text](../images/rule_parseJson.png "Parse JSON")  
+![Alt text](../images/ruleParseJson.png "Parse JSON")  
 Converts the cell value from text to a JSON object and returns the value given by the specified key. Supports nested key/values and arrays. You can use key.value[2].key to retrieve value for a given key.  
 
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Prepend text
-![Alt text](../images/rule_prependText.png "Prepend text")  
+![Alt text](../images/rulePrependText.png "Prepend text")  
 Adds the specified text to the beginning of the cell value.  
 <details>
     <summary>Example</summary>  
@@ -183,7 +183,7 @@ Adds the specified text to the beginning of the cell value.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Replace text
-![Alt text](../images/rule_replaceText.png "Replace text")  
+![Alt text](../images/ruleReplaceText.png "Replace text")  
 Replaces any instances of the specified text with the new value.  
 <details>
     <summary>Example</summary>  
@@ -198,7 +198,7 @@ Replaces any instances of the specified text with the new value.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Round to nearest X
-![Alt text](../images/rule_roundNearest.png "Round to nearest X")  
+![Alt text](../images/ruleRoundNearest.png "Round to nearest X")  
 Rounds the number to the nearest specified digit. Supports integers only.  
 <details>
     <summary>Example</summary>  
@@ -213,7 +213,7 @@ Rounds the number to the nearest specified digit. Supports integers only.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Set cell value
-![Alt text](../images/rule_setCellValue.png "Set cell value")  
+![Alt text](../images/ruleSetCellValue.png "Set cell value")  
 Sets the cell value to the specified text.  
 <details>
     <summary>Example</summary>  
@@ -226,7 +226,7 @@ Sets the cell value to the specified text.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Set empty cells
-![Alt text](../images/rule_setEmptyCells.png "Set empty cells")  
+![Alt text](../images/ruleSetEmptyCells.png "Set empty cells")  
 Set an empty (any cell that has whitespace or no value) cell value to the specified text.  
 <details>
     <summary>Example</summary>  
@@ -239,7 +239,7 @@ Set an empty (any cell that has whitespace or no value) cell value to the specif
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text length must equal
-![Alt text](../images/rule_textLengthEquals.png "Text length must equal")  
+![Alt text](../images/ruleTextLengthEquals.png "Text length must equal")  
 The number of characters in the cell value must be exactly the length specified.  
 <details>
     <summary>Example</summary>  
@@ -252,7 +252,7 @@ The number of characters in the cell value must be exactly the length specified.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text must be exactly
-![Alt text](../images/rule_textExactMatch.png "Text must be exactly")  
+![Alt text](../images/ruleTextExactMatch.png "Text must be exactly")  
 The cell value must be an exact match with the specified text.  
 <details>
     <summary>Example</summary>  
@@ -265,7 +265,7 @@ The cell value must be an exact match with the specified text.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text must contain string
-![Alt text](../images/rule_textContains.png "Text must contain string")  
+![Alt text](../images/ruleTextContains.png "Text must contain string")  
 The cell value must contain the specified text.  
 <details>
     <summary>Example</summary>  
@@ -278,7 +278,7 @@ The cell value must contain the specified text.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text must end with string
-![Alt text](../images/rule_textEndWith.png "Text must end with string")  
+![Alt text](../images/ruleTextEndWith.png "Text must end with string")  
 The cell value must end with the specified string.  
 <details>
     <summary>Example</summary>  
@@ -291,7 +291,7 @@ The cell value must end with the specified string.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text must not be empty
-![Alt text](../images/rule_textNotEmpty.png "Text must not be empty")  
+![Alt text](../images/ruleTextNotEmpty.png "Text must not be empty")  
 The cell value must not be empty.  
 <details>
     <summary>Example</summary>  
@@ -303,7 +303,7 @@ The cell value must not be empty.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text must not contain string
-![Alt text](../images/rule_textNotContains.png "Text must not contain string")  
+![Alt text](../images/ruleTextNotContains.png "Text must not contain string")  
 The cell value must not contain the specified string.  
 <details>
     <summary>Example</summary>  
@@ -316,7 +316,7 @@ The cell value must not contain the specified string.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text must not end with string
-![Alt text](../images/rule_textNotEndWith.png "Text must not end with string")  
+![Alt text](../images/ruleTextNotEndWith.png "Text must not end with string")  
 The cell value must not end with the specified string.  
 <details>
     <summary>Example</summary>  
@@ -329,7 +329,7 @@ The cell value must not end with the specified string.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text must start with string
-![Alt text](../images/rule_textStartWith.png "Text must start with string")  
+![Alt text](../images/ruleTextStartWith.png "Text must start with string")  
 The cell value must start with the specified string.  
 <details>
     <summary>Example</summary>  
@@ -342,7 +342,7 @@ The cell value must start with the specified string.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Value must be in list
-![Alt text](../images/rule_valueMustBeInList.png "Value must be in list")  
+![Alt text](../images/ruleValueMustBeInList.png "Value must be in list")  
 The cell value must match a value in a string list. Entries are separated by a comma.    
 <details>
     <summary>Example</summary>  
@@ -355,7 +355,7 @@ The cell value must match a value in a string list. Entries are separated by a c
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Value must not be in list
-![Alt text](../images/rule_valueMustNotBeInList.png "Value must not be in list")  
+![Alt text](../images/ruleValueMustNotBeInList.png "Value must not be in list")  
 The cell value must not match a value in a string list. Entries are separated by a comma.    
 <details>
     <summary>Example</summary>  
@@ -368,7 +368,7 @@ The cell value must not match a value in a string list. Entries are separated by
 [Return to Top](#list-of-property-mapping-rules)
 
 ### Value must be a number
-![Alt text](../images/rule_valueMustBeNumber.png "Value must be a number")  
+![Alt text](../images/ruleValueMustBeNumber.png "Value must be a number")  
 The cell value must be a number.  
 <details>
     <summary>Example</summary>  
@@ -380,7 +380,7 @@ The cell value must be a number.
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Value must not be a number
-![Alt text](../images/rule_valueMustNotBeNumber.png "Value must not be a number")  
+![Alt text](../images/ruleValueMustNotBeNumber.png "Value must not be a number")  
 The cell value must not be a number.
 <details>
     <summary>Example</summary>  
