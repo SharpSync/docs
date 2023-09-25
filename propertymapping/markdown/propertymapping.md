@@ -44,7 +44,7 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
 ![Alt text](../images/PropertyMapping4.png "Rendering")
 
 ### Configure Rules
-Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For a comprehensive list of Rules, click the following link: [List of Property Mapping Rules](rules)    
+Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For the list of Rules with explanations for each, click the following link: [List of Property Mapping Rules](rules)    
 
 ![Alt text](../images/PropertyMapping5.png "Rules Module")  
 1. Select the rule desired. Be sure to select the type of rule that best matches the data type. (Text, Numeric, JavaScript expression, Json value)

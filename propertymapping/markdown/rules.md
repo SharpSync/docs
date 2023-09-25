@@ -1,5 +1,5 @@
 # List of Property Mapping Rules
-Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Text rules are not case-sensitive unless otherwise specified. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. Below is a comprehensive list of seach Property Mapping Rule. Expand the Table of Contents and click a specific rule to jump to that rule. Learn more about Rule setup: [Configure Rules](propertymapping#configure-rules)  
+Below is a comprehensive list of seach Property Mapping Rule. Expand the Table of Contents and click a specific rule to jump to that rule. Learn more about Rule setup: [Configure Rules](propertymapping#configure-rules)  
 
 <details open>
     <summary>Table of Contents</summary>
@@ -43,11 +43,7 @@ Property Mapping Rules are used to define the output format of the BOM data show
 [Values must not be a number](#values-must-not-be-a-number)  
         </blockquote>
     </details>
-    <details>
-        <summary>Interpreting the Results</summary>
-        <blockquote>
-        </blockquote>
-    </details>
+[Interpreting the Results](#interpreting-the-results)
     </blockquote>
 </details>
 
@@ -394,3 +390,50 @@ The cell value must not be a number.
 </details>
 
 [Return to Top](#list-of-property-mapping-rules)
+
+## Interpreting the Results
+
+SharpSync processes and prioritizes each rule in order from top to bottom. Moving a rule up or down the list can change the result depending on the subsequent outcome. See the examples below to gain an idea of how results are evaluated:
+
+### Example 1: Text-based Rule Application  
+#### Preconditions
+* Property Mapping: Description (Text)  
+* Sample Cell Data: "Connector Bracket 1_REL"
+
+#### Rules
+1. Prepend Text: "ABC-"
+2. Text Must End with String: "_REL"
+3. Maximum Text Length: 25
+
+#### Evaluation
+1. PASS: Text is appended to be "ABC-Connector Bracket 1_REL"
+2. PASS: Text does end with the string "_REL"
+3. FAIL: Text length is longer than maximum. Text was originally 23 characters; the prepended text makes the character length 27.
+
+* Quick Fix: change the text in SharpSync by removing charcaters or abbreviating words. Datasources can be updated when the BOM is submitted with the changes, depending on the Property Mapping settings.
+* If the Maximum Text Length was ordered before the Prepend Text rule, all rules would evaulate as passing.
+
+### Example 2: Numeric Rule Application
+#### Preconditions
+* Property Mapping: Weight (Numeric value)
+* Sample Cell Data: "123.54 kg"
+
+#### Rules
+1. Replace Text (removing spaces)
+    * Orginal Value: " "
+    * New Value: ""
+2. Format as Decimal Number  
+    * Number of Decimals: 0
+    * Remove Text: kg|KG|g|lb|lbs
+3. Round to Nearest X: 1
+4. Number Between
+    * Min Value: 1
+    * Max Value: 123
+
+#### Evaluation
+1. PASS: Space is removed, new text is "123.54kg"
+2. PASS: Text is changed to Decimal. Any characters after tenth place is dropped. New value is 123.
+3. PASS: Decimal is rounded to the nearest whole number of 123.
+4. PASS: Number is between or equal to the minimum and maximum values of 1 and 123.
+
+* If the 2nd and 3rd rules were reversed, the last rule would fail. The number would be rounded first, which would result in the new number being 124, which is larger than the last rule's maximum value.
