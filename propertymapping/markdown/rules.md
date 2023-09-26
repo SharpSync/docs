@@ -1,5 +1,5 @@
 # List of Property Mapping Rules
-Below is a comprehensive list of seach Property Mapping Rule. Expand the Table of Contents and click a specific rule to jump to that rule. Learn more about Rule setup: [Configure Rules](propertymapping#configure-rules)  
+Below is a comprehensive list of seach Property Mapping Rule. Expand the Table of Contents and click a specific rule to jump to that rule. Learn more about Rule setup: [Configure Rules](/propertymapping/markdown/propertymapping#configure-rules)  
 
 <details open>
     <summary>Table of Contents</summary>
