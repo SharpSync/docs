@@ -1,8 +1,13 @@
-# Property Mapping
-## Table of Contents  
-1. [Adding Property Mappings](#adding-property-mappings)
-2. [Configure Settings](#configure-settings)
-3. [Configure Rules](#configure-rules)  
+# Property Mapping  
+<details open>
+    <summary>Table of Contents</summary>
+    <blockquote>
+
+[Adding Property Mappings](#adding-property-mappings)  
+[Configure Settings](#configure-settings)  
+[Configure Rules](#configure-rules)  
+</blockquote>
+</details>
 
 ![Alt text](../images/PropertyMapping.png "Property Mapping")  
 Property Mapping defines the way BOM data is displayed in SharpSync. Property Mappings can display a variety of CAD information including (but not limited to) BOM columns, Part or Assembly properties, Configurations, or CAD model data. SharpSync has built-in rules and settings for each property mapping. These rules and settings are used to help codify, standardize, and push changes to the selected datasources.
@@ -44,7 +49,7 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
 ![Alt text](../images/PropertyMapping4.png "Rendering")
 
 ### Configure Rules
-Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For the list of Rules with explanations for each, click the following link: [List of Property Mapping Rules](rules)    
+Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For the list of Rules with explanations for each, click the following link: [List of Property Mapping Rules](/propertymapping/markdown/rules.md)    
 
 ![Alt text](../images/PropertyMapping5.png "Rules Module")  
 1. Select the rule desired. Be sure to select the type of rule that best matches the data type. (Text, Numeric, JavaScript expression, Json value)
