@@ -199,7 +199,7 @@ Replaces any instances of the specified text with the new value.
 
 ### Round to nearest X
 ![Alt text](../images/ruleRoundNearest.PNG "Round to nearest X")  
-Rounds the number to the nearest specified number. Supports integers only. (Positive or negative whole number.)  
+Rounds to the nearest specified number. Supports integers only.  
 <details>
     <summary>Example</summary>  
     
