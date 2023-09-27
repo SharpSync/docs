@@ -199,15 +199,15 @@ Replaces any instances of the specified text with the new value.
 
 ### Round to nearest X
 ![Alt text](../images/ruleRoundNearest.PNG "Round to nearest X")  
-Rounds the number to the nearest specified digit. Supports integers only.  
+Rounds the number to the nearest specified number. Supports integers only. (Positive or negative whole number.)  
 <details>
     <summary>Example</summary>  
     
 * Cell value: 1234.5678 mm
 * Rule values:
-    * Round to nearest X: 2
+    * Round to nearest X: 10
     * Ignore text: kg|Kg|g|mg|m|mm|each|L|ml|oz|fl
-* Result: 1234.57
+* Result: 1230
 </details>
 
 [Return to Top](#list-of-property-mapping-rules)  
