@@ -1,6 +1,6 @@
 # Netsuite Setup
 
-Updating thumbnails in Netsuite requires the usage of an external restlet. The restlet used was developed by Tim Dietrich and is freely available at https://suiteapi.com
+Updating thumbnails in Netsuite requires the usage of an external restlet. The restlet used was developed by Tim Dietrich and is freely available at https://suiteapi.com. This is optionals but highly recommended.
 
 Steps required:
 * Navigate to latest version of [SuiteApi](SuiteAPI-v2022.1)
