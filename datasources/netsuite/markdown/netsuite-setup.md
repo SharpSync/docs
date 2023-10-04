@@ -5,7 +5,7 @@ Steps involved in setting up NetSuite:
 * Setup restlet for uploading thumbnails (optional - goes with previous step)
 * Setup OAuth
 
-## Step: Setup the upload folder
+## Setup the upload folder
 Updating thumbnails in NetSuite requires the usage of an external restlet. The restlet used was developed by Tim Dietrich and is freely available at https://suiteapi.com. This is optional but highly recommended.
 
 Steps required:
@@ -37,16 +37,16 @@ With this last folder selected in the file cabinet, take note of the folder id i
 
 > https://`{companyId}`.app.netsuite.com/app/common/media/mediaitemfolders.nl?`folder=20149768`&whence=&cmid=...
   
-## Step: Upload SuiteApi
+## Upload SuiteApi
 If for some reason the website is unavailable, a copy of the Suite API zip file can be found here: [SuiteAPI-v2022.1.zip](SuiteApi.v2022.1.zip)
 Follow the steps in the SuiteApi setup 
-## Step: Setup OAuth
+## Setup OAuth
 
  NOTE: In the OAuth setup steps below, the value of `{{netsuite-api}}` takes the form 
 
 > `https://{companyId}.suitetalk.api.netsuite.com`
 
-### Create a new integration record
+### Step: Create a new integration record
 
 * Click Setup > Integration > Manage Integrations > New
 * Enter a name for the integration
@@ -55,7 +55,7 @@ Follow the steps in the SuiteApi setup
   * Restlets
   * Rest Web Services
 
-### Scopes
+### Step: Scopes
 
 NetSuite requires that the following scopes are enabled for the OAuth connection to work:
 
@@ -72,7 +72,7 @@ There are 3 steps to authenticating with NetSuite:
 </ol>
 
 ### Testing the setup
-#### Step 1: Browser redirect
+#### Step: Browser redirect
 Execute the following /GET request in a browser window
 
 >https://`{companyId}`.app.netsuite.com/app/login/oauth2/authorize.nl?  
@@ -87,7 +87,7 @@ This will redirect to the login page for the NetSuite account. Once logged in, t
 >NOTE: The redirect_uri must be https://sharpsync.net/callback-oauth and must be url encoded (https%3A%2F%2Fsharpsync.net%2Fcallback-oauth)
 
 
-#### Step 2: Get the refresh token
+#### Step: Get the refresh token
 When the previous /GET request is executed, the user will be redirected to the redirect_uri with a code value. This code value is used to get the refresh token.
 
 Execute the following /POST request to the token endpoint. This should be made within 30 seconds of the previous step.
@@ -102,7 +102,7 @@ The body of the request should be:
 `redirect_uri`=https%3A%2F%2Fsharpsync.net%2Fcallback-oauth&  
 `code`={code}
 
-#### Step 2: Refresh the access token
+#### Step: Refresh the access token
 Execute the following /POST request to the token endpoint. This should be made within 30 secondns of the previous step.
 
 >`{{netsuite-api}}`/services/rest/auth/oauth2/v1/token
@@ -117,18 +117,15 @@ The body of the request should be:
 
 ## Putting it all together 
 
-With the copied URL in the previous step, and the folder Id from the first step, it's time to setup the datasource in SharpSync.
-### Datasource configuration in SharpSync
+With the copied URL in the previous step, and the folder Id from the first step, it's time to setup the datasource in SharpSync. In SharpSync add a new data source > NetSuite
 
-* In SharpSync add a new data source > NetSuite
-
-#### Configuring NetSuite in SharpSync
+### Configuring NetSuite
 
 There are 2 configuration sections for each datasource
 * Authentication
 * BOM Configuration
 
-##### Authentication
+#### Authentication
 * Navigate to the Datasources > Config UI
 * Select the NetSuite datasource
 * Enter the following values:
@@ -144,7 +141,7 @@ There are 2 configuration sections for each datasource
   |OAuth Scopes|The scopes required to get data. The `restlets` scope is optional but highly recommended. Without it you will not be able to upload thumbnails|rest_webservices,restlets|
   
 
-##### BOM Configuration
+#### BOM Configuration
   |Name|Description|Recommended value|
   |--|--|--|
   |Top level assembly column name|When querying the data you may use this value to identify assemblies (optional)|itemid|
