@@ -19,7 +19,7 @@ Select an individual datasource to view the configuration setup for that source.
 |Name|Type|Status|Documentation|
 |---|---|---|----|
 |CSV|Static / offline|[done]|[Documentation](../csv/markdown/csv-setup.md)|
-|Netsuite|ERP|[done]|[Documentation](../netsuite/markdown/netsuite-setup.md)|
+|NetSuite|ERP|[done]|[Documentation](../netsuite/markdown/netsuite-setup.md)|
 |Onshape|CAD|[done]|Documentation (coming soon)|
 |SOLIDWORKS|CAD|[In progress]|Documentation (coming soon)|
 |SOLIDWORKS|PDM|[In progress]|Documentation (coming soon)|
