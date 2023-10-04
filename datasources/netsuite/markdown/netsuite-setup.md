@@ -1,8 +1,15 @@
 # NetSuite Setup
 
+Steps involved in setting up NetSuite:
+* Setup an upload folder (optional)
+* Setup restlet for uploading thumbnails (optional - goes with previous step)
+* Setup OAuth
+
+## Setup the upload folder
 Updating thumbnails in NetSuite requires the usage of an external restlet. The restlet used was developed by Tim Dietrich and is freely available at https://suiteapi.com. This is optional but highly recommended.
 
 Steps required:
+* Create a new folder in NetSuite
 * Navigate to latest version of  [SuiteAPI](https://suiteapi.com)
 * [Download](https://tdietrich-opensource.s3.amazonaws.com/suitescripts/SuiteAPI-v2022.1.zip) the SuiteApi zip file for the restlet
 * Install using the [instructions](https://suiteapi.com/documentation/) on the site <sup>**</sup>
@@ -10,46 +17,65 @@ Steps required:
 
 ** At the time of writing the documentation was available. If the above link / website cannot be found, a copy (current at the time of writing) of the file and the instructions can be found using the link below:
 
-
-## File
-If for some reason the website is unavailable, a copy of the Suite API zip file can be found here: [SuiteAPI-v2022.1.zip](SuiteApi.v2022.1.zip)
-
-## Instructions
- SuiteAPI Documentation
-All SuiteAPI requests are sent using the HTTP POST method, and both the request and response payloads are JSON-encoded.
-
-Requests include the name of the procedure that is to be run, and any required and optional parameters, depending on the procedure being called.
-
-For example, to call SuiteAPI's recordGet procedure, the request would look like this:
-```json
-{
-  "procedure": "recordGet",
-  "type": "salesorder",
-  "id": 26049
-}
-```
-When sending a request, set the HTTP "Content-Type" header to: application/json
-
-When using token-based authentication, the HTTP "Authorization" header should be a valid OAuth 1.0a Authorization Header.
-
-Unless a fatal error occurs, the HTTP response code returned by SuiteAPI will always be 200 OK. Error information will be returned in the response body.
-
-The table below lists all of the standard procedures that SuiteAPI supports based on the most recent release.
-
-## Configuration
-
-## Create a folder
-* Create a new folder in NetSuite file cabinet
-* Navigate to the list of folders
-* Get the ID of the folder
-* Enter the folder ID into the UI in the form
+### Step: Create a new thumbnails folder in NetSuite
  
-> `{{netsuite-api}}`/app/site/hosting/restlet.nl?script=[yourScriptId]&deploy=1&folderId=[folderId]
+* Navigate to NetSuite
+* Click on the `Documents` menu item
+* Click on the `Files` sub menu item > File Cabinet
+* Click on the `New Folder` button
+  * Folder name: `SharpSync`
+  * Subfolder of: nothing
+  * Type `Documents and Files`
+  * Click `Save`
+* Click on the `New Folder` button again
+  * Folder name: `Thumbnails`
+  * Subfolder of: `SharpSync`
+  * Type `Documents and Files`
+  * Click `Save`
 
-e.g.
+With this last folder selected in the file cabinet, take note of the folder id in the URL. This will be used later. The url at the top will look something like this:
 
-> {{netsuite-api}}/app/site/hosting/restlet.nl?script=2943&deploy=1&folderId=19575359
+> https://`{companyId}`.app.netsuite.com/app/common/media/mediaitemfolders.nl?`folder=20149768`&whence=&cmid=...
+  
+### Step: Upload SuiteApi
+If for some reason the website is unavailable, a copy of the Suite API zip file can be found here: [SuiteAPI-v2022.1.zip](SuiteApi.v2022.1.zip)
+ 
+* Extract the contents of the downloaded zip file
+* In NetSuite Navigate to `Documents` > `Files` > `File Cabinet`, <span style="color:orange">select the system folder called `SuiteScripts`</span>
+* Click on the `New Folder` button again
+  * Folder name: `SharpSync`
+  * Subfolder of: `SuiteScripts`
+  * Type `Documents and Files`
+  * Click `Save`
+* With the `SharpSync` folder selected in NetSuite, click `Add file`
+* Select the extracted `suiteapi.restlet.js` file  
+  
+### Step: Create scription deployment record
+* Navigate to `Setup` > `Customization` > `Scripts` > `New`
+* In the Script file entry, enter `suiteapi.restlet.js` 
+* Click `Create Script Record`
+* On the new form enter the values:
+  * Name: `SharpSyncSuiteAPI`
+  * ID: `_sharpsyncsuiteapi`
+  * Description: `Restlet for uploading files and thumbnails for SharpSync`
+* Click on the `Deployments` tab at the bottom and in the first row set
+  * Title: `SharpSyncSuiteAPI`
+  * ID: `_sharpsyncsuiteapi`
+* IMPORTANT: Confirm that in the Deployed Column it reads Yes
+* Change the `Status` from `Testing` > `Released`
+* Click `Save`
+* Click the Deployments tab
+* Click on the title of the deployment (SharpSyncSuiteAPI)
+* Copy the External URL. It will look something like this:
+* https://{companyId}.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=925&deploy=1
 
+To get back to this page:
+* Navigate to Setup > Customization > Scripts
+* Search for and select SharpSyncSuiteApi
+* Click the View link
+* On the deployments tab, click the title of the deployment
+* The external URL will be available
+  
 ## OAuth Setup
 
  NOTE: In the OAuth setup steps below, the value of `{{netsuite-api}}` takes the form 
@@ -125,13 +151,20 @@ The body of the request should be:
 `redirect_uri`=https%3A%2F%2Fsharpsync.net%2Fcallback-oauth&  
 `refresh_token`={refresh-token}
 
-## Configuring NetSuite in SharpSync
+## Putting it all together 
+
+With the copied URL in the previous step, and the folder Id from the first step, it's time to setup the datasource in SharpSync.
+### Datasource configuration in SharpSync
+
+* In SharpSync add a new data source > NetSuite
+
+#### Configuring NetSuite in SharpSync
 
 There are 2 configuration sections for each datasource
 * Authentication
 * BOM Configuration
 
-### Authentication
+##### Authentication
 * Navigate to the Datasources > Config UI
 * Select the NetSuite datasource
 * Enter the following values:
@@ -147,7 +180,7 @@ There are 2 configuration sections for each datasource
   |OAuth Scopes|The scopes required to get data. The `restlets` scope is optional but highly recommended. Without it you will not be able to upload thumbnails|rest_webservices,restlets|
   
 
-### BOM Configuration
+##### BOM Configuration
   |Name|Description|Recommended value|
   |--|--|--|
   |Top level assembly column name|When querying the data you may use this value to identify assemblies (optional)|itemid|
@@ -155,6 +188,16 @@ There are 2 configuration sections for each datasource
   |Servlet URL|The url of the servlet where thumbnails will be uploaded. Optional but recommented. If specified, include the `folderId` param at the end|https://{companyId}.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=2943&deploy=1&folderId={folderId}|
   |Thumbnail column name|The column to update in NetSuite using the file ID of the uploaded thumbnail|custitem_mycol_image|
   
+
+* Enter the URL of the restlet, followed by `&folderId=` and the id of the folder in the first steps
+* Enter the folder ID into the UI in the form
+ 
+> `{{netsuite-api}}`/app/site/hosting/restlet.nl?script={yourScriptId}&deploy=1&folderId={folderId}
+
+e.g.
+
+> `{{netsuite-api}}`/app/site/hosting/restlet.nl?script=`2743`&deploy=1&folderId=`19578359`
+
 
 See also 
 
