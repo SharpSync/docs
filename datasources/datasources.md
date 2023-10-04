@@ -16,11 +16,13 @@ _primary datasource_ ↔️ SharpSync ↔️ _secondary datasource_
 Select an individual datasource to view the configuration setup for that source.
 
  
-|Name|Type|Status|Documentation|
-|---|---|---|----|
-|CSV|Static / offline|[done]|[Documentation](../csv/markdown/csv-setup.md)|
-|NetSuite|ERP|[done]|[Documentation](../netsuite/markdown/netsuite-setup.md)|
-|Onshape|CAD|[done]|Documentation (coming soon)|
-|SOLIDWORKS|PDM|[done]|Documentation (coming soon)|
-|SOLIDWORKS|CAD|[done] single direction => ERP<br />  [In progress] bi-directional|Documentation (coming soon)|
+|Name|Type|Sync|Status|Documentation|
+|---|---|---|----|----|
+|CSV|Static / offline|single direction|:white_check_mark:|[Documentation](csv/markdown/csv-setup.md)|
+|NetSuite|ERP|bi-directional|:white_check_mark:|[Documentation](netsuite/markdown/netsuite-setup.md)|
+|Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](onshape/markdown/onshape-setup.md)|
+|SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](swpdm/markdown/swxpdm-setup.md)|
+|SOLIDWORKS|CAD|single-directional|:white_check_mark:|Documentation (coming soon)|
+|SOLIDWORKS|CAD|bi-directional [In progress]|[In progress]|Documentation (coming soon)|
+   
    
