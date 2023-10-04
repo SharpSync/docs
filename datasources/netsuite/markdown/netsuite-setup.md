@@ -5,7 +5,7 @@ Steps involved in setting up NetSuite:
 * Setup restlet for uploading thumbnails (optional - goes with previous step)
 * Setup OAuth
 
-## Setup the upload folder
+## Step: Setup the upload folder
 Updating thumbnails in NetSuite requires the usage of an external restlet. The restlet used was developed by Tim Dietrich and is freely available at https://suiteapi.com. This is optional but highly recommended.
 
 Steps required:
@@ -37,46 +37,10 @@ With this last folder selected in the file cabinet, take note of the folder id i
 
 > https://`{companyId}`.app.netsuite.com/app/common/media/mediaitemfolders.nl?`folder=20149768`&whence=&cmid=...
   
-### Step: Upload SuiteApi
+## Step: Upload SuiteApi
 If for some reason the website is unavailable, a copy of the Suite API zip file can be found here: [SuiteAPI-v2022.1.zip](SuiteApi.v2022.1.zip)
- 
-* Extract the contents of the downloaded zip file
-* In NetSuite Navigate to `Documents` > `Files` > `File Cabinet`, <span style="color:orange">select the system folder called `SuiteScripts`</span>
-* Click on the `New Folder` button again
-  * Folder name: `SharpSync`
-  * Subfolder of: `SuiteScripts`
-  * Type `Documents and Files`
-  * Click `Save`
-* With the `SharpSync` folder selected in NetSuite, click `Add file`
-* Select the extracted `suiteapi.restlet.js` file  
-  
-### Step: Create scription deployment record
-* Navigate to `Setup` > `Customization` > `Scripts` > `New`
-* In the Script file entry, enter `suiteapi.restlet.js` 
-* Click `Create Script Record`
-* On the new form enter the values:
-  * Name: `SharpSyncSuiteAPI`
-  * ID: `_sharpsyncsuiteapi`
-  * Description: `Restlet for uploading files and thumbnails for SharpSync`
-* Click on the `Deployments` tab at the bottom and in the first row set
-  * Title: `SharpSyncSuiteAPI`
-  * ID: `_sharpsyncsuiteapi`
-* IMPORTANT: Confirm that in the Deployed Column it reads Yes
-* Change the `Status` from `Testing` > `Released`
-* Click `Save`
-* Click the Deployments tab
-* Click on the title of the deployment (SharpSyncSuiteAPI)
-* Copy the External URL. It will look something like this:
-* https://{companyId}.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=925&deploy=1
-
-To get back to this page:
-* Navigate to Setup > Customization > Scripts
-* Search for and select SharpSyncSuiteApi
-* Click the View link
-* On the deployments tab, click the title of the deployment
-* The external URL will be available
-  
-## OAuth Setup
+Follow the steps in the SuiteApi setup 
+## Step: Setup OAuth
 
  NOTE: In the OAuth setup steps below, the value of `{{netsuite-api}}` takes the form 
 
