@@ -38,7 +38,9 @@ The error message returns a 400 Bad request with a body similar to:
 ```
 
 
-A result of `invalid_grant` means that the token has expired. You will need to re-authenticate to get a new token.  
+A result of `invalid_grant` means that:
+* The code you received in the initial /GET request has expired or is incorrect. You will need to re-authenticate to get a new token.  OR
+* The scopes you've used are incorrect or not matching with the scopes used when performing the initial /GET request in the browser
 
 The error message returns a 400 Bad request with a body similar to:
 ```json
