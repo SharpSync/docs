@@ -21,6 +21,6 @@ Select an individual datasource to view the configuration setup for that source.
 |CSV|Static / offline|[done]|[Documentation](../csv/markdown/csv-setup.md)|
 |NetSuite|ERP|[done]|[Documentation](../netsuite/markdown/netsuite-setup.md)|
 |Onshape|CAD|[done]|Documentation (coming soon)|
-|SOLIDWORKS|CAD|[In progress]|Documentation (coming soon)|
-|SOLIDWORKS|PDM|[In progress]|Documentation (coming soon)|
+|SOLIDWORKS|PDM|[done]|Documentation (coming soon)|
+|SOLIDWORKS|CAD|[done] single direction => ERP<br />  [In progress] bi-directional|Documentation (coming soon)|
    
