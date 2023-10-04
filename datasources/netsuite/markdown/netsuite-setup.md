@@ -1,18 +1,18 @@
 # Netsuite Setup
 
-Updating thumbnails in Netsuite requires the usage of an external restlet. The restlet used was developed by Tim Dietrich and is freely available at https://suiteapi.com. This is optionals but highly recommended.
+Updating thumbnails in Netsuite requires the usage of an external restlet. The restlet used was developed by Tim Dietrich and is freely available at https://suiteapi.com. This is optional but highly recommended.
 
 Steps required:
-* Navigate to latest version of [SuiteApi](SuiteAPI-v2022.1)
+* Navigate to latest version of  [SuiteAPI](https://suiteapi.com)
 * [Download](https://tdietrich-opensource.s3.amazonaws.com/suitescripts/SuiteAPI-v2022.1.zip) the SuiteApi zip file for the restlet
 * Install using the [instructions](https://suiteapi.com/documentation/) on the site <sup>**</sup>
 
 
-** At the time of writing the documentation was available. If the above link / website cannot be found, an older copy of the file and the instructions can be found using the links below:
+** At the time of writing the documentation was available. If the above link / website cannot be found, a copy (current at the time of writing) of the file and the instructions can be found using the link below:
 
 
 ## File
-Suite API zip file [SuiteAPI-v2022.1.zip](SuiteApi.v2022.1.zip)
+If for some reason the website is unavailable, a copy of the Suite API zip file can be found here: [SuiteAPI-v2022.1.zip](SuiteApi.v2022.1.zip)
 
 ## Instructions
  SuiteAPI Documentation
