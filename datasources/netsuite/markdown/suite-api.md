@@ -35,7 +35,7 @@ SuiteAPI is an open source, alternative Web API for the NetSuite platform. It ma
 * Copy the External URL. It will look something like this:
 * https://{companyId}.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=925&deploy=1
 
-### To get back to this page:
+### To locate the script id / get back to this page:
 * Navigate to `Setup` > `Customization` > `Scripts`
 * Search for and select `SharpSyncSuiteApi`
 * Click the View link
