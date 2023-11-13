@@ -3,7 +3,7 @@
 SWX  files are utilized to import Bills of Materials (BOMs) from desktop-based CAD software into SharpSync. Follow the steps below to begin importing data into SharpSync using CSV files.
 
 ## Prerequisites
-* Download and install the SOLIDWORKS Addin from the Downloads section
+* Download and install the SOLIDWORKS Addin from the `Downloads` section
 * Install the addin
 
   
