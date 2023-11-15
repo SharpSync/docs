@@ -2,12 +2,62 @@
 
 Rules for property mappings fall into 1 of 3 categories:
 
-* Import Rules
-* Display Rules
-* Export Rules
+* Import Rules (Data transformation)
+* Display Rules (Data validation)
+* Export Rules (Data transformation)
 
-Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule
+## Main concepts for Rules
 
+* Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule
+* Javascript rules have access to 3 parameters:
+
+  | Param | Description |
+  | -- | -- |  
+  |s|The current string value in the cell (changes with each successive import rule (if there are any) |
+  |rowData|The rowData object (more detail below **)|
+  |p|The pass / block value|
+
+** The rowData value is a special value. It contains, but is not limited to, the following key/values:
+<table>
+ <th>   Key name  </th>
+ <th>   Description of the value </th>
+  <tr>
+  <td>isAssemblyRow</td>
+  <td> A bool value indicating if the current row value is an assembly row (contains children according to the source) </td>
+ </tr>
+ <tr>
+  <td>componentName</td>
+  <td>The primary identifier of each row - typically the name of the component</td>
+ </tr>
+ <tr>
+  <td>componentPathArray</td>
+  <td>The path of each component. So if you have assembly A1, with Part P1, then this value will be [ 'A1', 'P1' ] </td>
+ </tr>
+ <tr>
+  <td>cells</td>
+  <td>The row values for the entire row. A typical row object might look something like this (notice the nested `cells` key):
+   
+   ```json 
+   {
+     "isAssemblyRow" : false,
+     "componentName" : "Part 1",
+     "componentPathArray" : [ "A1", "Part 1"],
+     "cells" : {
+        "partNumber" : "P1",
+        "description" : "Side plate",
+        "revision" : "A"
+        "material" : "steel",
+        "qty" : 1,
+     }
+   } 
+```
+   
+  </td>
+ </tr>
+
+</table>
+
+  
 ## Import rules
 Import rules are run when the data is imported from the source. The rule will change the incoming value from the datasource. For example, if you have value from a CSV file that is being imported as 0, you can transform the value using the `Text Manipulation` rule to change from `0` => `0.0`
 
