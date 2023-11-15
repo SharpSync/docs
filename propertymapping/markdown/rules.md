@@ -6,6 +6,8 @@ Rules for property mappings fall into 1 of 3 categories:
 * Display Rules
 * Export Rules
 
+Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule
+
 ## Import rules
 Import rules are run when the data is imported from the source. The rule will change the incoming value from the datasource. For example, if you have value from a CSV file that is being imported as 0, you can transform the value using the `Text Manipulation` rule to change from `0` => `0.0`
 
