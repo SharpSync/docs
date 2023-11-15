@@ -137,7 +137,6 @@ Below is a comprehensive list of seach Property Mapping Rule. Expand the Table o
 
 [Append text](#append-text)  
 [Calculate number](#calculate-number)  
-[Cell value manipulation](#cell-value-manipulation)  
 [Format as decimal number](#format-as-decimal-number)  
 [Parse JSON](#parse-json)  
 [Prepend text](#prepend-text)  
@@ -146,6 +145,7 @@ Below is a comprehensive list of seach Property Mapping Rule. Expand the Table o
 [Set cell value](#set-cell-value)  
 [Set empty cells](#set-empty-cells)  
 [Text length must equal](#text-length-must-equal)  
+[Text manipulation](#cell-value-manipulation)  
 [Text must be exactly](#text-must-be-exactly)  
 [Text must contain string](#text-must-contain-string)  
 [Text must end with string](#text-must-end-with-string)  
@@ -164,7 +164,7 @@ Below is a comprehensive list of seach Property Mapping Rule. Expand the Table o
 </details>
 
 ## Display Rules
-### Cell value evaluation
+### Text evaluation
 ![Alt text](../images/ruleCellValueEval.PNG "Cell value evaluation")  
 Evaluates the cell value given the javascript expression. Available parameters:  
 * s (original value)
