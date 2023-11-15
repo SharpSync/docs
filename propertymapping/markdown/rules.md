@@ -1,4 +1,68 @@
-# List of Property Mapping Rules
+# Property Mapping Rules
+
+Rules for property mappings fall into 1 of 3 categories:
+
+* Import Rules
+* Display Rules
+* Export Rules
+
+## Import rules
+Import rules are run when the data is imported from the source. The rule will change the incoming value from the datasource. For example, if you have value from a CSV file that is being imported as 0, you can transform the value using the `Text Manipulation` rule to change from `0` => `0.0`
+
+*Example*
+You have a value that is received from the datasource as a json object, say 
+```json
+ {
+   "id" : 42,
+   "refName" : "Material Name"
+ }
+```
+
+You can use the
+
+> `Parse Json`
+
+rule to select the key called `refName` from this Json object. The value displayed onscreen will be `Material Name`
+
+*Example*
+```json
+[
+{
+   "id" : 41,
+   "refName" : "Material Name 1"
+},
+{
+   "id" : 42,
+   "refName" : "Material Name 2"
+ }
+]
+```
+You can use the 
+
+> `Parse Json`
+
+rule to select the key called `[1].refName` from this Json object. The value displayed onscreen will be `Material Name 2`
+
+
+## Display Rules
+
+Display rules are rules that trigger either warnings or errors _after_ the data has been imported. This plays out as: 
+* Data is imported
+* Import rules are applied to transform data
+* Data is displayed onscreen
+* Rules are evaluated
+* Warnings or errors are displayed based on the rule conditions
+
+A Display Rule can be set to either `pass` or `block`.
+* A value of `pass` will show a orange border if it fails. The user is still able to submit the BOM
+* A value of `block` will show a red border if it fails. The user is not able to submit the BOM
+* (Colors are configurable)
+
+## Export rules
+Export rules are run when the data is exported from SharpSync when using the `Submit BOM` button. The rule will change the value sent to the datasource. For example, if you have value from a source, say Onshape, that was imported as `0`, the displayed onscreen as `0.0`, you can transform the value using the `Text Manipulation` rule to change from `0.0` => `0` so that the value may be accepted by Onshape.
+
+  
+## List of preset rules
 Below is a comprehensive list of seach Property Mapping Rule. Expand the Table of Contents and click a specific rule to jump to that rule. Learn more about Rule setup: [Configure Rules](/propertymapping/markdown/propertymapping.md#configure-rules)  
 
 <details open>
@@ -99,7 +163,7 @@ Converts cell value to a number and evaluates if number is within a range of val
 [Return to Top](#list-of-property-mapping-rules)  
 
 ### Text length must be between
-![Alt text](../images/ruleTextLengthBetween.PNG "Text length must be between")  
+![Alt text](../images/ruleTextLengthBetween.png "Text length must be between")  
 The number of characters in the cell value must be between the lower and upper limit.  
 <details>
     <summary>Example</summary>  
