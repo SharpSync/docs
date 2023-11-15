@@ -163,8 +163,8 @@ Below is a comprehensive list of seach Property Mapping Rule. Expand the Table o
     </blockquote>
 </details>
 
-## Display Rules
-### Text evaluation
+### Display Rules
+#### Text evaluation
 ![Alt text](../images/ruleCellValueEval.PNG "Cell value evaluation")  
 Evaluates the cell value given the javascript expression. Available parameters:  
 * s (original value)
@@ -172,7 +172,7 @@ Evaluates the cell value given the javascript expression. Available parameters:
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Maximum text length
+#### Maximum text length
 ![Alt text](../images/ruleMaxTextLength.PNG "Maximum text length")  
 Limits the length of the cell value text to a number of characters.  
 <details>
@@ -185,7 +185,7 @@ Limits the length of the cell value text to a number of characters.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Minimum text length
+#### Minimum text length
 ![Alt text](../images/ruleMinTextLength.PNG "Minimum text length")  
 The number of characters in the cell value must be greater than the specified number.  
 <details>
@@ -198,7 +198,7 @@ The number of characters in the cell value must be greater than the specified nu
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Number between
+#### Number between
 ![Alt text](../images/ruleNumberBetween.PNG "Number between")  
 Converts cell value to a number and evaluates if number is within a range of values, and ignores text listed in textbox.  
 <details>
@@ -214,7 +214,7 @@ Converts cell value to a number and evaluates if number is within a range of val
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Text length must be between
+#### Text length must be between
 ![Alt text](../images/ruleTextLengthBetween.png "Text length must be between")  
 The number of characters in the cell value must be between the lower and upper limit.  
 <details>
@@ -229,8 +229,8 @@ The number of characters in the cell value must be between the lower and upper l
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-## Import/Export Rules
-### Append text
+### Import/Export Rules
+#### Append text
 ![Alt text](../images/ruleAppendText.PNG "Append Text")  
 Adds the specified text to the end of the cell value.  
 <details>
@@ -243,7 +243,7 @@ Adds the specified text to the end of the cell value.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Calculate Number
+#### Calculate Number
 ![Alt text](../images/ruleCalcNumber.PNG "Calculate Number")  
 Uses the cell value and performs a calculation. The result of the calculation replaces the cell value.  
 <details>
@@ -256,7 +256,7 @@ Uses the cell value and performs a calculation. The result of the calculation re
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Cell value manipulation
+#### Cell value manipulation
 ![Alt text](../images/ruleCellValueMani.PNG "Cell value manipulation")  
 Manipulates (and returns the result of) the cell value given the javascript expression. Available parameters:  
 * s (original value)
@@ -264,7 +264,7 @@ Manipulates (and returns the result of) the cell value given the javascript expr
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Format as decimal number
+#### Format as decimal number
 ![Alt text](../images/ruleFormatDecNum.PNG "Format as decimal number")  
 Converts the cell value to a number and adds the specified number of decimals. This formats the number as it is viewed and does not round it. Any text specified to be removed will be replaced/ignored during the number format.  
 <details>
@@ -279,13 +279,13 @@ Converts the cell value to a number and adds the specified number of decimals. T
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Parse JSON
+#### Parse JSON
 ![Alt text](../images/ruleParseJson.PNG "Parse JSON")  
 Converts the cell value from text to a JSON object and returns the value given by the specified key. Supports nested key/values and arrays. You can use key.value[2].key to retrieve value for a given key.  
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Prepend text
+#### Prepend text
 ![Alt text](../images/rulePrependText.PNG "Prepend text")  
 Adds the specified text to the beginning of the cell value.  
 <details>
@@ -298,7 +298,7 @@ Adds the specified text to the beginning of the cell value.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Replace text
+#### Replace text
 ![Alt text](../images/ruleReplaceText.PNG "Replace text")  
 Replaces any instances of the specified text with the new value.  
 <details>
@@ -313,7 +313,7 @@ Replaces any instances of the specified text with the new value.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Round to nearest X
+#### Round to nearest X
 ![Alt text](../images/ruleRoundNearest.PNG "Round to nearest X")  
 Rounds the number to the nearest specified number. Supports integers only. (Positive or negative whole number.)  
 <details>
@@ -328,7 +328,7 @@ Rounds the number to the nearest specified number. Supports integers only. (Posi
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Set cell value
+#### Set cell value
 ![Alt text](../images/ruleSetCellValue.PNG "Set cell value")  
 Sets the cell value to the specified text.  
 <details>
@@ -341,7 +341,7 @@ Sets the cell value to the specified text.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Set empty cells
+#### Set empty cells
 ![Alt text](../images/ruleSetEmptyCells.PNG "Set empty cells")  
 Set an empty (any cell that has whitespace or no value) cell value to the specified text.  
 <details>
@@ -354,7 +354,7 @@ Set an empty (any cell that has whitespace or no value) cell value to the specif
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Text length must equal
+#### Text length must equal
 ![Alt text](../images/ruleTextLengthEquals.PNG "Text length must equal")  
 The number of characters in the cell value must be exactly the length specified.  
 <details>
@@ -367,7 +367,7 @@ The number of characters in the cell value must be exactly the length specified.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Text must be exactly
+#### Text must be exactly
 ![Alt text](../images/ruleTextExactMatch.PNG "Text must be exactly")  
 The cell value must be an exact match with the specified text.  
 <details>
@@ -380,7 +380,7 @@ The cell value must be an exact match with the specified text.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Text must contain string
+#### Text must contain string
 ![Alt text](../images/ruleTextContains.PNG "Text must contain string")  
 The cell value must contain the specified text.  
 <details>
@@ -393,7 +393,7 @@ The cell value must contain the specified text.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Text must end with string
+#### Text must end with string
 ![Alt text](../images/ruleTextEndWith.PNG "Text must end with string")  
 The cell value must end with the specified string.  
 <details>
@@ -406,7 +406,7 @@ The cell value must end with the specified string.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Text must not be empty
+#### Text must not be empty
 ![Alt text](../images/ruleTextNotEmpty.PNG "Text must not be empty")  
 The cell value must not be empty.  
 <details>
@@ -418,7 +418,7 @@ The cell value must not be empty.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Text must not contain string
+#### Text must not contain string
 ![Alt text](../images/ruleTextNotContains.PNG "Text must not contain string")  
 The cell value must not contain the specified string.  
 <details>
@@ -431,7 +431,7 @@ The cell value must not contain the specified string.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Text must not end with string
+#### Text must not end with string
 ![Alt text](../images/ruleTextNotEndWith.PNG "Text must not end with string")  
 The cell value must not end with the specified string.  
 <details>
@@ -444,7 +444,7 @@ The cell value must not end with the specified string.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Text must start with string
+#### Text must start with string
 ![Alt text](../images/ruleTextStartWith.PNG "Text must start with string")  
 The cell value must start with the specified string.  
 <details>
@@ -457,7 +457,7 @@ The cell value must start with the specified string.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Value must be in list
+#### Value must be in list
 ![Alt text](../images/ruleValueMustBeInList.PNG "Value must be in list")  
 The cell value must match a value in a string list. Entries are separated by a comma.    
 <details>
@@ -470,7 +470,7 @@ The cell value must match a value in a string list. Entries are separated by a c
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Value must not be in list
+#### Value must not be in list
 ![Alt text](../images/ruleValueMustNotBeInList.PNG "Value must not be in list")  
 The cell value must not match a value in a string list. Entries are separated by a comma.    
 <details>
@@ -483,7 +483,7 @@ The cell value must not match a value in a string list. Entries are separated by
 
 [Return to Top](#list-of-property-mapping-rules)
 
-### Value must be a number
+#### Value must be a number
 ![Alt text](../images/ruleValueMustBeNumber.PNG "Value must be a number")  
 The cell value must be a number.  
 <details>
@@ -495,7 +495,7 @@ The cell value must be a number.
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-### Value must not be a number
+#### Value must not be a number
 ![Alt text](../images/ruleValueMustNotBeNumber.PNG "Value must not be a number")  
 The cell value must not be a number.
 <details>
@@ -507,21 +507,21 @@ The cell value must not be a number.
 
 [Return to Top](#list-of-property-mapping-rules)
 
-## Interpreting the Results
+### Interpreting the Results
 
 SharpSync processes and prioritizes each rule in order from top to bottom. Moving a rule up or down the list can change the result depending on the subsequent outcome. See the examples below to gain an idea of how results are evaluated:
 
-### Example 1: Text-based Rule Application  
-#### Preconditions
+#### Example 1: Text-based Rule Application  
+##### Preconditions
 * Property Mapping: Description (Text)  
 * Sample Cell Data: "Connector Bracket 1_REL"
 
-#### Rules
+##### Rules
 1. Prepend Text: "ABC-"
 2. Text Must End with String: "_REL"
 3. Maximum Text Length: 25
 
-#### Evaluation
+##### Evaluation
 1. PASS: Text is appended to be "ABC-Connector Bracket 1_REL"
 2. PASS: Text does end with the string "_REL"
 3. FAIL: Text length is longer than maximum. Text was originally 23 characters; the prepended text makes the character length 27.
@@ -529,12 +529,12 @@ SharpSync processes and prioritizes each rule in order from top to bottom. Movin
 * Quick Fix: change the text in SharpSync by removing charcaters or abbreviating words. Datasources can be updated when the BOM is submitted with the changes, depending on the Property Mapping settings.
 * If the Maximum Text Length was ordered before the Prepend Text rule, all rules would evaulate as passing.
 
-### Example 2: Numeric Rule Application
-#### Preconditions
+#### Example 2: Numeric Rule Application
+##### Preconditions
 * Property Mapping: Weight (Numeric value)
 * Sample Cell Data: "123.54 kg"
 
-#### Rules
+##### Rules
 1. Replace Text (removing spaces)
     * Orginal Value: " "
     * New Value: ""
@@ -546,7 +546,7 @@ SharpSync processes and prioritizes each rule in order from top to bottom. Movin
     * Min Value: 1
     * Max Value: 123
 
-#### Evaluation
+##### Evaluation
 1. PASS: Space is removed, new text is "123.54kg"
 2. PASS: Text is changed to Decimal. Any characters after tenth place is dropped. New value is 123.
 3. PASS: Decimal is rounded to the nearest whole number of 123.
