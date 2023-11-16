@@ -9,6 +9,7 @@ Rules for property mappings fall into 1 of 3 categories:
 ## Main concepts for Rules
 
 * Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule
+* Import rules work on the raw source data and are applied to each individual data source's data.
 * Javascript rules have access to 3 parameters:
 
   | Param | Description |
