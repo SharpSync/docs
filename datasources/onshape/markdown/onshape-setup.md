@@ -1,6 +1,9 @@
 # Onshape Setup
+  
+`Note:` Onshape integration for SharpSync is not currently supported for free versions.
+In order for SharpSync to work, you need to create custom properties in a company in Onshape. This is only possible with the Professional or Enterprise versions of Onshape. This is a limitation in Onshape
 
-Onshape setup is quite easy.
+ ## To setup Onshape
 
 * Select + Add the Onshape datasource
 * Configure the authentication options
@@ -21,6 +24,18 @@ you will have
 
 
 ## Troubleshooting
+
+### Cannot get properties 
+The following response in the network tab with a 500  statuscode
+```json
+Request Method: GET
+Status Code: 502 Bad Gateway
+
+{
+    "message": "Could not find the Onshape company that the user belongs to when loading the BOM"
+}
+```
+This means that you're attempting to use SharpSync with a free version. Free versions are not supported atm due to a limitation in Onshape that you cannot create custom properties (True at the time of writing this)
 
 ### Cannot pull Onshape BOM
 The following response in the network tab with a 502  statuscode
