@@ -6,4 +6,4 @@ Solidworks PDM is a data management solution from Dassault Systemes. It allows y
 * The PDM Professional version API must be exposed to the internet using the Web API setup guide
 
 ## Next steps
-See [setup](markdown\swxpdm-setup.md)
+See [setup](markdown/swxpdm-setup.md)
