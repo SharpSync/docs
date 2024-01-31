@@ -1,6 +1,12 @@
 # NetSuite
 NetSuite is an ERP from Oracle and support OAuth integration.
 
+## Setup Item Type mapping 
+At least one property mapping for NetSuite _must_ be set as an item type mapping. You can leave the Netsuite mapping as _(Unmapped)_ and invisible, but the mapping must exist.
+Typically you'd want to set this as 'prefer NetSuite value' as well, but that's optional.
+
+![image](https://github.com/SharpSync/docs/blob/main/datasources/netsuite/images/item-type-mapping.png)
+
 ## Selecting array values
 
 Array values are values that are limited in scope. The user may only specify that value. Internally in NetSuite this is known as enum values, but SharpSync displays it as an `array` type.
