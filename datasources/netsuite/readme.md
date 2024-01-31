@@ -15,6 +15,15 @@ As such, add this as a list of options to pick from. You can include any items i
 
 ![image](https://github.com/SharpSync/docs/blob/main/datasources/netsuite/images/item-type-mapping.png)
 
+In addition to this you'll want to create 2 rules:
+1. A text manipulation rule for NetSuite / Onshape that runs the following script (or similar based on your setup) on data import:
+
+```Javascript
+if (rowData.isAssemblyRow) return 'assemblyitem'; return 'noninventorypurchaseitem';
+```
+
+2. A `Text not empty` rule. This will prevent errors when submitting the BOM
+
 > On a more technical note: These items are derived by calling the endpoint /GET `{{netsuite-api}}/services/rest/record/v1/metadata-catalog` with an empty body
 
 ## Selecting array values
