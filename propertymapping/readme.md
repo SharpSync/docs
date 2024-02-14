@@ -10,7 +10,7 @@
 </blockquote>
 </details>
 
-!["Property Mapping"](propertymapping/images/PropertyMapping.png)  
+!["Property Mapping"](images/PropertyMapping.png)  
 Property Mapping defines the way BOM data is displayed in SharpSync. Property Mappings can display a variety of CAD information including (but not limited to) BOM columns, Part or Assembly properties, Configurations, or CAD model data. SharpSync has built-in rules and settings for each property mapping. These rules and settings are used to help codify, standardize, and push changes to the selected datasources.
 
 ## Instructions
@@ -19,11 +19,11 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
     * The column headers you entered in the Datasource BOM Configuration will populate each Property Mapping.
 	* Each Property Mapping will be displayed as a column on the Component Assembly BOM page.
 
-![Alt text](propertymapping/images/PropertyMapping1.png "Select Property Mapping")
+![Alt text](images/PropertyMapping1.png "Select Property Mapping")
 
 2. Once you have selected the property mappings that you want to appear in the SharpSync BOM, confirm that the Accessors, Primary Datasource Accessors, and Secondary Datasource Accessors columns are correct. You can double click on the cells in each column to change the value SharpSync will be matching. The accessor must be present in the appropriate datasource.
 
-!["Check Accessors"](propertymapping/images/PropertyMapping2.png)
+!["Check Accessors"](images/PropertyMapping2.png)
 ### Configure Settings
 #### Update Datasource
 1. To change the settings of each Property Mapping, click on the gear in the Settings column.
@@ -32,7 +32,7 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
     * If you want both sources to change, check both checkboxes.
     * Settings are saved for each Property Mapping.
 
-![Alt text](propertymapping/images/PropertyMapping3.png "Select Source")
+![Alt text](images/PropertyMapping3.png "Select Source")
 #### Rendering
 3. Rendering defines how the Property Mapping is viewed and accessed in the BOM.
     * Rendering Types change the display of the Property Mapping:
@@ -47,12 +47,12 @@ Property Mapping defines the way BOM data is displayed in SharpSync. Property Ma
         * Visible - When unchecked, column will not be visible, but user can unhide from the BOM column context menu
 4. Click Save to finish.  
 
-![Alt text](propertymapping/images/PropertyMapping4.png "Rendering")
+![Alt text](images/PropertyMapping4.png "Rendering")
 
 ### Configure Rules
 Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For the list of Rules with explanations for each, click the following link: [List of Property Mapping Rules](/propertymapping/markdown/rules.md)    
 
-![Alt text](propertymapping/images/PropertyMapping5.png "Rules Module")  
+![Alt text](images/PropertyMapping5.png "Rules Module")  
 1. Select the rule desired. Be sure to select the type of rule that best matches the data type. (Text, Numeric, JavaScript expression, Json value)
 2. Select display, import or export to determine when the rule is applied:
     * Display applies the rule in the SharpSync BOM.
@@ -78,7 +78,7 @@ Property Mapping Rules are used to define the output format of the BOM data show
   
 <figcaption style="text-align:center">
 
-![Alt text](propertymapping/images/PropertyMapping6.png "BOM Rules Result")BOM with list of pass/fail Rules on overlay for part A4 - Base Plate (Red Arrow)
+![Alt text](images/PropertyMapping6.png "BOM Rules Result")BOM with list of pass/fail Rules on overlay for part A4 - Base Plate (Red Arrow)
 
 </figcaption>
 
