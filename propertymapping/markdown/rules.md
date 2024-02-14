@@ -73,7 +73,7 @@ You have a value that is received from the datasource as a json object, say
 
 You can use the
 
-> `Parse Json`
+> `Select from Json`
 
 rule to select the key called `refName` from this Json object. The value displayed onscreen will be `Material Name`
 
@@ -92,9 +92,9 @@ rule to select the key called `refName` from this Json object. The value display
 ```
 You can use the 
 
-> `Parse Json`
+> `Select from Json`
 
-rule to select the key called `[1].refName` from this Json object. The value displayed onscreen will be `Material Name 2`
+rule to select the key called `[1].refName` from this Json object. The value displayed onscreen will be `Material Name 2`. The selector `[1].refName` uses a text string to select the value from the array of values. In this case select from the 2nd element (indexes start at 0, so select element 1, which is the 2nd element in the array of 2 elements), then select the `refName` key on the element. Nested properties are supported.
 
 
 ## Display Rules
@@ -139,7 +139,7 @@ Below is a comprehensive list of seach Property Mapping Rule. Expand the Table o
 [Append text](#append-text)  
 [Calculate number](#calculate-number)  
 [Format as decimal number](#format-as-decimal-number)  
-[Parse JSON](#parse-json)  
+[Select from JSON](#select-from-json)  
 [Prepend text](#prepend-text)  
 [Replace text](#replace-text)  
 [Round to nearest X](#round-to-nearest-x)  
@@ -266,7 +266,7 @@ Manipulates (and returns the result of) the cell value given the javascript expr
 [Return to Top](#list-of-property-mapping-rules)  
 
 #### Format as decimal number
-![Alt text](../images/ruleFormatDecNum.PNG "Format as decimal number")  
+!["Format as decimal number"](../images/ruleFormatDecNum.PNG )  
 Converts the cell value to a number and adds the specified number of decimals. This formats the number as it is viewed and does not round it. Any text specified to be removed will be replaced/ignored during the number format.  
 <details>
     <summary>Example</summary>  
@@ -280,8 +280,8 @@ Converts the cell value to a number and adds the specified number of decimals. T
 
 [Return to Top](#list-of-property-mapping-rules)  
 
-#### Parse JSON
-![Alt text](../images/ruleParseJson.PNG "Parse JSON")  
+#### Select from JSON
+!["Select from JSON"](../images/ruleParseJson.PNG)  
 Converts the cell value from text to a JSON object and returns the value given by the specified key. Supports nested key/values and arrays. You can use key.value[2].key to retrieve value for a given key.  
 
 [Return to Top](#list-of-property-mapping-rules)  
