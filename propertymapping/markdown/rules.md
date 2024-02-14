@@ -34,20 +34,29 @@ Pro tip: One way to get around this is to create an `Text evaluation` rule to ma
 Considering that we have Datasource 1 (DS1) and Datasource 2 (DS2), the process would be:
 
 * Setup the initial (let's call it the 1st) property column. Give it an accessor of `description` with a column mapping of property `description` for DS1 and for DS2
-* For now let's say. The value comes from DS1. Let's say the value is `my description`.
-* Setup a 2nd `(Unmapped)` column - value of `s` is empty by default.
-* Add an import rule to the 2nd column which copies the DS1 value from the 1st column. The value in 2nd column is now `my description`. This means that the value of `s` (and the value of rowData.cells.is now `my description`
-* The data from DS2 is now imported. The rules start running for DS2
+* For now let's say. The value comes from DS1. Let's say the value is `Coil`.
+* Setup a 2nd `description` column. Call it `Description2` - value of `s` is the same by default.
 * Add a  `Text evaluation` display rule to the 2nd column.
-* `Text evaluation` rules only have access to `s` - the current string value. which has the following logic:
-*   If the value of `s` == `rowData.cells.description`, return a message to the user. Written out in Javascript it would look like this
+* Enable the setting on the 2nd column: `Prefer {DS2} Value`. This forces the value from DS2 to display instead of the value of DS1 displaying by default
+* Add a `Text evaluation` rule. This rule only has access to `s` - the current string value. which has the following logic:
+* If the value of `s` == `rowData.cells.description`, return a message to the user. Written out in Javascript it would look like this
 
  ```javascript
-if (s == rowData.cells.description)
-   return { status: 'failure', message: `The descriptions for DS1 and DS2 must not match`};
-``` 
+if (s === rowData.cells.description) 
+  return { status: 'failure', message: `The values must not be the same` };
 
-Note that returning any value 
+```
+
+Note that returning any value in the `message` above can be customized by you.
+
+![Example: Setup Auxilary Property](../images/setup_auxilary_prop.png)
+
+The data from DS2 is imported after that of DS1. The rules start running for DS2
+
+![Example: Setup Auxilary Property](../images/values_must_not_be_same.png)
+
+
+
 ### Javascript rules have access to 3 parameters, not just 1:
 
 Typical rules only have access to the string value `s` which is passed to it. The `Text manipulation` rule has access to more data which allows for much greater scripting capability. The result of a text manipulation rule must always be a `string` or a representation of a `string` such as a javascript `object` which has been serialized. If it does not return a value you may experience unexpected results in the UI, possibly even instability in attempting to render client side BOMs.
