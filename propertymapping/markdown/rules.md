@@ -8,9 +8,49 @@ Rules for property mappings fall into 1 of 3 categories:
 
 ## Main concepts for Rules
 
+
 * Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule
 * Import rules work on the raw source data and are applied to each individual data source's data.
-* Javascript rules have access to 3 parameters:
+* Javascript rules have access to 3 parameters, not just 1.
+  
+### Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule
+The order that rules run in always follow the following order:
+* import
+* display
+* export
+
+ You can reorder the rules, but export rules cannot appear before import rules. Import/Export rules have an orange border, while display rules only have a gray border.
+
+### Import rules work on the raw source data and are applied to each individual data source's data.
+ Each rule runs only on the source that it is being applied on 
+
+In the example below, the `Format as decimal` rule runs for both NetSuite and Onshape. The rules individually runs on the individual strings of data imported. The rule running for NetSuite is not aware of the data being imported for Onshape. That means that when running a rule such as a javascript `Text Manipulation` rule, the rule runs only for one source at a time, never for both at the same time. 
+
+![Example: Format as decimal](../images/format_as_decimal.png)
+
+
+Pro tip: One way to get around this is to create an `Text evaluation` rule to match the value of a cell to that of another and return a display message to the user. Or use a `Text manipulation` rule to write a message to a cell value and give the user a message onscreen.
+
+Considering that we have Datasource 1 (DS1) and Datasource 2 (DS2), the process would be:
+
+* Setup the initial (let's call it the 1st) property column. Give it an accessor of `description` with a column mapping of property `description` for DS1 and for DS2
+* For now let's say. The value comes from DS1. Let's say the value is `my description`.
+* Setup a 2nd `(Unmapped)` column - value of `s` is empty by default.
+* Add an import rule to the 2nd column which copies the DS1 value from the 1st column. The value in 2nd column is now `my description`. This means that the value of `s` (and the value of rowData.cells.is now `my description`
+* The data from DS2 is now imported. The rules start running for DS2
+* Add a  `Text evaluation` display rule to the 2nd column.
+* `Text evaluation` rules only have access to `s` - the current string value. which has the following logic:
+*   If the value of `s` == `rowData.cells.description`, return a message to the user. Written out in Javascript it would look like this
+
+ ```javascript
+if (s == rowData.cells.description)
+   return { status: 'failure', message: `The descriptions for DS1 and DS2 must not match`};
+``` 
+
+Note that returning any value 
+### Javascript rules have access to 3 parameters, not just 1:
+
+Typical rules only have access to the string value `s` which is passed to it. The `Text manipulation` rule has access to more data which allows for much greater scripting capability. The result of a text manipulation rule must always be a `string` or a representation of a `string` such as a javascript `object` which has been serialized. If it does not return a value you may experience unexpected results in the UI, possibly even instability in attempting to render client side BOMs.
 
   | Param | Description |
   | -- | -- |  
