@@ -6,7 +6,7 @@
 [Adding Property Mappings](#adding-property-mappings)  
 [Configure Settings](#configure-settings)  
 [Configure Rules](#configure-rules)  
-[Effect troubleshooting](#effective-troubleshooting)
+[Effective troubleshooting](#effective-troubleshooting)
 </blockquote>
 </details>
 
