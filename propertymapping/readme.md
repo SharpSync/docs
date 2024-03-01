@@ -6,6 +6,7 @@
 [Adding Property Mappings](#adding-property-mappings)  
 [Configure Settings](#configure-settings)  
 [Configure Rules](#configure-rules)  
+[Render types](#render-types)  
 [Effective troubleshooting](#effective-troubleshooting)
 </blockquote>
 </details>
@@ -81,6 +82,57 @@ Property Mapping Rules are used to define the output format of the BOM data show
 ![Alt text](images/PropertyMapping6.png "BOM Rules Result")BOM with list of pass/fail Rules on overlay for part A4 - Base Plate (Red Arrow)
 
 </figcaption>
+
+### Render types
+Properties mapped from a source may be displayed using different representations on screen. The options are:
+
+|Render Type|Description|
+|:--|--|
+|Checkbox|Attempts to convert values to true/false. Any value of True or true will be converted. Tip: Use rules to parse values to True|
+|Free Text|Displays the return value from the source as is. If it is a single value like 'myvalue' the that will be displayed. If a more complex object like `{ "id" : "myvalue"}` then the entire object is displayed as a string|
+|List|Displays a list of values from the list specified|
+|Object List|This is a special list (more detail below) that serves as a substitution list. You would pick a value from a list, but the actual value is a different value|
+|Url|Displays the underlying text as a clickable URL. The URL is always opened in a new tab|
+
+#### Object list setup example
+Expanding on the `Object List`  option, the requirements are:
+* Create an array of javascript objects
+* Specify which key in the json object is your value (the value going to the destination datasource)
+* Specify which key in the json object is your display value
+Given the following list of json objects as the input for my `Object List Items`
+
+```json
+[
+  {
+        "id": "ALU-OX-3HD",
+        "displayName": "Alumina Oxide",
+        "category": "Ceramic"
+    },
+    {
+        "id": "BR",
+        "displayName": "Brick",
+        "category": "Ceramic" 
+    },
+    {
+        "id": "CONC",
+        "displayName": "Concrete",
+        "category": "Ceramic" 
+    },
+    {
+        "id": "FE",
+        "displayName": "Ferrite",
+        "category": "Ceramic" 
+    }
+]
+```
+
+The values that I want to see on screen in the selection list would be `Alumina Oxide`, `Brick`,`Concrete`,`Ferrite`
+The values that I want to pass to my ERP would be `ALU-OX-3HD`,`BR`,`CONC`,`FE`
+
+So my values specified in the Object selection list would be:
+* Rendering type: `Object list`
+* List Value Selector: `id`
+* List Value Display Selector: `displayName`
 
 ## Effective troubleshooting
 Property mappings and their associated rules can get complicated based on the number of rules you create and the data being returned.
