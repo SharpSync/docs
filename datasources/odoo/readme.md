@@ -21,7 +21,7 @@ To configure an Odoo intance you need 4 things
 * Click the `Save` button
 * Click the `Authenticate` button
 
-![Configure Odoo](datasources/odoo/odoo-config-values.png "Register new Organization")
+![Configure Odoo](odoo-config-values.png "Register new Organization")
  
 
 ## Limitations at the time of writing
