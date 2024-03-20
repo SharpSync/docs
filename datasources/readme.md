@@ -20,8 +20,10 @@ Select an individual datasource to view the configuration setup for that source.
 |---|---|---|----|----|
 |CSV|Static / offline|single direction|:white_check_mark:|[Documentation](csv/markdown/csv-setup.md)|
 |NetSuite|ERP|bi-directional|:white_check_mark:|[Documentation](netsuite/markdown/netsuite-setup.md)|
+|Odoo|ERP|bi-directional|:white_check_mark:|[Documentation](odoo/readme.md)|
 |Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](onshape/markdown/onshape-setup.md)|
 |SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](swpdm/markdown/swxpdm-setup.md)|
 |SOLIDWORKS|CAD|single-directional|:white_check_mark:|Documentation [(in progress)](swx/readme.md)|
+
    
    
