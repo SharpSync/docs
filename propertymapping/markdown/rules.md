@@ -217,9 +217,30 @@ Below is a comprehensive list of seach Property Mapping Rule. Expand the Table o
 #### Text evaluation
 ![Alt text](../images/ruleCellValueEval.PNG "Cell value evaluation")  
 Evaluates the cell value given the javascript expression. Available parameters:  
-* s (original value)
-* rowData (the existing row containing rowData.cells which is the accessors)  
+* s (display value)
+* rowData (the record containing the accessors data and additional metadata)
 
+Notes on `rowdata`:
+rowData is a object which contains the following noteworthy child items:
+* rowData.cells (each cell value without modification. This can include the altered values as set in import rules)
+* rowData.modifications (any modifications made by the user as at the time the rule is run)
+
+Special notes:
+
+Whenever you create a text evaluation rule that evaluates the value of _another cell_, you must take into consideration the modifications of the other cell. 
+
+e.g. if the accessor you're evaluating for is `myProperty1` and the condition is based on the value of accessor `myProperty2`, first check in your rule for the existance of `rowData.modifications.myProperty2`. If it exists, then use it, otherwise use `rowData.cells.myProperty2`. Example below
+
+```javascript
+// if the key exists in the object return its value, otherwise, return the value in the rowData.cells
+const myValue2 = "myProperty2" in rowData.modifications ? rowData.modifications.myProperty2 : rowData.cells.myProperty2;
+
+// now do something with the value you got above
+if ({conditionBasedOnMyValue2})
+  return { message: `the message you want to return` };
+```
+
+ 
 [Return to Top](#list-of-property-mapping-rules)  
 
 #### Maximum text length
