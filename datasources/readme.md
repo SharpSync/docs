@@ -24,6 +24,8 @@ Select an individual datasource to view the configuration setup for that source.
 |Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](onshape/markdown/onshape-setup.md)|
 |SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](swpdm/markdown/swxpdm-setup.md)|
 |SOLIDWORKS|CAD|single-directional|:white_check_mark:|Documentation [(in progress)](swx/readme.md)|
+|Inventor|CAD|single-directional|:white_check_mark:|(in progress)|
+
 
    
    
