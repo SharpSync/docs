@@ -24,7 +24,7 @@ Typically companies would employ a full time data entry person to manage the dat
 Important concepts:
 
 * [Getting started](getting_started.md)
-* [Datasources](datasources/datasources.md)
+* [Datasources](datasources/readme.md)
 * [Property mappings: Setup](propertymapping/markdown/propertymapping.md)
 * [Property mappings: Rules](propertymapping/markdown/rules.md)
 * [Subscriptions](subscriptions.md)
