@@ -23,7 +23,7 @@ Select an individual datasource to view the configuration setup for that source.
 |Odoo|ERP|bi-directional|:white_check_mark:|[Documentation](odoo/readme.md)|
 |Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](onshape/markdown/onshape-setup.md)|
 |SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](swpdm/markdown/swxpdm-setup.md)|
-|SOLIDWORKS|CAD|single-directional|:white_check_mark:|Documentation [(in progress)](swx/readme.md)|
+|SOLIDWORKS|CAD|single-directional|:white_check_mark:|[Documentation](swx/readme.md)|
 |Inventor|CAD|single-directional|:white_check_mark:|(in progress)|
 
 
