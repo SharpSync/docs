@@ -75,6 +75,10 @@ CSV (Comma Separated Values) files are utilized to import Bills of Materials (BO
 
 ### Setup the Property Mappings
 
+You can follow the instructions in the following link to setup your property mappings
+* [Property mappings: Setup](../../../propertymapping/readme.md)
+* Make sure you add the property `Quantity` as a property mapping and check its `Quantity Property` checkbox in the Property Mappings Settings panel.
+
 ### Configure the Addin
 
 After installing the Autodesk Inventor addin, you'll need to configure how it will generate BOMs.
