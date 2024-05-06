@@ -9,7 +9,7 @@ Steps involved in setting up NetSuite:
 Updating thumbnails in NetSuite requires the usage of an external restlet. The restlet used was developed by Tim Dietrich and is freely available at https://suiteapi.com. This is optional but highly recommended.
 
 Steps required:
-* Create a new folder in NetSuite
+* Create a new thumbnails folder in NetSuite
 * Navigate to latest version of  [SuiteAPI](https://suiteapi.com)
 * [Download](https://tdietrich-opensource.s3.amazonaws.com/suitescripts/SuiteAPI-v2022.1.zip) the SuiteApi zip file for the restlet
 * Install using the [instructions](https://suiteapi.com/documentation/) on the site <sup>**</sup>
@@ -38,6 +38,9 @@ With this last folder selected in the file cabinet, take note of the folder id i
 > https://`{companyId}`.app.netsuite.com/app/common/media/mediaitemfolders.nl?`folder=20149768`&whence=&cmid=...
   
 ## Upload SuiteApi
+
+If the previous page for the Suite API is unavailable - a copy can be found here: [Setting up Suite API](suite-api.md)
+
 If for some reason the website is unavailable, a copy of the Suite API zip file can be found here: [SuiteAPI-v2022.1.zip](SuiteApi.v2022.1.zip)
 Follow the steps in the SuiteApi setup 
 ## Setup OAuth
