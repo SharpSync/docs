@@ -1,5 +1,10 @@
 # Common scenarios
 
+*  [Setup a list of accounts to pick from for Income and Expense accounts](#setup-a-list-of-accounts-to-pick-from-for-income-and-expense-accounts)
+*  [Setting up accounts from a list](#setting-up-accounts-from-a-list)
+*  [Setting up a default value for income and expense accounts](#setting-up-a-default-value-for-income-and-expense-accounts)
+
+
 ## I want to setup a list of accounts to pick from for Income and Expense accounts
 This will require list selection from NetSuite. Use the following setup:
 
@@ -131,7 +136,7 @@ note2: The difference between a `list value selector` and an `object value selec
 
 note3: Should you want to change the selector string or any of the tokens being selected, then you have to first remove the list name, save, change the tokens, then enter the list name again. The selection is generated at the time of loading the list from NetSuite, and since this can be a data intensive process, SharpSync doesn't store all the details all the time, it only stores the specified details.
 
-## I want to populate a default value for my account values
+## Setting up a default value for income and expense accounts
 
 To setup a default value, you can use a rule such as this
 
