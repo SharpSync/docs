@@ -25,6 +25,6 @@ Important concepts:
 
 * [Getting started](getting_started.md)
 * [Datasources](datasources/readme.md)
-* [Property mappings: Setup](propertymapping/markdown/propertymapping.md)
+* [Property mappings: Setup](propertymapping/readme.md)
 * [Property mappings: Rules](propertymapping/markdown/rules.md)
 * [Subscriptions](subscriptions.md)
