@@ -1,4 +1,4 @@
-# Property Mapping  
+# Property Mappings
 <details open>
     <summary>Table of Contents</summary>
     <blockquote>
@@ -11,9 +11,20 @@
 </blockquote>
 </details>
 
+## Property Mappings
 !["Property Mapping"](images/PropertyMapping.png)  
-Property Mapping defines the way BOM data is displayed in SharpSync. Property Mappings can display a variety of CAD information including (but not limited to) BOM columns, Part or Assembly properties, Configurations, or CAD model data. SharpSync has built-in rules and settings for each property mapping. These rules and settings are used to help codify, standardize, and push changes to the selected datasources.
 
+### Overview
+Property Mappings defines the BOM columns displayed in SharpSync. Property Mappings can display a variety of information including, but not limited to:
+
+* BOM columns,
+* Part or Assembly custom metadata information,
+* Configuration information (such as name or configuration property)
+* CAD model data captured in custom properties (or metadata)
+* Generated values based on metadata (if rules are setup)
+
+SharpSync has built-in rules and settings for each property mapping. These rules and settings are used to help codify, standardize, and push changes to the selected datasources.
+See also [Rules](markdown/rules.md)
 ## Instructions
 ### Adding Property Mappings
 1. On the Property Mapping page, select the Property you wish to map to the BOM.	
