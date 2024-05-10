@@ -28,4 +28,4 @@ Select an individual datasource to view the configuration setup for that source.
 |MS Dynamics|ERP|bi-directional|[In progress]|[Documentation](ms-dynamics/readme.md)|
 
    
-   
+See also [Troubleshooting](troubleshooting_datasources.md)
