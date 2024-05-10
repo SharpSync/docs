@@ -11,7 +11,7 @@ Steps involved in setting up NetSuite:
 * [Setup OAuth](#setup-oauth) - gives you permissions to upload files +  `clientId` and `clientSecret`
 * [Setup restlet for uploading thumbnails (SuiteApi)](#setup-restlet-for-uploading-thumbnails-suiteapi) - gives you the `scriptId`
 * [Setup an upload folder](#setup-an-upload-folder) - gives you the `folderId`
-* [Putting it all together](#putting-it-all-together-setup-the-datasource) - configuring the datasource in SharpSync
+* [Putting it all together](#putting-it-all-together---setup-the-datasource) - configuring the datasource in SharpSync
 
 <hr />
 
