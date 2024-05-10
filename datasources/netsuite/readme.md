@@ -1,8 +1,12 @@
 # NetSuite
 NetSuite is an ERP from Oracle and support OAuth integration.
 
-See also [Common Scenarios](markdown/common-scenarios.md)
+* [Setup Item Type mapping](#setup-item-type-mapping)
+* [Setting up accounts from a list](#setting-up-accounts-from-a-list)
+* See also [Common Scenarios](markdown/common-scenarios.md)
+
 ## Setup Item Type mapping 
+
 At least one property mapping for NetSuite _must_ be set as an item type mapping. You can leave the Netsuite mapping as _(Unmapped)_ and invisible, but the mapping must exist.
 Typically you'd want to set this as 'prefer NetSuite value' as well, but that's optional.
 
