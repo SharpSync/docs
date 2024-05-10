@@ -4,7 +4,7 @@
 
 Sometimes the following error might occur onscreen when attempting to show BOM information
 
-![BOM contains duplicate rows and cannot be displayed](images/duplicate_rows_error.png)
+![BOM contains duplicate rows and cannot be displayed](images/bom_contains_duplicate_rows_error.png)
 
 The reason this error is shown is because there are components with duplicate paths.
 Duplicate paths cause problems such as incorrect quantities or duplicate entries in the destination system and are therefore blocked on a UI level.
