@@ -10,7 +10,7 @@ NetSuite is an ERP from Oracle and support OAuth integration.
 
 While not strictly necessary, it is recommended to setup a thumbnails folder in NetSuite. This lets you generate an image preview for a file in NetSuite.
 
-See [Setup thumbnail folder in NetSuite](markdown/netsuite-setup_thumbnail_folder.md)
+See [Setup thumbnail folder in NetSuite](markdown/netsuite_setup_thumbnail_folder.md)
 
 ## Setup Item Type mapping 
 
