@@ -4,6 +4,7 @@
 *  [Setting up accounts from a list](#setting-up-accounts-from-a-list)
 *  [Setting up a default value for income and expense accounts](#setting-up-a-default-value-for-income-and-expense-accounts)
 *  [Discovering property (accessor) names](#discovering-property-(accessor)-names)
+*  [Concurrency limits](#concurrency-limits)
 
 
 ## I want to setup a list of accounts to pick from for Income and Expense accounts
@@ -228,3 +229,18 @@ From the example response above we can get accessor names to be shown in SharpSy
 
 In SharpSync you're then able to select accessors from this list. Reminder that an accessor is just a property on a type. So `assetAccount` is an accessor (the data we're accessing) or property on `InventoryItem`
  
+## Concurrency limits.
+
+In NetSuite you can review the concurrency limits and the performance of a RESTlet using the `Setup > Other Setup > Integration Governance` section.
+Concurrency of requests are monitored in NetSuite and may be subject to rejection if the limit is exceeded
+
+or 
+
+> https://{your-account-id}.app.netsuite.com/app/webservices/governance/governance.nl?whence=
+
+* Account Concurrency limit - Specific account limit based on service tier and license count
+* Peak concurrency - Max requests received in 1 moment in the last 30 days
+* Rejected requests - Requests exceeding the concurrency limit in the last 30 days
+* Total Requests - Number of requests for restlets and services in the last 30 days.
+* Rejected Requests Ratio - Ratio of rejected requests - if it exceeds 1% then concurrency might be the root cause
+  
