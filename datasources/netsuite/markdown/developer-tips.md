@@ -1,4 +1,4 @@
-# Developer + Integration Tips
+# Integration Tips
 
 ## Enable internal IDs
 
