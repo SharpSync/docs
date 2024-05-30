@@ -2,6 +2,7 @@
 
 *  [Concurrency limits](#concurrency-limits)
 *  [Thumbnail uploads fail with errors](#thumbnail-uploads-fail-with-errors)
+*  [Error running script](#error-running-script)
 
 ## Concurrency limits.
 
@@ -27,3 +28,16 @@ This is typically because the user permissions is insufficient to upload documen
 
 This message is also typically followed by
 >Invalid login attempt. For more details, see the Login Audit Trail in the NetSuite UI at Setup > Users/Roles > User Management > View Login Audit Trail.
+
+## Error running script
+
+Should you get the below error despite the fact that the code is correct, make sure the the name of the script file has a `.js` at the end
+
+```javascript
+{
+    "error": {
+        "code": "MODULE_DOES_NOT_EXIST",
+        "message": "{\"type\":\"error.SuiteScriptModuleLoaderError\",\"name\":\"MODULE_DOES_NOT_EXIST\",\"message\":\"Module does not exist: /SuiteScripts/SharpSync/sharpsync-item-create.js\",\"stack\":[]}"
+    }
+}
+```
