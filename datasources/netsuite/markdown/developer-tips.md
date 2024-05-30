@@ -14,3 +14,5 @@ You can view the source of the SuiteScript API by navigating to
 > Setup > Customization > Scripts > {your script} > View > More (top right) > SuiteScript API
 
 This lists all the functions available to you when developing your scripts
+
+![SuiteScript Source](../images/developer-access-to-suite-api.png)
