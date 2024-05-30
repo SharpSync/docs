@@ -1,5 +1,9 @@
 # NetSuite OAuth Setup
 
+ * [Create a new integration record](#create-a-new-integration-record)
+ * [Permissions](#permissions)
+ * [Scopes](#scopes)
+
 NOTES: 
 
 1. In the setup steps below, the value of `{{netsuite-api}}` takes the form
@@ -18,6 +22,53 @@ NOTES:
   * Rest Web Services
 * Get the consumer key (clientId) and consumer secret (client secret) - this will be used later.
 
+## Step: Permissions
+
+   Permissions Required for NetSuite Integration role
+
+ ### Under Setup -> Records Catalogue 
+ Search for a record you need, then click on the "SuiteScript and REST Query API"
+
+ Navigate to the role you want to assign the permissions to, and add the following permissions:
+  
+ > Setup > Roles > Manage Roles > Developer
+(Or whichever role you want to assign the permissions to)
+ 
+
+| Section                    | Functionality                  | Access |
+|----------------------------|--------------------------------|--------|
+| Permissions > Transactions | Audit Trail                    | View   |
+| Permissions > Transactions | Find Transaction               | View   |
+| Permissions > Transactions | Receive Inventory              | View   |
+| Permissions > Transactions | Sales Order                    | View   |
+| Permissions > Reports      | SuiteAnalytics Workbook        | Edit   |
+| Permissions > Lists        | Accounts                       | View   |
+| Permissions > Lists        | Address list in Search         | View   |
+| Permissions > Lists        | Documents and Files            | Full   |
+| Permissions > Lists        | Employee Record                | View   |
+| Permissions > Lists        | Items                          | Full   |
+| Permissions > Lists        | Perform Search                 | Full   |
+| Permissions > Lists        | Manufacturing Routing          | Full   |
+| Permissions > Lists        | Vendors                        | View   |
+| Permissions > Setup        | Allows JS / HTML uploads       | Full   |
+| Permissions > Setup        | Custom Item fields             | Full   |
+| Permissions > Setup        | Custom Number Item fields      | Full   |
+| Permissions > Setup        | Custom Lists                   | Full   |
+| Permissions > Setup        | Custom Sublist                 | Full   |
+| Permissions > Setup        | Custom Sublists                | Full   |
+| Permissions > Setup        | Login using Access Tokens      | Full   |
+| Permissions > Setup        | Login using OAuth 2.0 Tokens   | Full   |
+| Permissions > Setup        | REST Web Services              | Full   |
+| Permissions > Setup        | SuiteScript                    | Full   |
+| Permissions > Setup        | SuiteApp Deployment            | Full   |
+| Permissions > Setup        | View Login Audit Trail         | Full   |
+| Forms > Item               | Group/Kit/Assembly             | Enabled|
+| Forms > Item               | Inventory Part                 | Enabled|
+| Forms > Item               | Non-Inventory Part             | Enabled|
+| Forms > Inventory Detail   | Inventory Detail               | Enabled|
+| Forms > Other record       | Item Location                  | Enabled|
+| Forms > Other record       | Manufacturing Routing          | Enabled|
+  
 ## Step: Scopes
 
 NetSuite requires that the following scopes are enabled for the OAuth connection to work:
