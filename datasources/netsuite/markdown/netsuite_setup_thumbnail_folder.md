@@ -40,7 +40,8 @@ Steps required:
 * Create a new thumbnails folder in NetSuite
 * Setup the datasource to point to the new restlet
 
-See [Setup restlet for uploading thumbnails (SuiteApi)](suite_api_setup.md)
+See [Setup restlet for uploading thumbnails (SuiteApi)](suite-api.md)
+Original source [Suite API Setup](suite_api_setup.md)
 
 <hr />
 
