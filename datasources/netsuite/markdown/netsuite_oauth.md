@@ -44,11 +44,20 @@ NOTES:
 | Permissions > Reports      | SuiteAnalytics Workbook        | Edit   |
 | Permissions > Lists        | Accounts                       | View   |
 | Permissions > Lists        | Address list in Search         | View   |
+| Permissions > Lists        | Bill of Materials              | Full   |
+| Permissions > Lists        | Cost of oGoods Sold Registers  | View   |
+| Permissions > Lists        | Departments                    | View   |
 | Permissions > Lists        | Documents and Files            | Full   |
 | Permissions > Lists        | Employee Record                | View   |
+| Permissions > Lists        | Employees                      | View   |
 | Permissions > Lists        | Items                          | Full   |
-| Permissions > Lists        | Perform Search                 | Full   |
+| Permissions > Lists        | Locations                      | Full   |
 | Permissions > Lists        | Manufacturing Routing          | Full   |
+| Permissions > Lists        | Perform Search                 | Full   |
+| Permissions > Lists        | Product Classes                | Full   |
+| Permissions > Lists        | Subsidiaries                   | Full   |
+| Permissions > Lists        | Tax Schedules                  | View   |
+| Permissions > Lists        | Units                          | View   |
 | Permissions > Lists        | Vendors                        | View   |
 | Permissions > Setup        | Allows JS / HTML uploads       | Full   |
 | Permissions > Setup        | Custom Item fields             | Full   |
