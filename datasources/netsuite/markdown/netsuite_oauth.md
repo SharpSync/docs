@@ -71,6 +71,7 @@ NOTES:
 | Permissions > Setup        | SuiteScript                    | Full   |
 | Permissions > Setup        | SuiteApp Deployment            | Full   |
 | Permissions > Setup        | View Login Audit Trail         | Full   |
+| Permissions > Reports      | SuiteAnalytics Workbook        | Edit   |
 | Forms > Item               | Group/Kit/Assembly             | Enabled|
 | Forms > Item               | Inventory Part                 | Enabled|
 | Forms > Item               | Non-Inventory Part             | Enabled|
