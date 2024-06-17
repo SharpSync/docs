@@ -1,9 +1,10 @@
 # Common scenarios
 
-*  [Setup a list of accounts to pick from for Income and Expense accounts](#setup-a-list-of-accounts-to-pick-from-for-income-and-expense-accounts)
+*  [Setup a list of accounts to pick from for Income and Expense accounts](#i-want-to-setup-a-list-of-accounts-to-pick-from-for-income-and-expense-accounts)
 *  [Setting up accounts from a list](#setting-up-accounts-from-a-list)
 *  [Setting up a default value for income and expense accounts](#setting-up-a-default-value-for-income-and-expense-accounts)
-*  [Discovering property (accessor) names](#discovering-property-(accessor)-names)
+*  [Set all new assemblies as isPhantom with rulecheck + evaluation](#set-all-new-assemblies-as-isphantom-with-rulecheck--evaluation)
+*  [Discovering property (accessor) names](#discovering-property-accessor-names)
 
 
 ## I want to setup a list of accounts to pick from for Income and Expense accounts
@@ -155,6 +156,36 @@ Value:
 
 ```javascript
 if (rowData.cells.expenseAccount == rowData.cells.incomeAccount) return { 'status': 'failure' }
+```
+## Set all new assemblies as isPhantom with rulecheck + evaluation
+
+This setup will cause all new assemblies in NetSuite to be marked as Phantom. 
+Onscreen you will also see any new assemblies (not marked as Phantom) showing with an error.
+
+### New Rule
+Rule: `Text manipulation` (Import)
+
+Value:
+```Javascript
+const isNewAssemblyRow = rowData.isAssemblyRow && rowData.isMissingInSecondaryDatasource == true && rowData.isFoundInSecondaryDatasource == false;
+
+if (isNewAssemblyRow)
+  { return true; }
+else
+  { return rowData.cells.phantomYN || rowData.differences.phantomYN || true; }
+```
+
+### New Rule
+Rule: `Text evaluation` (Display Rule)
+Value:
+
+```Javascript
+const isNewAssemblyRow = rowData.isAssemblyRow && rowData.isMissingInSecondaryDatasource == true && rowData.isFoundInSecondaryDatasource == false;
+
+if (isNewAssemblyRow && (rowData.cells.phantomYN === "false" || (`phantomYN` in rowData.modifications === true && rowData.modifications.phantomYN === false)))
+{
+  return { status: 'failure', message: `New Assemblies must be set to isPhantom=true` }
+}
 ```
 
 ## Discovering property (accessor) names
