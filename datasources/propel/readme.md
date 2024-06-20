@@ -11,10 +11,10 @@ To configure a Propel intance you need:
     * Refresh Token URL: `https://{propel-instance}.my.salesforce.com/services/oauth2/token`
     * Scopes: `full api web refresh_token offline_access`
 
-## Setup steps
+## Setup Propel Datasource
 
 * Login on the application
-* Navigate to data sources
+* Navigate to `Data Sources`
 * On the right > Select Propel > Add
 * Click the configure button
 * On the first tab, enter the OAuth credentials
@@ -22,3 +22,7 @@ To configure a Propel intance you need:
 * Click the `Save` button
 * Click the `Authenticate` button
 
+## Setup Propel Property Mappings
+
+* Navigate to `Property Mapping`
+* After creating/adding your property mappings from your primary/CAD source, select the corresponding Propel property from the drop down selection boxes.
