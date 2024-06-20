@@ -31,5 +31,5 @@ To configure a Propel intance you need:
 
 In the current implementation of the SharpSync Propel Module:
 * New Propel items are created with at least a Name and Category prior to exporting to SharpSync.
-* Existing Propel item Names or Part Numbers (Propel property name: "Name") cannot be edited.
-* Existing Propel item Categories (Propel property name: "PDLM__Category__c") cannot be edited.
+* Existing Propel item Names or Part Numbers (Propel property name: `"Name"`) cannot be edited.
+* Existing Propel item Categories (Propel property name: `"PDLM__Category__c"`) cannot be edited.
