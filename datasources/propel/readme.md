@@ -5,7 +5,7 @@
 Propel is a cloud ERP available from salesforce. Please also see [(https://www.propelsoftware.com/)](https://www.propelsoftware.com/)
 
 To configure a Propel intance you need:
-* The base API path of your Propel cloud instance which is of the form: `https://{propel-instance}.my.salesforce.com/services`
+* The base API path of your Propel cloud instance which is of the form: `https://{propel-instance}.my.salesforce.com`
 * Propel uses the OAuth 2.0 protocol to authenticate, therefore, a code grant url, a refresh token url and the oauth scopes need to be supplied, they are of the form:
     * Code Grant URL: `https://{propel-instance}.my.salesforce.com/services/oauth2/authorize`
     * Refresh Token URL: `https://{propel-instance}.my.salesforce.com/services/oauth2/token`
