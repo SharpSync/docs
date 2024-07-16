@@ -18,7 +18,7 @@ To configure a Propel intance you need:
 * On the right > Select Propel > Add
 * Click the configure button
 * On the first tab, enter the OAuth credentials
-* On the second tab (BOM Configuration)
+* On the second tab (BOM Configuration), select the preferred Bom children selection option
 * Click the `Save` button
 * Click the `Authenticate` button
 
@@ -30,6 +30,6 @@ To configure a Propel intance you need:
 ## Notes:
 
 In the current implementation of the SharpSync Propel Module:
-* New Propel items are created with at least a Name and Category prior to exporting to SharpSync.
+* New Propel items are are already created with at least a Name and Category prior to exporting to SharpSync.
 * Existing Propel item Names or Part Numbers (Propel property name: `"Name"`) cannot be edited.
 * Existing Propel item Categories (Propel property name: `"PDLM__Category__c"`) cannot be edited.
