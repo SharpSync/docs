@@ -17,8 +17,8 @@ To configure a Propel intance you need:
 * Navigate to `Data Sources`
 * On the right > Select Propel > Add
 * Click the configure button
-* On the first tab, enter the OAuth credentials
-* On the second tab (BOM Configuration), select the preferred Bom children selection option
+* On the first tab `Authentication`, select the `OAuth 2.0` authentication type then enter the OAuth credentials
+* On the second tab `BOM Configuration`, select the preferred BOM child revisions selection option
 * Click the `Save` button
 * Click the `Authenticate` button
 
