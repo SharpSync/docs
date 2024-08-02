@@ -12,7 +12,7 @@ Out of the box, the Netsuite integration supports the following features:
 |Component thumbnails|||:white_check_mark:|
 |Advanced BOMs|:white_check_mark:|:white_check_mark:|:white_check_mark:|[in testing (development completed)]|
 |File derivative transfers (e.g. STEP, DXF)|||[In progress]|
-|Routings|||[marked for development]|
+|Routings|||[on roadmap]|
 
 
 ## Item level features
