@@ -38,6 +38,14 @@ Follow the steps below to begin importing data into SharpSync using CSV files.
 The primary component identifier is the identifier that is unique across data source domains. If this is `Number` or `No` or `PartNumber` then the assumption is this property exists in both SolidWorks and your ERP solution.
 (NOTE: It does not have to be called `Number`. It can be called anything as long as it exists as a SolidWorks custom property. If it does not exist, the file name will be used as the fallback value)
 
+In the example below I've setup 
+* Number 
+* Description
+* Revision
+* Qty (Settings > Is Quantity property must be enabled)
+
+![alt text](images/swx-property-mappings.png)
+
 ### Configure the Addin
 
 After installing the SOLIDWORKS addin, you'll need to configure how it will generate BOMs. Make sure your Solidworks files have the required properties. (Flattened BOMs are not supported)
@@ -57,4 +65,20 @@ Pushing data from SolidWorks to SharpSync is easy and straight forward. To push 
 * Open a part or assembly file
 * Make sure you've logged in to SharpSync (Click the login button at least once)
 * Click the Push BOM button
+* The active configuration of the assembly is used to display data in SharpSync
 
+![Push the BOM from SolidWorks](images/sw-export-bom.png)
+
+* The configuration for the assembly is loaded in SharpSync.
+* The version will always be shown as `current`.
+* If you want to use information from different versions, the addin for `SolidWorks PDM Professional` is recommended
+
+![Landing page in SharpSync](images/swx-landing-page.png)
+
+In the example below, the hierarchy in SharpSync is displayed using the mapped `Number` property mapped in SharpSync.
+
+Notice that the component names are taked from the 'Number' primary component identifier 
+
+![Landing page in SharpSync](images/swx-component-hierarchy.png)
+
+You're now ready to submit this to your ERP.
