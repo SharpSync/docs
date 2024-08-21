@@ -1,6 +1,8 @@
 # SolidWorks Addin Setup
 
-SWX  files are utilized to import Bills of Materials (BOMs) from desktop-based CAD software into SharpSync. Follow the steps below to begin importing data into SharpSync using CSV files.
+SolidWorks files (.sldasm, .sldprt) are utilized to import Bills of Materials (BOMs) from desktop-based CAD software into SharpSync. 
+(Drawing files' BOM's are not currently supported, but if demand is high enough we will consider it)
+Follow the steps below to begin importing data into SharpSync using CSV files.
 
 
 * [Prerequisites](#prerequisites)
