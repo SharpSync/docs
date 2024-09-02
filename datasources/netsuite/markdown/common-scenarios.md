@@ -5,6 +5,7 @@
 *  [Setting up a default value for income and expense accounts](#setting-up-a-default-value-for-income-and-expense-accounts)
 *  [Set all new assemblies as isPhantom with rulecheck + evaluation](#set-all-new-assemblies-as-isphantom-with-rulecheck--evaluation)
 *  [Discovering property (accessor) names](#discovering-property-accessor-names)
+*  [Setup a 'where used' link](#setup-a-where-used-link)
 
 
 ## I want to setup a list of accounts to pick from for Income and Expense accounts
@@ -267,3 +268,19 @@ From the example response above we can get accessor names to be shown in SharpSy
 
 In SharpSync you're then able to select accessors from this list. Reminder that an accessor is just a property on a type. So `assetAccount` is an accessor (the data we're accessing) or property on `InventoryItem`
   
+## Setup a 'where used' link
+
+In NetSuite it is often useful to know which assemblies or BOM revisions are using a specific component.
+
+Create a new import rule
+### New Rule
+Rule: `Text manipulation` (Import Rule)
+Value: 
+```Javascript
+return 'https://[companyId].app.netsuite.com/core/pages/itemchildrecords.nl?id=' + rowData.secondarySourceComponentId + '&t=InvtItem%05ProjectCostCategory&rectype=-10';
+```
+Property mapping render type: Url
+Enable: Prefer NetSuite value (checked)
+
+*Result*
+A new link is display which you can click in the BOM. This link will open a new tab showing all the inventory records making use of this component / assembly
