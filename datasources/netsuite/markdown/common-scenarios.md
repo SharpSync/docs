@@ -270,12 +270,15 @@ In SharpSync you're then able to select accessors from this list. Reminder that 
   
 ## Setup a 'where used' link
 
-In NetSuite it is often useful to know which assemblies or BOM revisions are using a specific component.
+In NetSuite it is often useful to know which assemblies or BOM revisions are using a specific component. We'll make use of the rowData object + secondarySourceComponentId (The id of the item in NetSuite) to generate the link.
 
 Create a new import rule
+
 ### New Rule
+
 Rule: `Text manipulation` (Import Rule)
-Value: 
+
+Value: `Javascript`
 ```Javascript
 return 'https://[companyId].app.netsuite.com/core/pages/itemchildrecords.nl?id=' + rowData.secondarySourceComponentId + '&t=InvtItem%05ProjectCostCategory&rectype=-10';
 ```
