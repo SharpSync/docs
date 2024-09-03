@@ -24,7 +24,7 @@ Select an individual datasource to view the configuration setup for that source.
 |NetSuite|ERP|bi-directional|:white_check_mark:|[Documentation](netsuite/readme.md)|
 |Odoo|ERP|bi-directional|:white_check_mark:|[Documentation](odoo/readme.md)|
 |Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](onshape/markdown/onshape-setup.md)|
-|PropelPLM|PDM|bi-directional|:white_check_mark:|[Documentation]([onshape/markdown/onshape-setup.md](propel/readme.md))|
+|PropelPLM|PDM|bi-directional|:white_check_mark:|[Documentation](propel/readme.md)|
 |SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](swpdm/markdown/swxpdm-setup.md)|
 |SOLIDWORKS|CAD|single-directional|:white_check_mark:|[Documentation](swx/readme.md)|
 
