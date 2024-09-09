@@ -11,7 +11,7 @@ NOTES:
 > `https://{companyId}.suitetalk.api.netsuite.com`
 
 2. In the setup steps below, the value of `{companyId}` is the numerical value of your company id
-
+3. You need the permission Permissions > Setup > Access Token Management to make `Integration Record` changes
 ## Step: Create a new integration record
 
 * Click Setup > Integration > Manage Integrations > New
