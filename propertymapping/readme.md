@@ -15,7 +15,18 @@
 !["Property Mapping"](images/PropertyMapping.png)  
 
 ### Overview
-Property Mappings defines the BOM columns displayed in SharpSync. Property Mappings can display a variety of information including, but not limited to:
+Property Mappings defines the BOM columns displayed in SharpSync. You can think of them as the mapping of meta data from one source to another source, or as the mapping of custom properties from one source to another source. 
+
+#### Terms
+| Term | Description |
+| -- | -- |
+| Property mapping | The entire mapping and all its settings |
+| Accessor | The Internal name as SharpSync refers to it | 
+| Primary accessor (or Datasource property) | The name of the property as at the primary source (typically a CAD / PDM / PLM System) |
+| Secondary accessor (or Datasource property) | The name of the property as at the secondary source (typically an online ERP System) |
+
+
+Property Mappings can display a variety of information including, but not limited to:
 
 * BOM columns,
 * Part or Assembly custom metadata information,
