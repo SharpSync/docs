@@ -24,7 +24,7 @@ Property Mappings defines the BOM columns displayed in SharpSync. Property Mappi
 * Generated values based on metadata (if rules are setup)
 
 SharpSync has built-in rules and settings for each property mapping. These rules and settings are used to help codify, standardize, and push changes to the selected datasources.
-See also [Rules](markdown/rules.md)
+See also  [Property mapping rules](markdown/readme.md)
 ## Instructions
 ### Adding Property Mappings
 1. On the Property Mapping page, select the Property you wish to map to the BOM.	
@@ -62,7 +62,7 @@ See also [Rules](markdown/rules.md)
 ![Alt text](images/PropertyMapping4.png "Rendering")
 
 ### Configure Rules
-Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For the list of Rules with explanations for each, click the following link: [List of Property Mapping Rules](/propertymapping/markdown/rules.md)    
+Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For the list of Rules with explanations for each, click the following link:  [Property mapping rules](markdown/readme.md)
 
 ![Alt text](images/PropertyMapping5.png "Rules Module")  
 1. Select the rule desired. Be sure to select the type of rule that best matches the data type. (Text, Numeric, JavaScript expression, Json value)
@@ -144,6 +144,8 @@ So my values specified in the Object selection list would be:
 * Rendering type: `Object list`
 * List Value Selector: `id`
 * List Value Display Selector: `displayName`
+
+Make sure to also read [Property mapping rules](markdown/readme.md)
 
 ## Effective troubleshooting
 Property mappings and their associated rules can get complicated based on the number of rules you create and the data being returned.
