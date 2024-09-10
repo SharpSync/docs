@@ -18,6 +18,9 @@
 Property Mappings defines the BOM columns displayed in SharpSync. You can think of them as the mapping of meta data from one source to another source, or as the mapping of custom properties from one source to another source. 
 
 #### Terms
+
+Before we go to deep, let's define some terms: 
+
 | Term | Description |
 | -- | -- |
 | Property mapping | The entire mapping and all its settings |
