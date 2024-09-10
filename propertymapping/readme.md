@@ -60,18 +60,70 @@ See also  [Property mapping rules](markdown/readme.md)
 
 ![Alt text](images/PropertyMapping3.png "Select Source")
 #### Rendering
-3. Rendering defines how the Property Mapping is viewed and accessed in the BOM.
-    * Rendering Types change the display of the Property Mapping:
-        * Checkbox - Toggle checkbox
-        * FreeText - Enter text
-        * List - Select from a list. Enter the list set in the textbox and separate each entry with a Vertical Pipe (see example below)
-        * Url - Web address hyperlink
-    * The remaining checkboxes affect the columns' display and interface:
-        * Enabled - When unchecked the column will not be visible in the BOM nor any related mapping rule will be processed
-        * Read Only - When checked, BOM column will not be editable
-        * Show in Totals - The total for that column will be shown in the Totals row at the bottom of the BOM
-        * Visible - When unchecked, column will not be visible, but user can unhide from the BOM column context menu
+
+Rendering defines how and accessor / mapping of a value is viewed and accessed in the Bill of Materials view.
+
+Before we go to deep, let's define some terms: 
+
+| Term | Description |
+| -- | -- |
+| Render type | How the user may interact with the cell |
+| Accessor / Property | The internal name as SharpSync refers to it | 
+| Options | An optional configuration option affecting the behavior of a column when the Bill Of materials is displayed |
+
+##### Rendering Types 
+
+Changes the behaviour display of the Property Mapping when the Bill of Materials shows on-screen:
+
+| Type | Description | Configuration |
+| -- | -- | -- |
+| Checkbox | User interacts via clicking only, will be true if the value is True, 1, Y or Yes. | None |
+| Free text | User interacts by clicking, then typing text. You may also paste text  |  None |
+| List | User interacts by clicking, then selecting text. You may also paste text  | Enter a list of values in the textbox and separate each entry with a vertical Pipe (see example below) | None |
+| Object List | User interacts by clicking, then selecting text. You may also paste text. <br/> <br/> An object list displays a value (`display selector` - that which is displayed), but when you _select that value_, a different value is used as the value sent to the source (`value selector` - the value selected as the update value) (see example below)  | Enter a list of values in the textbox in the javascript array form <p/> <p/>`[ {}, {} ]` <p /> and separate each entry with a comma (see example below)  
+| Url | Displays any text as a url (opens in a new tab when clicked) | None |
+     
+##### Rendering options    
+
+* The remaining checkboxes affect the columns' display and interface:
+    * Enabled - When unchecked the column will not be visible in the BOM nor any related mapping rule will be processed
+    * Read Only - When checked, BOM column will not be editable
+    * Show in Totals - The total for that column will be shown in the Totals row at the bottom of the BOM
+    * Visible - When unchecked, column will not be visible, but user can unhide from the BOM column context menu
+
 4. Click Save to finish.  
+
+#### Setting Examples
+
+Example: Custom list of items to select from using `Object List`
+
+* Rendering type: `Object List`
+* Value selector: `id`
+* Display selector: `refName`
+* List items: 
+     ```json
+     [
+        {"id":"182","refName":"My Assembly Form"},
+        {"id":"187","refName":"My Item Group Form"},
+        {"id":"143","refName":"My Non-Inventory Part Form"},
+        {"id":"181","refName":"My Inventory Part Form"}
+    ]
+     ```
+
+Which, when displayed in the UI, looks like this 
+
+![Alt text](images/objectList.png "Object list")
+
+
+Example: Custom list of items to select from using `List`
+
+* Rendering type: `List`
+* List items: 
+     ```json
+      Plate|Frame|Connector
+     ```
+
+Which, when displayed in the UI, looks like this 
 
 ![Alt text](images/PropertyMapping4.png "Rendering")
 
