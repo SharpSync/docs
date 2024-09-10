@@ -114,6 +114,10 @@ Which, when displayed in the UI, looks like this
 
 ![Alt text](images/objectList.png "Object list")
 
+Given the list above, if the selections would result in the following:
+* Selecting `My assembly Form` would result in a value of `182`
+* Selecting `My Item Group Form` would result in a value of `187`
+
 
 Example: Custom list of items to select from using `List`
 
