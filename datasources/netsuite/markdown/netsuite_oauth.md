@@ -16,7 +16,7 @@ NOTES:
 
 For this to happen you need the permissions 
 * Lists > Integration application and
-* Setup > Integration Application permissions 
+* Setup > Integration Application 
 
 To create a new integration record do the following:
 
