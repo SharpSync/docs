@@ -2,7 +2,7 @@
 NetSuite is an ERP from Oracle and support OAuth integration.
 See also our [feature matrix for Netsuite](markdown/feature_matrix_netsuite.md)
 
-* [Setup OAuth + permissions](markdown/netsuite_oauth.md)
+* [Permissions + OAuth](markdown/netsuite_oauth.md)
 * [Setup Thumbnail Folder](#setup-thumbnail-folder) (not necessary but recommended)
 * [Setup Item Type mapping](#setup-item-type-mapping)
 * [Setting up accounts from a list](#setting-up-accounts-from-a-list)
