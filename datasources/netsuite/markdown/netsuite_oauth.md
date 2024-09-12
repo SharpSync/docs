@@ -14,6 +14,12 @@ NOTES:
 3. You need the permission `Permissions > Setup > Access Token Management` to make `Integration Record` changes
 ## Step: Create a new integration record
 
+For this to happen you need the permissions 
+* Lists > Integration application and
+* Setup > Integration Application permissions 
+
+To create a new integration record do the following:
+
 * Click Setup > Integration > Manage Integrations > New
 * Enter a name for the integration
 * Check the boxes for:
@@ -22,9 +28,11 @@ NOTES:
   * Rest Web Services
 * Get the consumer key (clientId) and consumer secret (client secret) - this will be used later.
 
+Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
+
 ## Step: Permissions
 
-   Permissions Required for NetSuite Integration role
+  Permissions Required for NetSuite Integration role
 
  ### Under Setup -> Records Catalogue 
  Search for a record you need, then click on the "SuiteScript and REST Query API"
