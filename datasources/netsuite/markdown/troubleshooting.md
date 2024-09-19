@@ -3,6 +3,7 @@
 *  [Concurrency limits](#concurrency-limits)
 *  [Thumbnail uploads fail with errors](#thumbnail-uploads-fail-with-errors)
 *  [Error running script](#error-running-script)
+*  [Cannot update BOMs using incompatible subsidiaries](#current-limitation-cannot-update-bom-rows-with-incompatible-subsidiaries)
 
 ## Concurrency limits.
 
@@ -41,3 +42,14 @@ Should you get the below error despite the fact that the code is correct, make s
     }
 }
 ```
+
+## Current limitation: Cannot update bom rows with incompatible subsidiaries
+
+At the time of writing there is a limitation for advanced BOMs. The limitation only occurs when the subsidiary is incompatible with another subsidiary. To fix the issue:
+
+* All commponents (parts / assemblies) added to a BOM revision must have a compatible subsidiary as the inventory item (e.g. AssemblyItem / NonInventorResaleItem)
+* If it does not - you may see an error in the logs stating something along the lines of
+  > Error while accessing a resource. You have entered an Invalid Field Value 18099 for the following field: item.
+* If this is the case, locate the item using its Id e.g.
+> https://[customerId].app.netsuite.com/app/common/item/item.nl?id=18099
+* Make sure that the subsidiary matches that of the Bom to which it is being added.
