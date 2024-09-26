@@ -23,6 +23,13 @@ To configure an Odoo intance you need 4 things
 
 ![Configure Odoo](odoo-config-values.png "Register new Organization")
  
+## Property mappings
+After successfully authenticating with Odoo, navigate to the [property mappings](propertymapping/markdown/readme.md)
+The update should automatically trigger. If it does not, click the *Update* button
+
+The custom fields from Odoo has now succesfully been pulled into SharpSync.
+
+<span style='color:orange'>Take note!:</span> If you ever add new properties to Odoo, make sure to come back to the property mapping page and click the *Update* button again.
 
 ## Limitations at the time of writing
 
@@ -34,3 +41,6 @@ SharpSync requires the MRP module (mrp) at a minimum in order to support an Odoo
 This is because BOM information, more specifically the Quantities of individual items.
 
 Routings are not currently supported but we are working towards it
+
+## Extra information
+Please see [hosting options](datasources/odoo/hosting-options.md)
