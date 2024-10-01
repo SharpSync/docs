@@ -63,8 +63,9 @@ Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
 | Permissions > Lists        | Manufacturing Routing          | Full   |
 | Permissions > Lists        | Perform Search                 | Full   |
 | Permissions > Lists        | Product Classes                | Full   |
-| Permissions > Lists        | Subsidiaries                   | Full   |
+| Permissions > Lists        | Subsidiaries                   | View   |
 | Permissions > Lists        | Tax Schedules                  | View   |
+| Permissions > Lists        | Tax Records                    | View   |
 | Permissions > Lists        | Units                          | View   |
 | Permissions > Lists        | Vendors                        | View   |
 | Permissions > Setup        | Allows JS / HTML uploads       | Full   |
