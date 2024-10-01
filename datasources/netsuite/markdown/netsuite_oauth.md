@@ -1,7 +1,7 @@
 # NetSuite OAuth Setup
 
  * [Create a new integration record](#create-a-new-integration-record)
- * [Permissions](#permissions)
+ * [Permissions](#step-permissions)
  * [Scopes](#scopes)
 
 NOTES: 
