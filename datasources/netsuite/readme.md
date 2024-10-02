@@ -6,8 +6,11 @@ See also our [feature matrix for Netsuite](markdown/feature_matrix_netsuite.md)
 * [Setup Thumbnail Folder](#setup-thumbnail-folder) (not necessary but recommended)
 * [Setup Item Type mapping](#setup-item-type-mapping)
 * [Setting up accounts from a list](#setting-up-accounts-from-a-list)
-* See also [Common Scenarios](markdown/common-scenarios.md)
-* See also [Integration tips](markdown/developer-tips.md)
+* [Setting up advanced BOMs](markdown/advanced_boms.md)
+
+See also
+* [Common Scenarios](markdown/common-scenarios.md)
+* [Integration tips](markdown/developer-tips.md)
 
 ## Setup Thumbnail Folder
 
