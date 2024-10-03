@@ -8,6 +8,8 @@ The setup steps for SWPDM are as follows:
 * Configure the PDM client for the vault
 * Configure the PDM client for the logged in user
 
+See also [Configure the addin for testing](configure_addin_for_testing.md)
+
 ## Step: Add the SWPDM datasource
 
 * Login on SharpSync
