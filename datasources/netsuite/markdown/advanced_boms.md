@@ -14,6 +14,7 @@ To use serverside scripting to create items, in SharpSync do the following under
 
 * [Setup the server side script](#setup-the-server-side-script)
 * [Configure SharpSync to use server side scripting](#configure-sharpsync-to-use-server-side-scripting)
+* [Configure Routings](#configure-routings)
 
 ### Setup the server side script
 
@@ -62,7 +63,139 @@ Server side scripting allows SharpSync to configure fields in NetSuite that are 
 
 A custom script example follows below. You can certainly modify this to your heart's content, but the overarching details are captured here
 
-Before uploading to Netsuite, save the below contents to a `*.js` file
+Before uploading to Netsuite, save the below contents to a `*.js` file. See the example called [Example script](#example-script)
+
+## Configure Routings
+### Step 1: Manufacturing operation
+Routing in NetSuite, or in any manufacturing context, refers to a sequence of operations or steps that a product must go through during the manufacturing process. These steps can include various operations such as assembly, machining, laser and inspection.
+
+To configure routings for Netsuite in Sharpsync, add at least 1 property mapping with the setting enabled: 
+* `Is Manufacturing Operation` (let's call this `operationStep`)
+* AND 1 more mapping
+* `Is Manufacturing Step` (let's call this `manfacturingStep`)
+
+For the property `operationStep` use the settings:
+
+|Setting|Value|
+|--|--|
+|Primary source Property|(Unmapped)|
+|Secondary source Property|(Unmapped)|
+|Is Manufacturing Operation|Yes|
+|Is Manufacturing Step|No|
+|Rendering Type|Object List|
+|List Display Selector|name|
+|List Value Selector|value|
+|List Items|See [List items for Operation Step](#list-items-for-operation-step) and [Finding the location IDs](#finding-the-location-ids) |
+
+### List items for Operation Step
+```json 
+[{
+    "name" : "Location - Inhouse",
+    "value" : {
+        "name": "SharpSync routing via rest",
+        "subsidiary": { "id": 1 },
+        "location": { "items": [ { "id": 5 }] }
+    }
+},
+{
+    "name" : "Location - External",
+    "value" : {
+        "name": "SharpSync routing via rest",
+        "subsidiary": { "id": 1 },
+        "location": { "items": [ { "id": 6 }] }
+    }
+}
+]
+```
+
+### Finding the location IDs
+
+To find your available location ids you can simply select Financial > Lists > Locations, and then grab the `INTERNAL ID`.
+
+For the more technical users, use POSTMAN to authenticate, then
+
+> <span style='color:orange'> /GET</span> https://[companyId].suitetalk.api.netsuite.com/services/rest/record/v1/location
+
+and then followup with 
+
+> <span style='color:orange'> /GET</span> https://[companyId].suitetalk.api.netsuite.com/services/rest/record/v1/location/{id}
+
+
+### Step 2: Manufacturing operation steps
+Operation steps are groupings of steps performed on an operation. Say you have a default set of steps for an assembly. Let's say it's to be powdercoated, cut, galvanized, then you'll want setup the steps accordingly (let's call this `Set 1`):
+
+```json
+[
+  {
+    "setupTime": 5,
+    "operationName": "10 - Cutting",
+    "operationsequence": 10,
+    "manufacturingWorkCenter": { "id": 48 },
+    "manufacturingCostTemplate": { "id": 6 },
+    "runRate": 1
+  },
+  {
+    "setupTime": 5,
+    "operationName": "20 - Galvanize",
+    "operationsequence": 20,
+    "manufacturingWorkCenter": { "id": 48 },
+    "manufacturingCostTemplate": { "id": 6 },
+    "runRate": 1,
+  },
+  {
+    "setupTime": 5,
+    "operationName": "30 - Powdercoat",
+    "operationsequence": 30,
+    "manufacturingWorkCenter": { "id": 48 },
+    "manufacturingCostTemplate": { "id": 6 },
+    "runRate": 1,
+    "lagType" : { "id" : "qtypercent"},
+    "lagAmount" : 50
+  }
+]
+```
+However for a different type of assembly you might not require the cutting part as that is subcontracted out, so you have a different set of steps (Let's call this `Set 2`):
+
+```json
+[ 
+  {
+    "setupTime": 5,
+    "operationName": "10 - Galvanize",
+    "operationsequence": 10,
+    "manufacturingWorkCenter": { "id": 48 },
+    "manufacturingCostTemplate": { "id": 6 },
+    "runRate": 1,
+  },
+  {
+    "setupTime": 5,
+    "operationName": "20 - Powdercoat",
+    "operationsequence": 20,
+    "manufacturingWorkCenter": { "id": 48 },
+    "manufacturingCostTemplate": { "id": 6 },
+    "runRate": 1,
+  }
+]
+```
+
+You can group both of these "sets of steps" in an object list as follows:
+
+```json
+[
+  {
+    "name" : "Set 1 - Cut, Galv, Powder",
+    "value" : // "{paste the values from set  1}",
+  }
+  {
+    "name" : "Set 2 - Galv, Powder", 
+    "value" : // "{paste the values from set  1}",
+  }
+]
+```
+
+You then
+
+### Example script
+
 ```Javascript
 /*
   Created for SharpSync.net
