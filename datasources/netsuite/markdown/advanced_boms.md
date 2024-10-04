@@ -207,9 +207,7 @@ You then add this list as a list of values for a property mapping
 
 You can now save this mapping and load a bom to see the results in a BOM that was loaded
 
-![Selecting routing combinations](#../images/routing-selections.png)
-
-
+![Selecting routing combinations](../images/routing-selections.png)
 
 ### Example script
 
