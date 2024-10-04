@@ -122,32 +122,46 @@ and then followup with
 
 
 ### Step 2: Manufacturing operation steps
+
 Operation steps are groupings of steps performed on an operation. Say you have a default set of steps for an assembly. Let's say it's to be powdercoated, cut, galvanized, then you'll want setup the steps accordingly (let's call this <span style='color:orange'>Set 1</span>):
+
+You mileage may vary, but the default items required for setting up a routing are:
+* Sequence,
+* Name,
+* WorkCenter
+* CostTemplate
+* SetupTime
+* RunRate
+
+![Routing requirements](../images/default-routing-requirements.png)
+
+
+This leads us to a json array body that looks something like the following:
 
 ```json
 [
   {
-    "setupTime": 5,
-    "operationName": "10 - Cutting",
     "operationsequence": 10,
-    "manufacturingWorkCenter": { "id": 48 },
+    "operationName": "10 - Cutting",
     "manufacturingCostTemplate": { "id": 6 },
+    "manufacturingWorkCenter": { "id": 48 },
+    "setupTime": 5,
     "runRate": 1
   },
   {
-    "setupTime": 5,
     "operationName": "20 - Galvanize",
     "operationsequence": 20,
-    "manufacturingWorkCenter": { "id": 48 },
     "manufacturingCostTemplate": { "id": 6 },
+    "manufacturingWorkCenter": { "id": 48 },
+    "setupTime": 5,
     "runRate": 1
   },
   {
-    "setupTime": 5,
     "operationName": "30 - Powdercoat",
     "operationsequence": 30,
-    "manufacturingWorkCenter": { "id": 48 },
     "manufacturingCostTemplate": { "id": 6 },
+    "manufacturingWorkCenter": { "id": 48 },
+    "setupTime": 5,
     "runRate": 1,
     "lagType" : { "id" : "qtypercent"},
     "lagAmount" : 50
@@ -159,19 +173,19 @@ However for a different type of assembly you might not require the cutting part 
 ```json
 [ 
   {
-    "setupTime": 5,
     "operationName": "10 - Galvanize",
     "operationsequence": 10,
-    "manufacturingWorkCenter": { "id": 48 },
     "manufacturingCostTemplate": { "id": 6 },
+    "manufacturingWorkCenter": { "id": 48 },
+    "setupTime": 5,
     "runRate": 1
   },
   {
-    "setupTime": 5,
     "operationName": "20 - Powdercoat",
     "operationsequence": 20,
-    "manufacturingWorkCenter": { "id": 48 },
     "manufacturingCostTemplate": { "id": 6 },
+    "manufacturingWorkCenter": { "id": 48 },
+    "setupTime": 5,
     "runRate": 1
   }
 ]
@@ -192,7 +206,7 @@ You can group both of these "sets of steps" in an object list as follows:
 ]
 ```
 
-You then add this list as a list of values for a property mapping
+You then add this list as a list of values for a property mapping as follows:
 
 |Setting|Value|
 |--|--|
@@ -205,9 +219,11 @@ You then add this list as a list of values for a property mapping
 |List Value Selector|value|
   
 
-You can now save this mapping and load a bom to see the results in a BOM that was loaded
+You can now save this mapping and load a bom to see the results in a BOM that was loaded.
 
 ![Selecting routing combinations](../images/routing-selections.png)
+
+Take note that there are some limitations imposed by Netsuite that must be followed. In the example shown above you cannot have lagTime at the middle of the list of steps, only at the end
 
 ### Example script
 
