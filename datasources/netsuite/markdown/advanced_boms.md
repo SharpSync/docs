@@ -140,7 +140,7 @@ Operation steps are groupings of steps performed on an operation. Say you have a
     "operationsequence": 20,
     "manufacturingWorkCenter": { "id": 48 },
     "manufacturingCostTemplate": { "id": 6 },
-    "runRate": 1,
+    "runRate": 1
   },
   {
     "setupTime": 5,
@@ -164,7 +164,7 @@ However for a different type of assembly you might not require the cutting part 
     "operationsequence": 10,
     "manufacturingWorkCenter": { "id": 48 },
     "manufacturingCostTemplate": { "id": 6 },
-    "runRate": 1,
+    "runRate": 1
   },
   {
     "setupTime": 5,
@@ -172,7 +172,7 @@ However for a different type of assembly you might not require the cutting part 
     "operationsequence": 20,
     "manufacturingWorkCenter": { "id": 48 },
     "manufacturingCostTemplate": { "id": 6 },
-    "runRate": 1,
+    "runRate": 1
   }
 ]
 ```
