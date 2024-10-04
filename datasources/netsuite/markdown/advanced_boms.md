@@ -80,8 +80,8 @@ For the property `operationStep` use the settings:
 |--|--|
 |Primary source Property|(Unmapped)|
 |Secondary source Property|(Unmapped)|
-|Is Manufacturing Operation|Yes|
-|Is Manufacturing Step|No|
+|Is Manufacturing Operation|<span style='color:orange'>Yes</span>|
+|Is Manufacturing Step|<span style='color:SkyBlue'>No</span>|
 |Rendering Type|Object List|
 |List Display Selector|name|
 |List Value Selector|value|
@@ -122,7 +122,7 @@ and then followup with
 
 
 ### Step 2: Manufacturing operation steps
-Operation steps are groupings of steps performed on an operation. Say you have a default set of steps for an assembly. Let's say it's to be powdercoated, cut, galvanized, then you'll want setup the steps accordingly (let's call this `Set 1`):
+Operation steps are groupings of steps performed on an operation. Say you have a default set of steps for an assembly. Let's say it's to be powdercoated, cut, galvanized, then you'll want setup the steps accordingly (let's call this <span style='color:orange'>Set 1</span>):
 
 ```json
 [
@@ -154,7 +154,7 @@ Operation steps are groupings of steps performed on an operation. Say you have a
   }
 ]
 ```
-However for a different type of assembly you might not require the cutting part as that is subcontracted out, so you have a different set of steps (Let's call this `Set 2`):
+However for a different type of assembly you might not require the cutting part as that is subcontracted out, so you have a different set of steps (Let's call this <span style='color:orange'>Set 2</span>):
 
 ```json
 [ 
@@ -183,16 +183,33 @@ You can group both of these "sets of steps" in an object list as follows:
 [
   {
     "name" : "Set 1 - Cut, Galv, Powder",
-    "value" : // "{paste the values from set  1}",
+    "value" : [] // "{paste the values from set 1}",
   }
   {
     "name" : "Set 2 - Galv, Powder", 
-    "value" : // "{paste the values from set  1}",
+    "value" : [] // "{paste the values from set 2}",
   }
 ]
 ```
 
-You then
+You then add this list as a list of values for a property mapping
+
+|Setting|Value|
+|--|--|
+|Primary source Property|(Unmapped)|
+|Secondary source Property|(Unmapped)|
+|Is Manufacturing Operation|<span style='color:SkyBlue'>No</span>|
+|Is Manufacturing Step|<span style='color:orange'>Yes</span>|
+|Rendering Type|Object List|
+|List Display Selector|name|
+|List Value Selector|value|
+  
+
+You can now save this mapping and load a bom to see the results in a BOM that was loaded
+
+![Selecting routing combinations](#../images/routing-selections.png)
+
+
 
 ### Example script
 
