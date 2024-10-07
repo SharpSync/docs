@@ -7,6 +7,7 @@ See also our [feature matrix for Netsuite](markdown/feature_matrix_netsuite.md)
 * [Setup Item Type mapping](#setup-item-type-mapping)
 * [Setting up accounts from a list](#setting-up-accounts-from-a-list)
 * [Setting up advanced BOMs](markdown/advanced_boms.md)
+* [Advanced BOM Routings](markdown/advanced_boms.md#configure-routings)
 
 See also
 * [Common Scenarios](markdown/common-scenarios.md)
