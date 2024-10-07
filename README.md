@@ -1,6 +1,16 @@
 [![SharpSync Intro video](https://sharpsync.net/wp-content/uploads/2024/01/SharpSync_Home_Banner-1200x313.png)](https://sharpsync.net/wp-content/uploads/2024/06/SharpSync-Promo-1.mp4)
 # SharpSync
  
+ Important concepts:
+ 
+* [What is SharpSync](#what-is-sharpsync)
+* [Getting started](getting_started.md)
+* [Datasources](datasources/readme.md)
+* [Property mappings: Setup](propertymapping/readme.md)
+* [Property mappings: Rules](propertymapping/markdown/rules.md)
+* [Subscriptions](subscriptions.md)
+
+
 ## What is SharpSync?
 
 SharpSync is a cloud based data synchronization application in the CAD <> ERP space. 
@@ -38,13 +48,6 @@ These rules are setup for data sources for the entire organization and all your 
 * No need to export + import settings across machines.
 * Intuitive: You should be able to map your own mappings. Not pay a developer to do it.
   
-Important concepts:
-
-* [Getting started](getting_started.md)
-* [Datasources](datasources/readme.md)
-* [Property mappings: Setup](propertymapping/readme.md)
-* [Property mappings: Rules](propertymapping/markdown/rules.md)
-* [Subscriptions](subscriptions.md)
 
 ## Resource links
 Select an individual datasource to view the configuration setup for that source.
