@@ -66,8 +66,12 @@ A custom script example follows below. You can certainly modify this to your hea
 Before uploading to Netsuite, save the below contents to a `*.js` file. See the example called [Example script](#example-script)
 
 ## Configure Routings
-### Step 1: Manufacturing operation
+
 Routing in NetSuite, or in any manufacturing context, refers to a sequence of operations or steps that a product must go through during the manufacturing process. These steps can include various operations such as assembly, machining, laser and inspection.
+
+<span style='color:orange'>Routing limitation (at time of writing): </span> For the NetSuite implementation, SharpSync only adds routings to BOMs that do NOT ALREADY have routings. This is to prevent overwriting existing manufacturing processes which may have been defined already. Please engage us for upgrading this functionality should you have need for it.
+
+### Step 1: Manufacturing operation
 
 To configure routings for Netsuite in Sharpsync, add at least 1 property mapping with the setting enabled: 
 * `Is Manufacturing Operation` (let's call this `operationStep`)
