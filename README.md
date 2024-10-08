@@ -1,6 +1,25 @@
 [![SharpSync Intro video](https://sharpsync.net/wp-content/uploads/2024/01/SharpSync_Home_Banner-1200x313.png)](https://sharpsync.net/wp-content/uploads/2024/06/SharpSync-Promo-1.mp4)
 # SharpSync
  
+ ## Resource links
+Select an individual datasource to view the configuration setup for that source.
+
+ 
+|Name|Type|Sync|Status|Documentation|
+|---|---|---|----|----|
+|CSV|Static / offline|single direction|:white_check_mark:|[Documentation](datasources/csv/markdown/csv-setup.md)|
+|Inventor|CAD|single-directional|:white_check_mark:|[Documentation](datasources/inventor/markdown/readme.md)|
+|MS Dynamics|ERP|bi-directional|[In progress]|[Documentation](datasources/ms-dynamics/readme.md)|
+|NetSuite|ERP|bi-directional|:white_check_mark:|[Documentation](datasources/netsuite/readme.md)|
+|Odoo|ERP|bi-directional|:white_check_mark:|[Documentation](datasources/odoo/readme.md)|
+|Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](datasources/onshape/markdown/onshape-setup.md)|
+|PropelPLM|ERP/PLM|bi-directional|:white_check_mark:|[Documentation](datasources/propel/readme.md)|
+|SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](datasources/swpdm/markdown/swxpdm-setup.md)|
+|SOLIDWORKS|CAD|single-directional|:white_check_mark:|[Documentation](datasources/swx/readme.md)|
+
+   
+See also [Troubleshooting](troubleshooting_datasources.md)
+
  Important concepts:
  
 * [What is SharpSync](#what-is-sharpsync)
@@ -49,21 +68,4 @@ These rules are setup for data sources for the entire organization and all your 
 * Intuitive: You should be able to map your own mappings. Not pay a developer to do it.
   
 
-## Resource links
-Select an individual datasource to view the configuration setup for that source.
 
- 
-|Name|Type|Sync|Status|Documentation|
-|---|---|---|----|----|
-|CSV|Static / offline|single direction|:white_check_mark:|[Documentation](datasources/csv/markdown/csv-setup.md)|
-|Inventor|CAD|single-directional|:white_check_mark:|[Documentation](datasources/inventor/markdown/readme.md)|
-|MS Dynamics|ERP|bi-directional|[In progress]|[Documentation](datasources/ms-dynamics/readme.md)|
-|NetSuite|ERP|bi-directional|:white_check_mark:|[Documentation](datasources/netsuite/readme.md)|
-|Odoo|ERP|bi-directional|:white_check_mark:|[Documentation](datasources/odoo/readme.md)|
-|Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](datasources/onshape/markdown/onshape-setup.md)|
-|PropelPLM|ERP/PLM|bi-directional|:white_check_mark:|[Documentation](datasources/propel/readme.md)|
-|SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](datasources/swpdm/markdown/swxpdm-setup.md)|
-|SOLIDWORKS|CAD|single-directional|:white_check_mark:|[Documentation](datasources/swx/readme.md)|
-
-   
-See also [Troubleshooting](troubleshooting_datasources.md)
