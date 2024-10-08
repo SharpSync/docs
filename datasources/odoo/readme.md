@@ -2,7 +2,7 @@
 
 <em>This document is a work in progress</em>
 
-Odoo is an open source ERP available in a selfhosted or cloud hosted option. Please also see [https://www.odoo.com/](https://www.odoo.com)
+Odoo is an open source ERP available in a selfhosted or cloud hosted option. Please also see [https://www.odoo.com/](https://www.odoo.com) and [hosting options](markdown/hosting-options.md)
 
 To configure an Odoo intance you need 4 things
 * Odoo version number
@@ -43,4 +43,5 @@ This is because BOM information, more specifically the Quantities of individual 
 Routings are not currently supported but we are working towards it
 
 ## Extra information
-Please see [hosting options](datasources/odoo/hosting-options.md)
+
+Please see  [hosting options](markdown/hosting-options.md)
