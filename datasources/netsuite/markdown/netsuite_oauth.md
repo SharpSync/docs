@@ -43,8 +43,8 @@ Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
 (Or whichever role you want to assign the permissions to)
  
 
-| Section                    | Functionality                  | Access |
-|----------------------------|--------------------------------|--------|
+| Section                    | Functionality                  | Access | Required |
+|----------------------------|--------------------------------|--------| -------- |
 | Permissions > Transactions | Audit Trail                    | View   |
 | Permissions > Transactions | Find Transaction               | View   |
 | Permissions > Transactions | Receive Inventory              | View   |
@@ -59,8 +59,9 @@ Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
 | Permissions > Lists        | Employee Record                | View   |
 | Permissions > Lists        | Employees                      | View   |
 | Permissions > Lists        | Items                          | Full   |
-| Permissions > Lists        | Locations                      | Full   |
+| Permissions > Lists        | Locations                      | View   |
 | Permissions > Lists        | Manufacturing Routing          | Full   |
+| Permissions > Lists        | Manufacturing Cost Template    | View   | Optional |
 | Permissions > Lists        | Perform Search                 | Full   |
 | Permissions > Lists        | Product Classes                | Full   |
 | Permissions > Lists        | Subsidiaries                   | View   |
