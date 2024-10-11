@@ -2,6 +2,14 @@
 
 <em>This document is a work in progress</em>
 
+## Limitations at the time of writing
+
+SharpSync supports 
+* Odoo version 17
+* Odoo version 16 (in progress)
+Should you require access to a different version please make contact with us at [SharpSync](https://sharpsync.net/about/)
+
+
 Odoo is an open source ERP available in a selfhosted or cloud hosted option. Please also see [https://www.odoo.com/](https://www.odoo.com) and [hosting options](markdown/hosting-options.md)
 
 To configure an Odoo intance you need 4 things
@@ -30,12 +38,7 @@ The update should automatically trigger. If it does not, click the *Update* butt
 The custom fields from Odoo has now succesfully been pulled into SharpSync.
 
 <span style='color:orange'>Take note!:</span> If you ever add new properties to Odoo, make sure to come back to the property mapping page and click the *Update* button again.
-
-## Limitations at the time of writing
-
-SharpSync supports (but we can add upon request)
-* Odoo version 17
-
+ 
 
 SharpSync requires the MRP module (mrp) at a minimum in order to support an Odoo integration.
 This is because BOM information, more specifically the Quantities of individual items.

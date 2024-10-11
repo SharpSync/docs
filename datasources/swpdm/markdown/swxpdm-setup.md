@@ -50,7 +50,10 @@ The PDM Client is only available for Windows machines. It is not available for M
 * Login on SharpSync
 * Navigate to the Downloads section
 * Download the PDM Client
+![alt text](../images/image.png)
+* If you're having trouble installing the addin through the client, you can download the Admin Export (*.cex) file
 * Extract all the files to a known location (e.g. Desktop)
+* [Install using the downloadable instructions link or follow along here]
 * Open the administration tool and login on the vault
 * Right click Addins > New Addin  
  ![New Addin](../images/new-addin.png)
@@ -66,16 +69,17 @@ When configuring the addin for the vault, there are 2 sections to configure:
 * The SQL setup which is used internally by the add-in
 
 ### General setup
-This image shows a screen of the setup 
+This image shows a landing screen of the setup.
 
 ![general setup](../images/configure-addin-general.png) 
 
 The following fields must be configured:
+
 |Name|Description|Recommended value|
 |--|--|--|
-|Sharpsync Client UI|This is the url to which the user will be redirected once a BOM has been successfully submitted for comparison|https://app.sharpsync.net|
-|BOM Layout|The BOM |BOM (or whatever layout you want to export to SharpSync)|
+|BOM Layout|The columns + values exported to SharpSync|BOM (or whatever layout you want to export to SharpSync)|
 |SharpSync Admin credentials|User credentials that are used to setup the datasource|-|
+|File name handling|How files will be named in the hierarchy. Can be either the name of the file or a variable (e.g. Number)|This is automatically configured in datasource configuration and cannot be changed in the add-in|
 
 Click `Test Connectivity`. Upon success, the configured primary identifier will be listed in the `Primary Identifier` field. This is the value that will be used to identify the file in SharpSync.
 
@@ -85,10 +89,36 @@ NOTE: If you get an error saying that no source is configured
 
 First go to SharpSync > Datasources (you must be an admin) > Add the PDM datasource > This will create a source in SharpSync which will be used to store the data.
 
+### BOM Configuration setup
+Setting up the BOM configuration allows you to customize how Bill of materials are uploaded to SharpSync.
+|Section|Option|Description|
+|---|---|--|
+|Bom export|As Built|Export the version of the bom and its associated references as at the version selected||
+|Bom export|Latest|Export the latest version of the bom and its associated references||
+|Weldments|Export a weldmentpart as a part|Exports the weldment with the same qty referenced in the original BOM. Does not add children items from weldment members|
+|Weldments|Export a weldmentpart as a part|Exports the weldment with the same qty referenced in the original BOM. *DOES* add children items|
+|Sheetmetal|Export a weldmentpart as a part|Exports the weldment with the same qty referenced in the original BOM. Does not add children items from multibody parts|
+|Sheetmetal|Export a weldmentpart as a part|Exports the weldment with the same qty referenced in the original BOM. *DOES* add children items|
+|Excluded file types|Add file types on new lines|If a linked reference is found in the PDM BOM, it is not exported to SharpSync|
+
+![alt text](../images/configure-addin-bom-export.png)
+
 ### SQL setup
 The sql configuration page requires `data_reader` access for SQL Server. 
 
 This image shows a screen of the setup ![sql setup](../images/configure-addin-sql.png)
+
+Setting up the BOM configuration allows you to customize how Bill of materials are uploaded to SharpSync.
+|Section|Option|Description|
+|---|---|--|
+|SQL Connectivity|Hostname\instance|Enter the name of the server and the sql instance. Use \MSSQL if the instance is not named|
+|SQL Connectivity|Database name|Enter the name of the database. Typically the same as the vault name. Consult your IT Admin if you don't have access|
+|SQL Credentials|PDM SQL Username|Name of a user which has the ability to create and execute stored procedures. This helps with the determination of weldment part types / sheetmetal part types|
+|SQL Credentials|PDM SQL Password|Password of a user which has the ability to create and execute stored procedures. This helps with the determination of weldment part types / sheetmetal part types|
+
+Note: The connection details are not stored in SharpSync online services. The credentials are stored in a vault dictionary called SharpSync using the PDM API. You can search for it using Vault > Tables > Dictionaries > SharpSync
+
+ 
 
 ## Step: Configure the PDM client for the logged in user
 
