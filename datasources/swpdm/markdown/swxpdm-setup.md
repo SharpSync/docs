@@ -1,14 +1,31 @@
 # SOLIDWORKS PDM Setup
 
 The setup steps for SWPDM are as follows:
-* Add the SWPDM datasource
 * Make the PDM Web API available to the internet
+* Add the SWPDM datasource
 * Test the connectivity to the server
 * Download and install the PDM client
 * Configure the PDM client for the vault
 * Configure the PDM client for the logged in user
 
 See also [Configure the addin for testing](configure_addin_for_testing.md)
+
+## Step: Make the PDM Web API available to the internet
+
+*The PDM Web API must be accessible over the public internet.* This is required for SharpSync to be able to connect to the PDM vault.
+
+A domain name is not required. A public IP address is sufficient. However either of these (IP address or domain name) must be accessible from the internet.
+
+(See [Test connectivity to server](#step-test-connectivity-to-the-server))
+
+Once the API is available, go back to the datasource configuration page and click `Ping` button. Upon success the following message will be displayed:
+> Name   
+> Connection status: Healthy  
+> Connection message: `{serverName}` is accessible from the API
+
+Where `{serverName}` is the name of the server that is hosting the PDM Web API
+
+![Datasource configuration](../images/configure-datasource.png)
 
 ## Step: Add the SWPDM datasource
 
@@ -17,17 +34,6 @@ See also [Configure the addin for testing](configure_addin_for_testing.md)
 * Select SWPDM 
 * Click Add Datasource
 
-## Step: Make the PDM Web API available to the internet
-The PDM Web API must be accessible over the public internet. This is required for SharpSync to be able to connect to the PDM vault.
-
-A domain name is not required. A public IP address is sufficient. However either of these must be accessible (Ping can be used) from the data source configuration page
-
-Once the API is available, go back to the datasource configuration page and click `Ping` button. Upon success the following message will be displayed:
-> Name   
-> Connection status: Healthy  
-> Connection message: `{serverName}` is accessible from the API
-
-Where `{serverName}` is the name of the server that is hosting the PDM Web API
 
 ## Step: Test connectivity to the server
 
