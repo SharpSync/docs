@@ -1,8 +1,10 @@
 # NetSuite OAuth Setup
 
+NetSuite supports industry standard OAuth authentication and authorization. The implementation in SharpSync uses OAuth2 exclusively at this point. Should you require a different implementation such as API keys or OAuth1.0, please engage us
+
  * [Create a new integration record](#create-a-new-integration-record)
- * [Permissions](#step-permissions)
  * [Scopes](#scopes)
+ * [Setup Permissions for your users](#step-permissions)
 
 NOTES: 
 
@@ -30,9 +32,26 @@ To create a new integration record do the following:
 
 Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
 
+## Step: Scopes
+
+NetSuite requires that the OAuthe flow uses the following scopes. Ensure they are enabled for the OAuth connection to work:
+
+* rest_webservices
+* restlets
+
+This forms part of the URL when performing the initial browser redirect
+
+There are 3 steps to authenticating with NetSuite using OAuth:
+
+* A browser redirect
+* A call to the token endpoint to get the token
+* A call to refresh the token
+
+For the first 2 steps the OAuth client id and secret is required.  If successful, you'll be issued an access token. For the last step the refresh token is required to renew your access token
+
 ## Step: Permissions
 
-  Permissions Required for NetSuite Integration role
+  Permissions Required for NetSuite Integration role. These permissions are quired for the successful setup of SharpSync. Some of the permissions are not required for your users (the role your users will be logging in with), and are marked as `Setup Only` below
 
  ### Under Setup -> Records Catalogue 
  Search for a record you need, then click on the "SuiteScript and REST Query API"
@@ -69,18 +88,18 @@ Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
 | Permissions > Lists        | Tax Records                    | View   |
 | Permissions > Lists        | Units                          | View   |
 | Permissions > Lists        | Vendors                        | View   |
-| Permissions > Setup        | Allows JS / HTML uploads       | Full   |
-| Permissions > Setup        | Custom Item fields             | Full   |
-| Permissions > Setup        | Custom Number Item fields      | Full   |
-| Permissions > Setup        | Custom Lists                   | Full   |
-| Permissions > Setup        | Custom Sublist                 | Full   |
-| Permissions > Setup        | Custom Sublists                | Full   |
-| Permissions > Setup        | Login using Access Tokens      | Full   |
-| Permissions > Setup        | Login using OAuth 2.0 Tokens   | Full   |
-| Permissions > Setup        | REST Web Services              | Full   |
-| Permissions > Setup        | SuiteScript                    | Full   |
-| Permissions > Setup        | SuiteApp Deployment            | Full   |
-| Permissions > Setup        | View Login Audit Trail         | Full   |
+| Permissions > Setup        | Allows JS / HTML uploads       | Full   | Setup Only |
+| Permissions > Setup        | Custom Item fields             | Full   | Setup Only |
+| Permissions > Setup        | Custom Number Item fields      | Full   | Setup Only |
+| Permissions > Setup        | Custom Lists                   | Full   | Setup Only |
+| Permissions > Setup        | Custom Sublist                 | Full   | Setup Only |
+| Permissions > Setup        | Custom Sublists                | Full   | Setup Only |
+| Permissions > Setup        | Login using Access Tokens      | Full   | Setup Only |
+| Permissions > Setup        | Login using OAuth 2.0 Tokens   | Full   | Setup Only |
+| Permissions > Setup        | REST Web Services              | Full   | Setup Only |
+| Permissions > Setup        | SuiteScript                    | Full   | Setup Only |
+| Permissions > Setup        | SuiteApp Deployment            | Full   | Setup Only |
+| Permissions > Setup        | View Login Audit Trail         | Full   | Setup Only |
 | Permissions > Reports      | SuiteAnalytics Workbook        | Edit   |
 | Forms > Item               | Group/Kit/Assembly             | Enabled|
 | Forms > Item               | Inventory Part                 | Enabled|
@@ -89,21 +108,6 @@ Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
 | Forms > Other record       | Item Location                  | Enabled|
 | Forms > Other record       | Manufacturing Routing          | Enabled|
   
-## Step: Scopes
-
-NetSuite requires that the following scopes are enabled for the OAuth connection to work:
-
-* rest_webservices
-* restlets (if you want to do thumbnail uploads this is required)
-
-This forms part of the URL when performing the initial browser redirect
-
-There are 3 steps to authenticating with NetSuite:
-<ol>
-  <li> A browser redirect
-  <li> A call to the token endpoint to get the token
-  <li> A call to refresh the token
-</ol>
 
 ## Testing the OAuth setup
 ### Step: Browser redirect

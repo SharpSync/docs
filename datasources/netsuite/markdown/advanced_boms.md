@@ -70,7 +70,9 @@ Before uploading to Netsuite, save the below contents to a `*.js` file. See the 
 Routing in NetSuite, or in any manufacturing context, refers to a sequence of operations or steps that a product must go through during the manufacturing process. These steps can include various operations such as assembly, machining, laser and inspection.
 
 There is a dedicated page to [configure routings](configure_routings.md)
- 
+
+.. [Back to NetSuite](../readme.md)
+
 ### Example script
 
 ```Javascript
