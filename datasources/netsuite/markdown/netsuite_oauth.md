@@ -51,7 +51,7 @@ For the first 2 steps the OAuth client id and secret is required.  If successful
 
 ## Step: Permissions
 
-  Permissions Required for NetSuite Integration role. These permissions are quired for the successful setup of SharpSync. Some of the permissions are not required for your users (the role your users will be logging in with), and are marked as `Setup Only` below
+  Permissions Required for NetSuite Integration role. These permissions are quired for the successful setup of SharpSync. Some of the permissions are not required for your users (the role your users will be logging in with), and are marked as `Setup Only` below. Once all the permissions has been setup, make sure to [test the setup](#testing-the-oauth-setup)
 
  ### Under Setup -> Records Catalogue 
  Search for a record you need, then click on the "SuiteScript and REST Query API"
@@ -111,7 +111,8 @@ For the first 2 steps the OAuth client id and secret is required.  If successful
 
 ## Testing the OAuth setup
 ### Step: Browser redirect
-Execute the following /GET request in a browser window
+
+Execute the following /GET request in a browser window.
 
 >https://`{companyId}`.app.netsuite.com/app/login/oauth2/authorize.nl?  
 &nbsp;`response_type`=code&  
@@ -124,13 +125,22 @@ This will redirect to the login page for the NetSuite account. Once logged in, t
 
 >NOTE: The redirect_uri must be https://sharpsync.net/callback-oauth and must be url encoded (https%3A%2F%2Fsharpsync.net%2Fcallback-oauth)
 
+If this step is successful, you'll see the login window and a code at the end of the URL displayed in the browser.
 
 ### Step: Get the refresh token
-When the previous /GET request is executed, the user will be redirected to the redirect_uri with a code value. This code value is used to get the refresh token.
 
-Execute the following /POST request to the token endpoint. This should be made within 30 seconds of the previous step.
+When the previous /GET request is executed, the user will be redirected to the `redirect_uri` with a code value. This code value is used to get the refresh token as well as a new access token.
 
->`{{netsuite-api}}`/services/rest/auth/oauth2/v1/token
+Some terminology:
+* `code` - issued by the OAuth 2 authentication cycle. Used to get the initial `access_token` and `refresh_token`
+* `access_token` - let's you access resources in NetSuite. Expires after about an hour
+* `refresh_token` - let's you get a new `access_token` repeatedly
+
+<span style='color:orange'> You should treat an access token and a refresh token the same as a username and password! It is sensitive information</span>
+
+Execute the following /POST request to the token endpoint. This should be made within 30 seconds of the previous step. (Note that we're now using the `.suitetalk.api` subdomain)
+
+>https://`{companyId}`.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token
 
 The body of the request should be:
 * x-www-form-urlencoded
@@ -140,7 +150,7 @@ The body of the request should be:
 `redirect_uri`=https%3A%2F%2Fsharpsync.net%2Fcallback-oauth&  
 `code`={code}
 
-The result of this request will look like this 
+The result of this request will look like this  (`refresh_token` AND `access_token`)
 
 ```json
 {
@@ -154,9 +164,10 @@ The result of this request will look like this
 The important bit here is the `refresh_token`. We'll use it to get us a new `access_token` later.
 
 ### Step: Refresh the access token
+
 Execute the following /POST request to the token endpoint. This should be made within 30 seconds of the previous step.
 
->`{{netsuite-api}}`/services/rest/auth/oauth2/v1/token
+>https://`{companyId}`.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token
 
 The body of the request should be:
 * x-www-form-urlencoded
@@ -166,7 +177,7 @@ The body of the request should be:
 `redirect_uri`=https%3A%2F%2Fsharpsync.net%2Fcallback-oauth&  
 `refresh_token`={refresh-token}
 
-The result will look like this
+The result will look like this (no `refresh_token`, only the `access_token`)
 
 ```json
 {
