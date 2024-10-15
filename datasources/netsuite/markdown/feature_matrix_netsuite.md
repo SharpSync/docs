@@ -18,7 +18,7 @@ Out of the box, the Netsuite integration supports the following features:
 
 ## Item level features
 
-The list of items supported below types that have been officially tested and are supported. Please note that we're open for discussion on other item types, and we treat them as part of our consulation services. Most item types would not require any implementation as they follow the same standard in the NetSuite API. 
+The list of items that are supported are shown below. These have been officially tested and are supported. Please note that we're open for discussion on other item types, and we treat them as part of our consulation services. Most item types would not require any implementation as they follow the same standard in the NetSuite API. 
 
 |Item type|Differences|Modifications|Updates|
 |:---------------------------|:---:|:---:|:---:|
@@ -28,5 +28,7 @@ The list of items supported below types that have been officially tested and are
 |noninventorypurchaseitem|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |bom|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |bomrevision|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|routing operation|||:white_check_mark:|
+|routing step|||:white_check_mark:|
 |serializedinventoryitem|[on roadmap]|[on roadmap]|[on roadmap]|
 |serializedassemblyitem ||[on roadmap]|[on roadmap]|[on roadmap]|
