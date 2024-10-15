@@ -2,8 +2,6 @@
 
 Routings in NetSuite, or in any manufacturing context, refers to a sequence of operations or steps that a product must go through during the manufacturing process. These steps can include various operations such as assembly, machining, laser and inspection.
 
-There is a dedicated page to [configure routings](configure_routings.md)
-
 <span style='color:orange'>Routing limitation (at time of writing): </span> For the NetSuite module, SharpSync only adds routings to BOMs that do NOT ALREADY have routings. This is to prevent overwriting existing manufacturing processes which may have been defined already. Please engage us for upgrading this functionality should you have need for it.
 
 ### Step 1: Manufacturing operation
