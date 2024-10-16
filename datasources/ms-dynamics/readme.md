@@ -4,7 +4,20 @@
 
 Dynamics 365 Business Central is a cloud ERP available from Microsoft. Please also see [(https://www.microsoft.com/en-us/dynamics-365/products/business-central)
 
-To configure a Dynamics 365 Business Central datasource instance you need:
+## Install SharpSync custom extension for Dynamics 365 Business Central
+
+When logged in to your SharpSync organization as an admin user:
+* Navigate to [Downloads](https://app.sharpsync.net/admin/downloads)
+* Locate and download the current version of the custom extension app which should look like `CADSharp LLC_sharpsync-dynamics-365-api-extension_#.#.#.#.app` `(IN PROGRESS)`
+* Navigate to your Dynamics 365 Business Central web instance as an administrator
+* Navigate to Extension Management: From the Business Central home page, use the search feature and type "Extension Management." Select the appropriate link.
+* Upload the Extension: On the Extension Management page, click Manage and choose Upload Extension. You will be prompted to select the .app file for your extension.
+* Deploy the Extension: After selecting the file, click Accept and then Deploy. If your extension includes schema changes, you may have to select a schema sync mode, such as Force Sync for development environments.
+* Manage Permissions: Make sure that the user installing the extension has appropriate permissions, typically the EXTENSION MGT. - ADMIN permission set.
+
+## Setup Dynamics 365 Business Central Datasource
+
+To configure a Dynamics 365 Business Central datasource instance in SharpSync you need:
 * The base API path of Dynamics 365 Business Central cloud which is: `https://api.businesscentral.dynamics.com`
 * Dynamics 365 Business Central uses the OAuth 2.0 protocol to authenticate, therefore, a code grant url, a refresh token url and the oauth scopes need to be supplied, they are of the form:
     * Code Grant URL: `https://login.microsoftonline.com/{{sharpsync-app-tenant-id}}/oauth2/v2.0/authorize`
@@ -23,7 +36,7 @@ To configure a Dynamics 365 Business Central datasource instance you need:
 * All the above credentials (except for your instance's company id and environment) will already be set in SharpSync when you are configuring your data source.
     
 
-## Setup Dynamics 365 Business Central Datasource
+## Configure Dynamics 365 Business Central Datasource
 
 * Login on the application
 * Navigate to `Data Sources`
@@ -34,7 +47,7 @@ To configure a Dynamics 365 Business Central datasource instance you need:
 * Click the `Save` button
 * Click the `Authenticate` button
 
-## Setup Dynamics 365 Business Central Property Mappings
+## Configure Dynamics 365 Business Central Property Mappings
 
 * Navigate to `Property Mapping`
 * After creating/adding your property mappings from your primary/CAD source, select the corresponding Propel property from the drop down selection boxes.
