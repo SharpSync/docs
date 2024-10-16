@@ -14,6 +14,9 @@ When logged in to your SharpSync organization as an admin user:
 * Upload the Extension: On the Extension Management page, click Manage and choose Upload Extension. You will be prompted to select the .app file for your extension.
 * Deploy the Extension: After selecting the file, click Accept and then Deploy. If your extension includes schema changes, you may have to select a schema sync mode, such as Force Sync for development environments.
 * Manage Permissions: Make sure that the user installing the extension has appropriate permissions, typically the EXTENSION MGT. - ADMIN permission set.
+* Additional documentation can be found in the following links:
+   * [Customizing Business Central online using apps](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions)
+   * [Install and Uninstall Extensions (Apps) in Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions-install-uninstall)
 
 ## Setup Dynamics 365 Business Central Datasource
 
