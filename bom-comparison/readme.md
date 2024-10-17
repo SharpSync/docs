@@ -36,14 +36,14 @@ A secondary source is typically an ERP or PLM system. For secondary sources, qua
 
 Using the default color scheme for BOM comparison, you can expect the following results: 
 
-|Process Row|Row background|Result|
-|---|---|---|
-|Yes|White|Row properties + qty will be updated in {Datasource}|
-|Yes|Green|Row properties + qty will be created in {Datasource}|
-|Yes|Orange|Row properties + qty will be updated in {Datasource}|
-|Yes|Red|Row properties + qty will NOT be updated in {Datasource}. It will be unlinked (removed) from any parent items|
-|No|White|Row properties + qty will not be updated {Datasource}|
-|No|Green|Row will not be created in {Datasource}|
-|No|Orange|Row properties + qty will not be updated in {Datasource}|
-|No|Red|Row properties + qty will NOT be updated in {Datasource}. It will also not be unlinked (removed) from any parent items|
+|Process Row|Row Background|Item Creation|Bom Structure|Item Properties|
+|:---:|---|:---:|---|---|
+|☑️|⬜ White||Qty Updated|Updated|
+|☑️|🟩 Green|Created|Linked To Parent + Qty Updated|Updated|
+|☑️|🟨 Yellow||Linked To Parent + Qty Updated|Updated|
+|☑️|🟥 Red||Unlinked From Parent + Children Ignored|Ignored|
+||⬜ White||Qty Not Updated|Ignored|
+||🟩 Green|Not Created|Not Linked To Parent|Ignored|
+||🟨 Yellow||Not Linked To Parent|Ignored|
+||🟥 Red||Link To Parent Kept + Children Ignored|Ignored|
  
