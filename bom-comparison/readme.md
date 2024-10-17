@@ -26,6 +26,17 @@ Using the default color scheme for BOM comparison, you can expect the following 
 |No|Orange|Row properties + qty will not be updated in {Datasource}|
 |No|Red|Row properties + qty will NOT be updated in {Datasource}. It will also not be unlinked (removed) from any parent items|
 
+|Process Row|Row Background|Item Creation|Bom Structure|Quantity|Item Properties|Routings|Derivatives
+|:---:|---|:---:|---|:---:|:---:|:---:|:---:|
+|☑️|⬜ White||Unchanged|Unchanged|Updated|?|N/A|
+|☑️|🟩 Green||Unchanged|Unchanged|Updated|?|N/A|
+|☑️|🟨 Yellow||Unchanged|Unchanged|Updated|?|N/A|
+|☑️|🟥 Red||Unchanged|Unchanged|Ignored|Ignored|N/A|
+||⬜ White||Unchanged|Unchanged|Ignored|Ignored|N/A|
+||🟩 Green||Unchanged|Unchanged|Ignored|Ignored|N/A|
+||🟨 Yellow||Unchanged|Unchanged|Ignored|Ignored|N/A|
+||🟥 Red||Unchanged|Unchanged|Ignored|Ignored|N/A|
+
 ### Secondary Source updates
 
 
