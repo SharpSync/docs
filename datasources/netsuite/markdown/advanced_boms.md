@@ -6,7 +6,7 @@ Advanced BOMs are Netsuite's way of keeping track of bill of materials (BOM) sna
 There are some limitation with the use of advanced BOMs via the API. For this reason (at the time of writing), we make use of a custom script to create advanced BOMS
 
 Server side scripting uses a script in Netsuite to set field values.
-The important bit to take note of here is that the `injectionScriptId` needs to be configured (see below).
+The important bit to take note of here is that the `itemInjectionScriptId` needs to be configured (see below).
 
 To use serverside scripting to create items, in SharpSync do the following under `Data Sources`:
 
@@ -52,8 +52,8 @@ Server side scripting allows SharpSync to configure fields in NetSuite that are 
 * Click the `Configure` button
 * Navigate to the `Configuration` section
 * Add a servlet url
-    > https://[companyId].restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=3187&injectionScriptId=3187&deploy=1&folderId=3561
-* The `injectionScriptId` param above is the same as the one in the previous step
+    > https://[companyId].restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=3187&itemInjectionScriptId=3187&deploy=1&folderId=3561
+* The `itemInjectionScriptId` param above is the same as the one in the previous step
 * Select `Use server side scripting`
 * Select `Use advanced BOMs`
 * Configure your `Bom Naming scheme`
