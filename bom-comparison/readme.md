@@ -15,27 +15,16 @@ A primary source is typically a CAD or PDM or PLM system. For primary sources, q
 
 Using the default color scheme for BOM comparison, you can expect the following results: 
 
-|Process Row|Row background|Result|
-|---|---|---|
-|Yes|White|Row properties will be updated in {Datasource}|
-|Yes|Green|Row properties will be updated in {Datasource}|
-|Yes|Orange|Row properties + qty will be updated in {Datasource}|
-|Yes|Red|Row properties + qty will NOT be updated in {Datasource}. It will be unlinked (removed) from any parent items|
-|No|White|Row properties + qty will not be updated {Datasource}|
-|No|Green|Row will not be created in {Datasource}|
-|No|Orange|Row properties + qty will not be updated in {Datasource}|
-|No|Red|Row properties + qty will NOT be updated in {Datasource}. It will also not be unlinked (removed) from any parent items|
-
 |Process Row|Row Background|Item Creation|Bom Structure|Quantity|Item Properties|Routings|Derivatives
 |:---:|---|:---:|---|:---:|:---:|:---:|:---:|
-|☑️|⬜ White||Unchanged|Unchanged|Updated|?|N/A|
-|☑️|🟩 Green||Unchanged|Unchanged|Updated|?|N/A|
-|☑️|🟨 Yellow||Unchanged|Unchanged|Updated|?|N/A|
-|☑️|🟥 Red||Unchanged|Unchanged|Ignored|Ignored|N/A|
-||⬜ White||Unchanged|Unchanged|Ignored|Ignored|N/A|
-||🟩 Green||Unchanged|Unchanged|Ignored|Ignored|N/A|
-||🟨 Yellow||Unchanged|Unchanged|Ignored|Ignored|N/A|
-||🟥 Red||Unchanged|Unchanged|Ignored|Ignored|N/A|
+|☑️|⬜ White|N/A|Unchanged|Unchanged|Updated|N/A|N/A|
+|☑️|🟩 Green|N/A|Unchanged|Unchanged|Updated|N/A|N/A|
+|☑️|🟨 Yellow|N/A|Unchanged|Unchanged|Updated|N/A|N/A|
+|☑️|🟥 Red|N/A|Unchanged|Unchanged|Ignored|N/A|N/A|
+||⬜ White|N/A|Unchanged|Unchanged|Ignored|N/A|N/A|
+||🟩 Green|N/A|Unchanged|Unchanged|Ignored|N/A|N/A|
+||🟨 Yellow|N/A|Unchanged|Unchanged|Ignored|N/A|N/A|
+||🟥 Red|N/A|Unchanged|Unchanged|Ignored|N/A|N/A|
 
 ### Secondary Source updates
 
