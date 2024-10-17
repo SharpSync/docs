@@ -36,14 +36,14 @@ A secondary source is typically an ERP or PLM system. For secondary sources, qua
 
 Using the default color scheme for BOM comparison, you can expect the following results: 
 
-|Process Row|Row Background|Item Creation|Bom Structure|Item Properties|
-|:---:|---|:---:|---|---|
-|☑️|⬜ White||Qty Updated|Updated|
-|☑️|🟩 Green|Created|Linked To Parent + Qty Updated|Updated|
-|☑️|🟨 Yellow||Linked To Parent + Qty Updated|Updated|
-|☑️|🟥 Red||Unlinked From Parent + Children Ignored|Ignored|
-||⬜ White||Qty Not Updated|Ignored|
-||🟩 Green|Not Created|Not Linked To Parent|Ignored|
-||🟨 Yellow||Not Linked To Parent|Ignored|
-||🟥 Red||Link To Parent Kept + Children Ignored|Ignored|
+|Process Row|Row Background|Item Creation|Bom Structure|Quantity|Item Properties|Routings|Derivatives
+|:---:|---|:---:|---|:---:|:---:|:---:|:---:|
+|☑️|⬜ White||Unchanged|Updated|Updated|?|Processed|
+|☑️|🟩 Green|Created|Linked To Parent|Updated|Updated|?|Processed|
+|☑️|🟨 Yellow||Linked To Parent|Updated|Updated|?|Processed|
+|☑️|🟥 Red||Unlinked From Parent + Children Ignored|Ignored|Ignored|?|Ignored|
+||⬜ White||Unchanged|Ignored|Ignored|?|Ignored|
+||🟩 Green|Not Created|Not Linked To Parent|Ignored|Ignored|?|Ignored|
+||🟨 Yellow||Not Linked To Parent|Ignored|Ignored|?|Ignored|
+||🟥 Red||Link To Parent Kept + Children Ignored|Ignored|Ignored|?|Ignored|
  
