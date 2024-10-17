@@ -38,12 +38,12 @@ Using the default color scheme for BOM comparison, you can expect the following 
 
 |Process Row|Row Background|Item Creation|Bom Structure|Quantity|Item Properties|Routings|Derivatives
 |:---:|---|:---:|---|:---:|:---:|:---:|:---:|
-|☑️|⬜ White||Unchanged|Updated|Updated|?|Processed|
-|☑️|🟩 Green|Created|Linked To Parent|Updated|Updated|?|Processed|
-|☑️|🟨 Yellow||Linked To Parent|Updated|Updated|?|Processed|
-|☑️|🟥 Red||Unlinked From Parent + Children Ignored|Ignored|Ignored|?|Ignored|
-||⬜ White||Unchanged|Ignored|Ignored|?|Ignored|
-||🟩 Green|Not Created|Not Linked To Parent|Ignored|Ignored|?|Ignored|
-||🟨 Yellow||Not Linked To Parent|Ignored|Ignored|?|Ignored|
-||🟥 Red||Link To Parent Kept + Children Ignored|Ignored|Ignored|?|Ignored|
+|☑️|⬜ White||Unchanged|Updated|Updated|Updated|Processed|
+|☑️|🟩 Green|Created|Linked To Parent|Updated|Updated|Updated|Processed|
+|☑️|🟨 Yellow||Linked To Parent|Updated|Updated|Updated|Processed|
+|☑️|🟥 Red||Unlinked From Parent + Children Ignored|Ignored|Ignored|Ignored|Ignored|
+||⬜ White||Unchanged|Ignored|Ignored|Ignored|Ignored|
+||🟩 Green|Not Created|Not Linked To Parent|Ignored|Ignored|Ignored|Ignored|
+||🟨 Yellow||Not Linked To Parent|Ignored|Ignored|Ignored|Ignored|
+||🟥 Red||Link To Parent Kept + Children Ignored|Ignored|Ignored|Ignored|Ignored|
  
