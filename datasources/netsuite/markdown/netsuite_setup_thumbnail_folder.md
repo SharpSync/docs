@@ -57,6 +57,7 @@ Steps required:
 * Setup the datasource to point to the new restlet
  
  See [Setup an upload folder](netsuite_setup_thumbnail_folder.md)
+ See [Create an upload folder](create_upload_folder.md)
 
 
 ## Putting it all together - Setup the datasource
