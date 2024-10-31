@@ -2,10 +2,9 @@
 
 ## BOM row updates
 
-BOM row updates can occur in the primary or secondary datasource and is influenced by your settings for property mappings and their related import / export rules
+BOM row updates can occur in the primary or secondary datasource and is influenced by your settings for property mappings and their related import / export rules.
 
- * [Primary source updates](#primary-source-updates)
- * [Secondary source updates](#secondary-source-updates)
+BOM row updates are also influenced by whether the `PROCESS` checkbox is checked or unchecked. You can use the context menu of any given row's `PROCESS` cell to bulk check/uncheck the `PROCESS` checkbox of related rows and children rows.
 
 ### Primary Source updates
 
@@ -28,11 +27,9 @@ Using the default color scheme for BOM comparison, you can expect the following 
 
 ### Secondary Source updates
 
-
 When updating BOM rows the following table illustrates how updates occur at the secondary source.
 
 A secondary source is typically an ERP or PLM system. For secondary sources, quantity values are typically updated to reflect the quantities of the primary soruce.
-
 
 Using the default color scheme for BOM comparison, you can expect the following results: 
 
