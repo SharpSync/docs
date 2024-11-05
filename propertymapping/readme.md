@@ -78,9 +78,11 @@ Changes the behaviour display of the Property Mapping when the Bill of Materials
 | Type | Description | Configuration |
 | -- | -- | -- |
 | Checkbox | User interacts via clicking only, will be true if the value is True, 1, Y or Yes. | None |
-| Free text | User interacts by clicking, then typing text. You may also paste text  |  None |
-| List | User interacts by clicking, then selecting text. You may also paste text  | Enter a list of values in the textbox and separate each entry with a vertical Pipe (see example below) | None |
-| Object List | User interacts by clicking, then selecting text. You may also paste text. <br/> <br/> An object list displays a value (`display selector` - that which is displayed), but when you _select that value_, a different value is used as the value sent to the source (`value selector` - the value selected as the update value) (see example below)  | Enter a list of values in the textbox in the javascript array form <p/> <p/>`[ {}, {} ]` <p /> and separate each entry with a comma (see example below)  
+| Free text | User interacts by double-clicking, then typing text. You may also paste text  |  None |
+| Select List | User interacts by double-clicking, then selecting text. You may also paste text  | Enter a list of values in the `List Items` textbox and separate each entry with a vertical Pipe (see example below) |
+| Multi Select List | User interacts by double-clicking, then selecting text. You may select multiple values. The datasource to be updated must support multi value fields | Enter a list of values in the `List Items` textbox and separate each entry with a vertical Pipe |
+| Advanced List | User interacts by double-clicking, then selecting text. You may also paste text. <br/> <br/> An object list displays a value (`display selector` - that which is displayed), but when you _select that value_, a different value is used as the value sent to the source (`value selector` - the value selected as the update value) (see example below)  | Enter a list of values in the textbox in the javascript array form <p/> <p/>`[ {}, {} ]` <p /> and separate each entry with a comma (see example below)  
+| Advanced Multi Select List | User interacts by double-clicking, then selecting text. You may select multiple values. The datasource to be updated must support multi value fields. <br/> <br/> An object list displays a value (`display selector` - that which is displayed), but when you _select that value_, a different value is used as the value sent to the source (`value selector` - the value selected as the update value) (see example below)  | Enter a list of values in the textbox in the javascript array form <p/> <p/>`[ {}, {} ]` <p /> and separate each entry with a comma (see example below)  
 | Url | Displays any text as a url (opens in a new tab when clicked) | None |
      
 ##### Rendering options    
@@ -95,9 +97,9 @@ Changes the behaviour display of the Property Mapping when the Bill of Materials
 
 #### Setting Examples
 
-Example: Custom list of items to select from using `Object List`
+Example: Custom list of items to select from using `Advanced List`
 
-* Rendering type: `Object List`
+* Rendering type: `Advanced List`
 * Value selector: `id`
 * Display selector: `refName`
 * List items: 
@@ -112,16 +114,16 @@ Example: Custom list of items to select from using `Object List`
 
 Which, when displayed in the UI, looks like this 
 
-![Alt text](images/objectList.png "Object list")
+![Alt text](images/objectList.png "Advanced list")
 
 Given the list above, if the selections would result in the following:
 * Selecting `My assembly Form` would result in a value of `182`
 * Selecting `My Item Group Form` would result in a value of `187`
 
 
-Example: Custom list of items to select from using `List`
+Example: Custom list of items to select from using `Select List`
 
-* Rendering type: `List`
+* Rendering type: `Select List`
 * List items: 
      ```json
       Plate|Frame|Connector
