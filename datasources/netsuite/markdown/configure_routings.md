@@ -19,7 +19,7 @@ For the property `operationStep` use the settings:
 |Secondary source Property|(Unmapped)|
 |Is Manufacturing Operation|<span style='color:orange'>Yes</span>|
 |Is Manufacturing Step|<span style='color:SkyBlue'>No</span>|
-|Rendering Type|Object List|
+|Rendering Type|Advanced List|
 |List Display Selector|name|
 |List Value Selector|value|
 |List Items|See [List items for Operation Step](#list-items-for-operation-step) and [Finding the location IDs](#finding-the-location-ids) |
@@ -151,7 +151,7 @@ You then add this list as a list of values for a property mapping as follows:
 |Secondary source Property|(Unmapped)|
 |Is Manufacturing Operation|<span style='color:SkyBlue'>No</span>|
 |Is Manufacturing Step|<span style='color:orange'>Yes</span>|
-|Rendering Type|Object List|
+|Rendering Type|Advanced List|
 |List Display Selector|name|
 |List Value Selector|value|
   
