@@ -53,7 +53,7 @@ Array values are values that are limited in scope. The user may only specify tha
 
 When a column is mapped as an array value, the default values for that column should typically be mapped as a `Select List` instead of `FreeText`
 
-![image](https://github.com/SharpSync/docs/assets/5020751/6dfe8e56-5911-4b11-9e4c-022528cc81b0)
+![image](https://github.com/SharpSync/docs/blob/main/datasources/netsuite/images/array_values_select_list.png)
 
 When a  value is received from NetSuite it will come in the form of a Json Object.
 
