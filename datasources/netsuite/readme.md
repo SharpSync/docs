@@ -51,7 +51,7 @@ Array values are values that are limited in scope. The user may only specify tha
 
 ![image](https://github.com/SharpSync/docs/assets/5020751/241706db-2b2e-4a35-ac27-9ac8fe814d2e)
 
-When a column is mapped as an array value, the default values for that column should typically be mapped as a `List` instead of `FreeText`
+When a column is mapped as an array value, the default values for that column should typically be mapped as a `Select List` instead of `FreeText`
 
 ![image](https://github.com/SharpSync/docs/assets/5020751/6dfe8e56-5911-4b11-9e4c-022528cc81b0)
 
