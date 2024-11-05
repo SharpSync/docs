@@ -18,7 +18,7 @@ Select an individual datasource to view the configuration setup for that source.
 |SOLIDWORKS|CAD|single-directional|:white_check_mark:|[Documentation](datasources/swx/readme.md)|
 
    
-See also [Troubleshooting](troubleshooting_datasources.md)
+See also [Troubleshooting](datasources/troubleshooting_datasources.md)
 
  Important concepts:
  
