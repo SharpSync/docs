@@ -1,9 +1,13 @@
 # Onshape Setup
   
+* [Setting up Onshape](#setting-up-onshape-datasource)
+* [Mapping values to ERP](#)
+* [Troubleshooting](#troubleshooting)
+
 `Note:` Onshape integration for SharpSync is not currently supported for free versions.
 In order for SharpSync to work, you need to create custom properties in a company in Onshape. This is only possible with the Professional or Enterprise versions of Onshape. This is a limitation in Onshape
 
- ## To setup Onshape
+ ## Setting up Onshape Datasource
 
 * Select + Add the Onshape datasource
 * Configure the authentication options
@@ -22,7 +26,29 @@ you will have
 
 > `https://{enterpriseName}.onshape.com/api`
 
+## Mapping values to ERP
 
+### Mapping the URL to a field in the ERP
+
+
+Onshape is an online datasource, so you can map the URL of the document to a field in the ERP.
+
+To map an Onshape document URL to a property in the ERP do the following:
+
+* Create a new property mapping
+* Onshape property: `(Unmapped)`
+* ERP property: `{nameOfField}` e.g. `document_url`
+* Rendering Type: `URL`
+
+![alt text](../images/onshape_map_url.png)
+
+* Create a new rule: `Text manipulation`
+* Rule value: `return rowData.primaryViewHref;`
+
+![Primary View Href Mapping](../../../images/primary_view_href_mapping.png)
+* Click Save
+* Reload the BOM to display in the [BOM Comparison](../../../bom-comparison/readme.md) screen
+* Click Submit to update
 ## Troubleshooting
 
 ### Cannot get properties 
