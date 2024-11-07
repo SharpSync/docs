@@ -9,10 +9,10 @@ Out of the box, the Netsuite integration supports the following features:
 |Bom hierarchy|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Bom meta data|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Bom quantities|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Component thumbnails|||:white_check_mark:|
+|Component thumbnails|N/A|N/A|:white_check_mark:|
 |Advanced BOMs|:white_check_mark:|:white_check_mark:|:white_check_mark:|[in testing (development completed)]|
-|File derivative transfers (e.g. STEP, DXF)**|||[In progress]|
-|Routings|||[In progress]|
+|Routings|[In progress]|[In progress]|:white_check_mark:|
+|File derivative transfers (e.g. STEP, DXF)**|N/A|N/A|[marked for development]|
 
 ** It should be noted that there are many ways to transfer files. We're in the process of adding file transfers for NetSuite, but please note that consultation services are required to understand your use case + configuration options. More information to follow in the configuration of file transfers from the CAD system.
 

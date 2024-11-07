@@ -1,6 +1,6 @@
 # Common scenarios
 
-*  [Setup a list of accounts to pick from for Income and Expense accounts](#i-want-to-setup-a-list-of-accounts-to-pick-from-for-income-and-expense-accounts)
+*  [Setup a list of accounts to pick from (for Income and Expense accounts)](#i-want-to-setup-a-list-of-accounts-to-pick-from-for-income-and-expense-accounts)
 *  [Setting up accounts from a list](#setting-up-accounts-from-a-list)
 *  [Setting up a default value for income and expense accounts](#setting-up-a-default-value-for-income-and-expense-accounts)
 *  [Set all new assemblies as isPhantom with rulecheck + evaluation](#set-all-new-assemblies-as-isphantom-with-rulecheck--evaluation)
