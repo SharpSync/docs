@@ -34,6 +34,9 @@ The derivatives feature is currently only available for:
 3. After adding all the desired derivative types, you can now start to configure their settings
 
 ### Configure Derivative Types
+1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transfered to your ERP source.
+![Alt text](images/Derivatives3.png "Configure Derivative Type Naming Pattern")
+2. 
 
 
 
