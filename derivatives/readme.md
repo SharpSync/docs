@@ -39,11 +39,12 @@ The derivatives feature is currently only available for:
 
 1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transfered to your ERP source.
 ![Alt text](images/Derivatives3.png "Configure Derivative Type Naming Pattern")
-2. You can check/uncheck the `GENERATE FOR ASSEMBLIES` or the `GENERATE FOR COMPONENTS` checkbox of a derivative type to control which derivatives can be generated for which BOM component type (assemblies or components). For example, if the "STEP" derivative type is checked for assemblies, then the "STEP" derivative can be generated for any assembly row of your loaded BOM.
+2. You can check/uncheck the `GENERATE FOR ASSEMBLIES` or the `GENERATE FOR COMPONENTS` checkbox of a derivative type to control which BOM row derivatives can be generated for which BOM component type (assemblies or components). For example, if the "STEP" derivative type is checked for assemblies, then the "STEP" BOM row derivative can be generated for any assembly row of your loaded BOM. (See also [Configure Bom Row Derivatives](#configure-bom-row-derivatives))
 ![Alt text](images/Derivatives4.png "Configure Derivative Type Generate For")
-3. You can check/uncheck the `TRANSFER FILE` or the `TRANSFER URL` to have the corresponding derivative checkbox `Store File` or `Store Url` checked by default when the derivative is generated.
+3. You can check/uncheck the `TRANSFER FILE` or the `TRANSFER URL` checkbox of a derivative type to have the corresponding BOM row derivative checkbox `Store File` or `Store Url` checked by default when the BOM row derivative is generated. (See also [Configure Bom Row Derivatives](#configure-bom-row-derivatives))
 ![Alt text](images/Derivatives5.png "Configure Derivative Type Transfer File Or Url")
-4. 
+4. You can uncheck the `ENABLED` checkbox of a derivative type to prevent it from being available to be generated as a BOM row derivative. You can set a derivative type as `READ ONLY` to prevent the related generated BOM row derivatives from being configured on a per row basis.
+![Alt text](images/Derivatives6.png "Configure Derivative Type Enabled And Read Only")
 
 ### Auto Generate Default Derivatives
 
