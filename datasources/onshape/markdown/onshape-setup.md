@@ -30,7 +30,6 @@ you will have
 
 ### Mapping the URL to a field in the ERP
 
-
 Onshape is an online datasource, so you can map the URL of the document to a field in the ERP.
 
 To map an Onshape document URL to a property in the ERP do the following:
@@ -49,9 +48,11 @@ To map an Onshape document URL to a property in the ERP do the following:
 * Click Save
 * Reload the BOM to display in the [BOM Comparison](../../../bom-comparison/readme.md) screen
 * Click Submit to update
+
 ## Troubleshooting
 
 ### Cannot get properties 
+
 The following response in the network tab with a 500  statuscode
 ```json
 Request Method: GET
@@ -64,6 +65,7 @@ Status Code: 502 Bad Gateway
 This means that you're attempting to use SharpSync with a free version. Free versions are not supported atm due to a limitation in Onshape that you cannot create custom properties (True at the time of writing this)
 
 ### Cannot pull Onshape BOM
+
 The following response in the network tab with a 502  statuscode
 ```json
 {
