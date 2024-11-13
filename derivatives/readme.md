@@ -48,8 +48,24 @@ The derivatives feature is currently only available for:
 
 ### Auto Generate Default Derivatives
 
-* In `Settings` -> `Display` , you can check/uncheck the `Generate default BOM row Derivatives` in order to auto-generate the BOM row derivatives on SharpSync BOM load according to the derivative type configurations that you have set up in the previous section. (See also [Configure BOM Row Derivatives](#configure-bom-row-derivatives))
+* In `Settings` -> `Display` , you can check/uncheck the `Generate default BOM row derivatives` in order to auto-generate the BOM row derivatives on SharpSync BOM load according to the derivative type configurations that you have set up in the previous section. (See also [Configure BOM Row Derivatives](#configure-bom-row-derivatives))
 ![Alt text](images/Derivatives7.png "Auto Generate Default Derivatives")
 
 ### Configure BOM Row Derivatives
 
+1. If you have the user setting `Generate default BOM row derivatives` checked, all the BOM row derivatives should be auto-generated each time you load you BOM according to the derivative types configurations that you have set up in the previous sections.
+2. Otherwise you can always manually add BOM row derivatives per row by:
+   * Clicking on each BOM row's `DERIVATIVES` icon
+   * Selecting the required derivative type from the selection list
+   * Clicking on the `ADD DERIVATIVE` button
+3. Note that the available derivative type list changes based on you configured derivative types.
+![Alt text](images/Derivatives8.png "Generate BOM Row Derivatives")
+4. You can further configure your generated BOM row derivative (if your derivative types settings permit it) on a per row basis. For example, you can manually change the `File Name` that will be stored in you ERP source. (Note: Some ERP sources such as Propel PLM have a pre-set logic on where to store component derivatives; other sources have a more flexible logic. SharpSync features that support other sources are currently in development)
+![Alt text](images/Derivatives9.png "Generate BOM Row Derivatives Edit File Name")
+5. You can also change the `Store File` or `Store Url` option on a per row basis.
+![Alt text](images/Derivatives10.png "Generate BOM Row Derivatives Edit Store File Or Url")
+
+### Derivatives Transfer
+
+The CAD source derivatives will automatically be transferred to your ERP source as part of the SharpSync BOM Submittal process (when you click on the `SUBMIT BOM` button) according to your configured Derivative Types and BOM Row Derivatives settings.
+   
