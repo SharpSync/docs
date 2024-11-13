@@ -53,7 +53,7 @@ The derivatives feature is currently only available for:
 
 ### Configure BOM Row Derivatives
 
-1. If you have the user setting `Generate default BOM row derivatives` checked, all the BOM row derivatives should be auto-generated each time you load you BOM according to the derivative types configurations that you have set up in the previous sections.
+1. If you have the user setting `Generate default BOM row derivatives` checked, all the BOM row derivatives should be auto-generated each time you load your BOM according to the derivative types configurations that you have set up in the previous sections.
 2. Otherwise you can always manually add BOM row derivatives per row by:
    * Clicking on each BOM row's `DERIVATIVES` icon
    * Selecting the required derivative type from the selection list
