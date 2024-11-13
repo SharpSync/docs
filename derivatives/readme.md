@@ -3,8 +3,9 @@
 <details open>
 <summary>Table of Contents</summary>
 <blockquote>
-  
-[Adding Derivatives](#adding-derivatives)  
+
+[Adding Derivative Types](#adding-derivative-types)  
+[Configure Derivative Types](#configure-derivative-types)  
 </blockquote>
 </details>
 
