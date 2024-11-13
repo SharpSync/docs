@@ -24,11 +24,15 @@ The derivatives feature is currently only available for:
 
 ## Instructions
 
-### Adding Derivatives
+### Adding Derivative Types
 
 1. First, make sure you have loaded all available derivatives from your source by clicking on the update source derivatives types button.
 ![Alt text](images/Derivatives1.png "Update Derivatives Types")
 2. Second, click on the `DERIVATIVE TEMPLATE NAME` input to list the available derivative types to select from, then select a derivative type, andfinally click on the `ADD DERIVATIVE` button to add the derivative type.
 ![Alt text](images/Derivatives2.png "Add Derivative Type")
-3. 
+3. After adding all the desired derivative types, you can now start to configure their settings
+
+### Configure Derivative Types
+
+
 
