@@ -27,6 +27,7 @@ See also [Troubleshooting](datasources/troubleshooting_datasources.md)
 * [Datasources](datasources/readme.md)
 * [Property mappings: Setup](propertymapping/readme.md)
 * [Property mappings: Rules](propertymapping/markdown/rules.md)
+* [Derivatives](derivatives/readme.md)
 * [Subscriptions](subscriptions.md)
 
 
