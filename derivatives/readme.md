@@ -6,6 +6,8 @@
 
 [Adding Derivative Types](#adding-derivative-types)  
 [Configure Derivative Types](#configure-derivative-types)  
+[Auto Generate Default Derivatives](#auto-generate-default-derivatives)  
+[Configure Bom Row Derivatives](#configure-bom-row-derivatives)  
 </blockquote>
 </details>
 
@@ -39,7 +41,11 @@ The derivatives feature is currently only available for:
 ![Alt text](images/Derivatives3.png "Configure Derivative Type Naming Pattern")
 2. You can check/uncheck the `GENERATE FOR ASSEMBLIES` or the `GENERATE FOR COMPONENTS` checkbox of a derivative type to control which derivatives can be generated for which BOM component type (assemblies or components). For example, if the "STEP" derivative type is checked for assemblies, then the "STEP" derivative can be generated for any assembly row of your loaded BOM.
 ![Alt text](images/Derivatives4.png "Configure Derivative Type Generate For")
-3. 
+3. You can check/uncheck the `TRANSFER FILE` or the `TRANSFER URL` to have the corresponding derivative checkbox `Store File` or `Store Url` checked by default when the derivative is generated.
+![Alt text](images/Derivatives5.png "Configure Derivative Type Transfer File Or Url")
+4. 
 
 ### Auto Generate Default Derivatives
+
+### Configure Bom Row Derivatives
 
