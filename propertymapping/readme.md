@@ -38,7 +38,7 @@ Property Mappings can display a variety of information including, but not limite
 * Generated values based on metadata (if rules are setup)
 
 SharpSync has built-in rules and settings for each property mapping. These rules and settings are used to help codify, standardize, and push changes to the selected datasources.
-See also  [Property mapping rules](markdown/readme.md)
+See also  [Property mapping rules](markdown/rules.md)
 ## Instructions
 ### Adding Property Mappings
 1. On the Property Mapping page, select the Property you wish to map to the BOM.	
