@@ -69,9 +69,22 @@ or
 
 > [7]
 
+Not very user friendly, but we can fix that in the next step
+
+### Step: Setting up the list on screen
+Now that we know how to get the values, lets setup the list displayed onscreen. Lists like this can be cached in SharpSync, so the setup is done once and refreshed from time to time.
+
+![alt text](../images/stock_route_setup.png)
+
+List name: `stock.route`
+List Value Selector: `{id} : {display_name}`
+
+Once this is done, click the `copy` button
+![alt text](../images/stock_route_setup_rendering.png)
+
 So we need to convert the ids into a proper string to display onscreen. For that we'll use a `Text Manipulation` Rule to do the trick.
 
-[Text Manipulation Rule](images/list_names.md)
+![Text manipulation Rule](../images/stock_route_setup_rule.png)
 
 Make sure that the following `Text Manipulation` rule is applied for stock routes
 

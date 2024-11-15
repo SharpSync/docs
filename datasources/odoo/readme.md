@@ -25,6 +25,7 @@ To configure an Odoo intance you need 4 things
 * On the right > Select Odoo > Add
 * Click the configure button
 * On the first tab, enter the Database name, Username and password
+* [!Tip] To find the database name navigate to https://your-odoo-instance/web/database/selector
 * On the second tab (BOM Configuration) enter the version number (Only version 17 supported at the time of writing, but contact us if you require access to older version)
 * Click the `Save` button
 * Click the `Authenticate` button
@@ -47,4 +48,6 @@ Routings are not currently supported but we are working towards it
 
 ## Extra information
 
-Please see  [hosting options](markdown/hosting-options.md)
+For additional information please see:
+* [List names](markdown/list_names.md)
+* [Hosting options](markdown/hosting-options.md)
