@@ -11,7 +11,7 @@ Should you require access to a different version please make contact with us at 
 
 
 Odoo is an open source ERP available in a selfhosted or cloud hosted option. Please also see:
-* [Permission required](markdown/permissions_required.md)
+* [Permissions required](markdown/permissions_required.md)
 * [https://www.odoo.com/](https://www.odoo.com),
 * [Hosting options](markdown/hosting-options.md)
 
@@ -54,3 +54,4 @@ Routings are not currently supported but we are working towards it
 For additional information please see:
 * [List names](markdown/list_names.md)
 * [Hosting options](markdown/hosting-options.md)
+* [Permissions required](markdown/permissions_required.md)
