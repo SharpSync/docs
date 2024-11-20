@@ -5,7 +5,7 @@
 ## Limitations at the time of writing
 
 SharpSync supports 
-* Odoo version 17
+* Odoo version 17 (in progress)
 * Odoo version 16 (in progress)
 Should you require access to a different version please make contact with us at [SharpSync](https://sharpsync.net/about/)
 
