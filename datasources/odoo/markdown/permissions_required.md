@@ -11,6 +11,7 @@ The Odoo module integration requires the following permission to correctly read 
 |ir.model.fields|:white_check_mark:|||
 |ir.model.fields.selection|:white_check_mark:|||
 |ir.model.fields.selection|:white_check_mark:|||
+|ir.rule|:white_check_mark:|||
 |ir.ui.view|:white_check_mark:|||
 |mrp.bom|:white_check_mark:|:white_check_mark:|:white_check_mark:||
 |mrp.bom.line|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
