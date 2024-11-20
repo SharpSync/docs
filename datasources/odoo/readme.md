@@ -10,7 +10,10 @@ SharpSync supports
 Should you require access to a different version please make contact with us at [SharpSync](https://sharpsync.net/about/)
 
 
-Odoo is an open source ERP available in a selfhosted or cloud hosted option. Please also see [https://www.odoo.com/](https://www.odoo.com) and [hosting options](markdown/hosting-options.md)
+Odoo is an open source ERP available in a selfhosted or cloud hosted option. Please also see:
+* [Permission required](markdown/permissions_required.md)
+* [https://www.odoo.com/](https://www.odoo.com),
+* [Hosting options](markdown/hosting-options.md)
 
 To configure an Odoo intance you need 4 things
 * Odoo version number
