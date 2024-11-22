@@ -4,6 +4,7 @@
 * [Setting up Onshape](#setting-up-onshape-datasource)
 * [Configure the authentication options](#configure-the-authentication-options)
 * [Mapping values to ERP](#mapping-values-to-erp)
+* [Export Assembly or Part from Onshape](#export-assembly-or-part-from-onshape)
 * [Troubleshooting](#troubleshooting)
 
 `Note:` Onshape integration for SharpSync is not currently supported for free versions.
@@ -57,6 +58,16 @@ To map an Onshape document URL to a property in the ERP do the following:
 * Click Save
 * Reload the BOM to display in the [BOM Comparison](../../../bom-comparison/readme.md) screen
 * Click Submit to update
+
+## Export Assembly or Part from Onshape
+
+* You can export a BOM from Onshape to SharpSync through the following methods:
+  * The Onshape Tree Structure Assembly Context Menu
+  ![Onshape Tree Structure Assembly Context Menu](../images/onshape-tree-structure-assembly-context-menu.png)
+  * The Onshape Assembly Tab Context Menu
+  ![Onshape Assembly Tab Context Menu](../images/onshape-assembly-tab-context-menu.png)
+  * The Onshape Part Studio Tab Part Context Menu
+  ![Onshape Part Studio Tab Part Context Menu](../images/onshape-part-studio-tab-part-context-menu.png)
 
 ## Troubleshooting
 
