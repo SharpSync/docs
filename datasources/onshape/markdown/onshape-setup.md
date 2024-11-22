@@ -1,5 +1,6 @@
 # Onshape Setup
   
+* [Onshape App Store Subscribtion](#onshape-app-store-subscription)
 * [Setting up Onshape](#setting-up-onshape-datasource)
 * [Mapping values to ERP](#mapping-values-to-erp)
 * [Troubleshooting](#troubleshooting)
@@ -7,7 +8,11 @@
 `Note:` Onshape integration for SharpSync is not currently supported for free versions.
 In order for SharpSync to work, you need to create custom properties in a company in Onshape. This is only possible with the Professional or Enterprise versions of Onshape. This is a limitation in Onshape
 
- ## Setting up Onshape Datasource
+## Onshape App Store Subscription
+
+* Find and subscribe to the [SharpSync.net](https://appstore.onshape.com/apps/ERP%20Connector/D375UTR5KWRHUES3LFV56CCHA5VBYDFPXTGPXPQ=/description) onshape app in the Onshape App Store
+
+## Setting up Onshape Datasource
 
 * Select + Add the Onshape datasource
 * Configure the authentication options
