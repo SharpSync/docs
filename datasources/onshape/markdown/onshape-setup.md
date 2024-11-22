@@ -11,6 +11,9 @@ In order for SharpSync to work, you need to create custom properties in a compan
 ## Onshape App Store Subscription
 
 * Find and subscribe to the [SharpSync.net](https://appstore.onshape.com/apps/ERP%20Connector/D375UTR5KWRHUES3LFV56CCHA5VBYDFPXTGPXPQ=/description) onshape app in the Onshape App Store
+![Onshape App Store App SharpSync.net](../images/onshape-app-store-sharpsync.png)
+* For Onshape Enterprise users, make sure to add the related Onshape users to the list of users that have permission to access the Onhsape App Store
+![Onshape Enterprise Global Permission](../images/onshape-app-store-sharpsync.png)
 
 ## Setting up Onshape Datasource
 
