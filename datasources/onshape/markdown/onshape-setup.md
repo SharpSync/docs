@@ -2,6 +2,7 @@
   
 * [Onshape App Store Subscribtion](#onshape-app-store-subscription)
 * [Setting up Onshape](#setting-up-onshape-datasource)
+* [Configure the authentication options](#configure-the-authentication-options)
 * [Mapping values to ERP](#mapping-values-to-erp)
 * [Troubleshooting](#troubleshooting)
 
@@ -21,7 +22,7 @@ In order for SharpSync to work, you need to create custom properties in a compan
 * Configure the authentication options
 * Click Authenticate
   
-## Step: Configure the authentication options
+## Configure the authentication options
 
 * Click the configure button
 * For Onshape Professional or the free version:
