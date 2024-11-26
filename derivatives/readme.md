@@ -56,8 +56,8 @@ It is important to note the following logic:
 
 <span style='color:orange'>[Work in progress - can change]</span>
 
-* When mapping assembly derivatives [checkbox for Assemblies] (e.g. STEP, IGES), the derivative is *always* generated based on the version + configuration provided for the component.
-* When mapping component derivatives [checkbox for Components] (e.g. STEP, IGES), the derivative is *always* generated based on the version + configuration provided for the component.
+* When mapping assembly derivatives [checkbox for Assemblies] (e.g. STEP, IGES), the derivative is searched for (opt-in) or *always* generated based on the version + configuration provided for the component.
+* When mapping component derivatives [checkbox for Components] (e.g. STEP, IGES), the derivative is searched for (opt-in) or *always* generated based on the version + configuration provided for the component.
 * When mapping drawings (e.g. SLDDRW / ONSHAPE Drawing documents), no new drawings will be generated. This means that the application will search for an existing drawing using the search pattern and make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link + file (in the case of online CAD file system (e.g. SolidWorks PDM))
 * When mapping drawing derivatives, the application will first search for existing derivatives using the configuration + version number (opt-in), and when not found, derivatives (e.g. PDF / DXF ) will be generated on the fly. This means that the application will search for an existing drawing, and convert the drawing to the supported format specified, and copy the link or the actual file to the destination.
 
