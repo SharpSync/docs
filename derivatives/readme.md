@@ -37,7 +37,33 @@ The derivatives feature is currently only available for:
 
 ### Configure Derivative Types
 
-1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transfered to your ERP source.
+There are different types of mappings for derivatives:
+
+* Model geometry for assemblies (e.g. STEP, IGES)
+* Model geometry for components (e.g. STEP, IGES)
+* Drawings (search patterns) (e.g. find first drawings matching DRW-{componentName})
+* Drawing derivatives (e.g. PDF / DXF / DWG)
+
+For each type of mapping you can select one or more (depending on the type) of option:
+
+* Transfer URL: creates a copy of the URL value int the selected property mapping <sup>**</sup>
+* Transfer File: creates a copy of the file in the destination ERP
+
+<sup>**</sup>*Not available for **offline sources** at the time of writing*
+
+
+It is important to note the following logic:
+
+<span style='color:orange'>[Work in progress - can change]</span>
+
+* When mapping assembly derivatives [checkbox for Assemblies] (e.g. STEP, IGES), the derivative is *always* generated based on the version + configuration provided for the component.
+* When mapping component derivatives [checkbox for Components] (e.g. STEP, IGES), the derivative is *always* generated based on the version + configuration provided for the component.
+* When mapping drawings (e.g. SLDDRW / ONSHAPE Drawing documents), no new drawings will be generated. This means that the application will search for an existing drawing using the search pattern and make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link + file (in the case of online CAD file system (e.g. SolidWorks PDM))
+* When mapping drawing derivatives, the application will first search for existing derivatives using the configuration + version number (opt-in), and when not found, derivatives (e.g. PDF / DXF ) will be generated on the fly. This means that the application will search for an existing drawing, and convert the drawing to the supported format specified, and copy the link or the actual file to the destination.
+
+### Configure Derivative Name (or Search) Patterns
+
+1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transfered to your ERP source. If the naming pattern is for a drawing document type, then this will be the _search pattern_ used to search for drawings. Not that when searching for drawings, only exact matches are considered. Partial matching is not supported at the time of writing due to the possibility of 1000s of results being returned.
 ![Alt text](images/Derivatives3.png "Configure Derivative Type Naming Pattern")
 2. You can check/uncheck the `GENERATE FOR ASSEMBLIES` or the `GENERATE FOR COMPONENTS` checkbox of a derivative type to control which BOM row derivatives can be generated for which BOM component type (assemblies or components). For example, if the "STEP" derivative type is checked for assemblies, then the "STEP" BOM row derivative can be generated for any assembly row of your loaded BOM. (See also [Configure BOM Row Derivatives](#configure-bom-row-derivatives))
 ![Alt text](images/Derivatives4.png "Configure Derivative Type Generate For")
