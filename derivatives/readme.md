@@ -31,7 +31,7 @@ The derivatives feature is currently only available for:
 
 1. First, make sure you have loaded all available derivatives from your source by clicking on the update source derivatives types button.
 ![Alt text](images/Derivatives1.png "Update Derivatives Types")
-2. Second, click on the `DERIVATIVE TEMPLATE NAME` input to list the available derivative types to select from, then select a derivative type, andfinally click on the `ADD DERIVATIVE` button to add the derivative type.
+2. Second, click on the `DERIVATIVE TEMPLATE NAME` input to list the available derivative types to select from, then select a derivative type, and finally click on the `ADD DERIVATIVE` button to add the derivative type.
 ![Alt text](images/Derivatives2.png "Add Derivative Type")
 3. After adding all the desired derivative types, you can now start to configure their settings
 
@@ -41,7 +41,7 @@ There are different types of mappings for derivatives:
 
 * Model geometry for assemblies (e.g. STEP, IGES)
 * Model geometry for components (e.g. STEP, IGES)
-* Drawings (search patterns) (e.g. find first drawings matching DRW-{componentName})
+* Drawings (search patterns) (e.g. find first drawings matching the pattern DRW-{componentName})
 * Drawing derivatives (e.g. PDF / DXF / DWG)
 
 For each type of mapping you can select one or more (depending on the type) of option:
@@ -56,10 +56,10 @@ It is important to note the following logic:
 
 <span style='color:orange'>[Work in progress - can change]</span>
 
-* When mapping assembly derivatives [checkbox for Assemblies] (e.g. STEP, IGES), the derivative is searched for (opt-in) or *always* generated based on the version + configuration provided for the component.
-* When mapping component derivatives [checkbox for Components] (e.g. STEP, IGES), the derivative is searched for (opt-in) or *always* generated based on the version + configuration provided for the component.
-* When mapping drawings (e.g. SLDDRW / ONSHAPE Drawing documents), no new drawings will be generated. This means that the application will search for an existing drawing using the search pattern and make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link + file (in the case of online CAD file system (e.g. SolidWorks PDM))
-* When mapping drawing derivatives, the application will first search for existing derivatives using the configuration + version number (opt-in), and when not found, derivatives (e.g. PDF / DXF ) will be generated on the fly. This means that the application will search for an existing drawing, and convert the drawing to the supported format specified, and copy the link or the actual file to the destination.
+* When mapping assembly derivatives [checkbox `FOR ASSEMBLIES`] (e.g. STEP, IGES), the derivative is searched for (opt-in) or *always* generated based on the version + configuration provided for the component.
+* When mapping component derivatives [checkbox `FOR COMPONENTS`] (e.g. STEP, IGES), the derivative is searched for (opt-in) or *always* generated based on the version + configuration provided for the component.
+* When mapping drawings [checkbox `FOR DRAWINGS`] (e.g. SLDDRW / ONSHAPE Drawing documents), no new drawings will be generated. This means that the application will search for an existing drawing using the search pattern and make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link + file (in the case of online CAD file system (e.g. SolidWorks PDM))
+* When mapping drawing derivatives [checkbox `FOR DRAWINGS`], the application will first search for existing derivatives using the configuration + version number (opt-in), and when not found, derivatives (e.g. PDF / DXF ) will be generated on the fly. This means that the application will search for an existing drawing, and convert the drawing to the supported format specified, and copy the link or the actual file to the destination.
 
 ### Configure Derivative Name (or Search) Patterns
 
