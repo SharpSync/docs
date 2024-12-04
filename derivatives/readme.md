@@ -56,10 +56,22 @@ It is important to note the following logic:
 
 <span style='color:orange'>[Work in progress - can change]</span>
 
-* When mapping assembly derivatives [checkbox `FOR ASSEMBLIES`] (e.g. STEP, IGES), the derivative is searched for (opt-in) or *always* generated based on the version + configuration provided for the component.
-* When mapping component derivatives [checkbox `FOR COMPONENTS`] (e.g. STEP, IGES), the derivative is searched for (opt-in) or *always* generated based on the version + configuration provided for the component.
-* When mapping drawings [checkbox `FOR DRAWINGS`] (e.g. SLDDRW / ONSHAPE Drawing documents), no new drawings will be generated. This means that the application will search for an existing drawing using the search pattern and make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link + file (in the case of online CAD file system (e.g. SolidWorks PDM))
-* When mapping drawing derivatives [checkbox `FOR DRAWINGS`], the application will first search for existing derivatives using the configuration + version number (opt-in), and when not found, derivatives (e.g. PDF / DXF ) will be generated on the fly. This means that the application will search for an existing drawing, and convert the drawing to the supported format specified, and copy the link or the actual file to the destination.
+* When mapping assembly derivatives [checkbox `FOR ASSEMBLIES`] (e.g. STEP, IGES):
+  * The derivative is *always* generated based on the version + configuration provided for the component.
+  * The derivative is searched for (opt-in) (Not Yet Implemented)
+* When mapping component derivatives [checkbox `FOR COMPONENTS`] (e.g. STEP, IGES):
+  * The derivative is *always* generated based on the version + configuration provided for the component.
+  * The derivative is searched for (opt-in) (Not Yet Implemented)
+* When mapping the DRAWING derivative [checkbox `FOR DRAWINGS`] (e.g. SLDDRW / ONSHAPE DRAWING documents):
+  * No new drawings will be generated in the source.
+  * A new DRAWING BOM Row will be created in the BOM view in SharpSync as  child of each item (assemblies + parts).
+  * This created row will be read only and will not be included as part of bom submission.
+  * When processing derivatives, the application will search for an existing drawing using the search pattern specified in the DRAWING pattern (exact match).
+  * The application will then make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link + file (in the case of online CAD file system (e.g. SolidWorks PDM))
+* When mapping drawing derivatives [checkbox `FOR DRAWINGS`] (e.g. PDF / DXF ):
+  * Drawing derivatives can be configured in the DERIVATIVES menu but can only be added to DRAWING BOM Rows as defined above.
+  * The derivative is *always* generated based on DRAWING Bom Row. This means that the application will search for an existing drawing, and convert the drawing to the supported format specified, and copy the link or the actual file to the destination.
+  * The derivative is searched for (opt-in) (Not Yet Implemented)
 
 ### Configure Derivative Name (or Search) Patterns
 
