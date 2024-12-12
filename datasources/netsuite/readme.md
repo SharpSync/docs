@@ -17,7 +17,7 @@ See also
 
 ## Setting Up Permissions Required For OAuth
 
-See [Setting up permissions required for OAuth](markdown/netsuite_oauth.md)
+See [NetSuite OAuth](markdown/netsuite_oauth.md)
 
 ## Setup Thumbnail Folder
 
