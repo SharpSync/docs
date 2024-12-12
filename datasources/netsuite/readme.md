@@ -7,7 +7,7 @@ NetSuite is an ERP from Oracle and support OAuth integration.
 * [Setting up an item Type mapping](#setup-item-type-mapping)
 * [Selecting array values](#selecting-array-values)
 * [Setting up accounts from a list](#setting-up-accounts-from-a-list)
-* [Setting up advanced BOMs and server-side scripting (restlet)](#setting-up-advanced-boms-and-server-side-scripting-(restlet))
+* [Setting up advanced BOMs and server-side scripting (restlet)](#setting-up-advanced-boms-and-server-side-scripting)
 * [Configuring Routings](#configuring-routings) 
 
 See also
@@ -165,7 +165,7 @@ note2: The difference between a `list value selector` and an `object value selec
 
 note3: Should you want to change the selector string or any of the tokens being selected, then you have to first remove the list name, save, change the tokens, then enter the list name again. The selection is generated at the time of loading the list from NetSuite, and since this can be a data intensive process, SharpSync doesn't store all the details all the time, it only stores the specified details.
 
-## Setting Up Advanced BOMs And Server-side Scripting (restlet)
+## Setting Up Advanced BOMs And Server-side Scripting
 
 See [Advanced BOMs](markdown/advanced_boms.md)
 
