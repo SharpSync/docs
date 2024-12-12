@@ -8,7 +8,7 @@ NetSuite is an ERP from Oracle and support OAuth integration.
 * [Selecting Array Values](#selecting-array-values)
 * [Setting up accounts from a list](#setting-up-accounts-from-a-list)
 * [Setting up advanced BOMs](#setting-up-advanced-boms)
-* [Setting up server-side script (restlet)](markdown/advanced_boms.md#setup-the-server-side-script)
+* [Setting up server-side script (restlet)](#setting-up-server-side-script-(restlet))
 * [Configuring Routings](markdown/configure_routings.md) 
 
 See also
@@ -170,4 +170,6 @@ note3: Should you want to change the selector string or any of the tokens being 
 
 See [Advanced BOMs](markdown/advanced_boms.md)
 
+## Setting Up Server-side Script (restlet)
 
+See * [Setup the server-side script](markdown/advanced_boms.md#setup-the-server-side-script)
