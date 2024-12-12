@@ -2,9 +2,10 @@
 
 NetSuite supports industry standard OAuth authentication and authorization. The implementation in SharpSync uses OAuth2 exclusively at this point. Should you require a different implementation such as API keys or OAuth1.0, please engage us
 
- * [Create a new integration record](#create-a-new-integration-record)
- * [Scopes](#scopes)
- * [Setup Permissions for your users](#step-permissions)
+ * [Create a new integration record](#step-create-a-new-integration-record)
+ * [Scopes](#step-scopes)
+ * [Permissions](#step-permissions)
+ * [Testing the OAuth setup](#testing-the-oauth-setup)
 
 NOTES: 
 
@@ -110,6 +111,7 @@ For the first 2 steps the OAuth client id and secret is required.  If successful
   
 
 ## Testing the OAuth setup
+
 ### Step: Browser redirect
 
 Execute the following /GET request in a browser window.
