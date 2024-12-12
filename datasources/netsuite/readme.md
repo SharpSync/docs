@@ -172,4 +172,4 @@ See [Advanced BOMs](markdown/advanced_boms.md)
 
 ## Setting Up Server-side Script (restlet)
 
-See * [Setup the server-side script](markdown/advanced_boms.md#setup-the-server-side-script)
+See [Setup the server-side script](markdown/advanced_boms.md#setup-the-server-side-script)
