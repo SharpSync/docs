@@ -41,6 +41,11 @@ In Netsuite, create a new script for SharpSync to use (example at the bottom)
         * In the `URL` field you'll see a deployment url, something like 
         * <span style='color:orange'> /app/site/hosting/restlet.nl?script=3187&deploy=1 </span>
         * Take note of the id of the script (in the example above it's `3187`)
+        * Click to edit the deployment
+        * Make sure you have checked the following audiences:
+           *  `Audience` --> `Roles` --> `All Roles`
+           *  `Audience` --> `Roles` --> `All Employees`
+        * Click `Save`
 
 You are now done configuring the script in Netsuite. The next step is to use this ID in the setup of the script in SharpSync.
 
