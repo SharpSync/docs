@@ -97,7 +97,7 @@ It is important to note the following logic:
    * Clicking on the `ADD DERIVATIVE` button
 3. Note that the available derivative type list changes based on you configured derivative types.
 ![Alt text](images/Derivatives8.png "Generate BOM Row Derivatives")
-4. You can further configure your generated BOM row derivative (if your derivative types settings permit it) on a per row basis. For example, you can manually change the `File Name` that will be stored in you ERP source. (Note: Some ERP sources such as Propel PLM have a pre-set logic on where to store component derivatives; other sources have a more flexible logic. SharpSync features that support other sources are currently in development)
+4. You can further configure your generated BOM row derivative (if your derivative types settings permit it) on a per row basis. For example, you can manually change the `File Name` that will be stored in you ERP source. (Note: Some ERP sources such as Propel PLM have a pre-set logic on where to store component derivatives; other ERP sources have a more flexible logic where you can specify the secondary source mapping that will be used to store the url or file derivative. To specify the mapping the to be used to store derivative, in the corresponding DERIVATIVE type template simply select the associated property mapping from the drop down menu of available defined mappings)
 ![Alt text](images/Derivatives9.png "Generate BOM Row Derivatives Edit File Name")
 5. You can also change the `Store File` or `Store Url` option on a per row basis.
 ![Alt text](images/Derivatives10.png "Generate BOM Row Derivatives Edit Store File Or Url")
