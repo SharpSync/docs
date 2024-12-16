@@ -69,7 +69,7 @@ It is important to note the following logic:
   * When processing derivatives, the application will use the found source DRAWING. The application will then make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link and/or file (in the case of online CAD file system (e.g. SolidWorks PDM))
 * When mapping drawing derivatives [checkbox `FOR DRAWINGS`] (e.g. PDF / DXF / DWG ):
   * Drawing derivatives can be configured in the DERIVATIVES menu but can only be added to DRAWING BOM Rows as defined above.
-  * The derivative is *always* generated based on the DRAWING Bom Row and the its parent item metadata. This means that the application will use the found source DRAWING, and convert it to the supported format specified, and copy the link and/or the file to the destination.
+  * The derivative is *always* generated based on the DRAWING Bom Row and its parent item metadata. This means that the application will use the found source DRAWING, and convert it to the supported format specified, and copy the link and/or the file to the destination.
   * The derivative is searched for (opt-in) (Not Yet Implemented)
 
 ### Configure Derivative Name (or Search) Patterns
