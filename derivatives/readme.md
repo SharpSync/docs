@@ -74,7 +74,7 @@ It is important to note the following logic:
 
 ### Configure Derivative Name (or Search) Patterns
 
-1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transfered to your ERP source. If the naming pattern is for a drawing document type, then this will be the _search pattern_ used to search for drawings. Not that when searching for drawings, only exact matches are considered. Partial matching is not supported at the time of writing due to the possibility of 1000s of results being returned.
+1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transfered to your ERP source. If the naming pattern is for a DRAWING document type, then this will be the _search pattern_ used to search for drawings. Not that when searching for drawings, only exact matches are considered. Partial matching is not supported at the time of writing due to the possibility of 1000s of results being returned.
 ![Alt text](images/Derivatives3.png "Configure Derivative Type Naming Pattern")
 2. You can check/uncheck the `GENERATE FOR ASSEMBLIES` or the `GENERATE FOR COMPONENTS` checkbox of a derivative type to control which BOM row derivatives can be generated for which BOM component type (assemblies or components). For example, if the "STEP" derivative type is checked for assemblies, then the "STEP" BOM row derivative can be generated for any assembly row of your loaded BOM. (See also [Configure BOM Row Derivatives](#configure-bom-row-derivatives))
 ![Alt text](images/Derivatives4.png "Configure Derivative Type Generate For")
