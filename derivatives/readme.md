@@ -41,8 +41,8 @@ There are different types of mappings for derivatives:
 
 * Model geometry for assemblies (e.g. STEP, IGES)
 * Model geometry for components (e.g. STEP, IGES)
-* Drawings (search patterns) (e.g. find first drawings matching the pattern DRW-{componentName})
-* Drawing derivatives (e.g. PDF / DXF / DWG)
+* Drawings (search patterns) (e.g. first find DRAWING matching the pattern DRW-{componentName})
+* Drawing derivatives (e.g. PDF / DXF / DWG) based on the found DRAWING
 
 For each type of mapping you can select one or more (depending on the type) of option:
 
@@ -50,7 +50,6 @@ For each type of mapping you can select one or more (depending on the type) of o
 * Transfer File: creates a copy of the file in the destination ERP
 
 <sup>**</sup>*Not available for **offline sources** at the time of writing*
-
 
 It is important to note the following logic:
 
@@ -64,14 +63,13 @@ It is important to note the following logic:
   * The derivative is searched for (opt-in) (Not Yet Implemented)
 * When mapping the DRAWING derivative [checkbox `FOR DRAWINGS`] (e.g. SLDDRW / ONSHAPE DRAWING documents):
   * No new drawings will be generated in the source.
-  * A new DRAWING BOM Row will be created in the BOM view in SharpSync as  child of each item (assemblies + parts).
-  * This created row will be read only and will not be included as part of bom submission.
-  * The DRAWING derivatives can be configured in the DERIVATIVES menu but can only be added to a DRAWING BOM Row.
-  * When processing derivatives, the application will search for an existing drawing using the search pattern specified in the DRAWING file pattern (exact match).
-  * The application will then make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link + file (in the case of online CAD file system (e.g. SolidWorks PDM))
-* When mapping drawing derivatives [checkbox `FOR DRAWINGS`] (e.g. PDF / DXF ):
+  * A new DRAWING BOM Row will be created in the BOM view in SharpSync as child of each item (assemblies + parts) during the BOM loading process, only if a corresponding DRAWING is found in the source matching the defined file pattern exactly (the search will be based on the DRAWING derivative template file pattern and the metadata of the parent item. e.g.: If the parent item part name is P1-PN The pattern DRW-{componentName} will search for a source DRAWING exactly named DRW-P1-PN).
+  * This created row will be read only and will not be included as part of bom submission, instead it will act as a placeholder for possible drawing derivatives (DRAWING, PDF, DWG, etc...).
+  * The DRAWING row derivative can be configured in the DERIVATIVES menu but can only be added to a DRAWING BOM Row.
+  * When processing derivatives, the application will use the found source DRAWING. The application will then make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link and/or file (in the case of online CAD file system (e.g. SolidWorks PDM))
+* When mapping drawing derivatives [checkbox `FOR DRAWINGS`] (e.g. PDF / DXF / DWG ):
   * Drawing derivatives can be configured in the DERIVATIVES menu but can only be added to DRAWING BOM Rows as defined above.
-  * The derivative is *always* generated based on DRAWING Bom Row. This means that the application will search for an existing drawing, and convert the drawing to the supported format specified, and copy the link or the actual file to the destination.
+  * The derivative is *always* generated based on the DRAWING Bom Row and the its parent item metadata. This means that the application will use the found source DRAWING, and convert it to the supported format specified, and copy the link and/or the file to the destination.
   * The derivative is searched for (opt-in) (Not Yet Implemented)
 
 ### Configure Derivative Name (or Search) Patterns
