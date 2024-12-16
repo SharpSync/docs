@@ -41,7 +41,7 @@ There are different types of mappings for derivatives:
 
 * Model geometry for assemblies (e.g. STEP, IGES)
 * Model geometry for components (e.g. STEP, IGES)
-* Drawings (search patterns) (e.g. first find DRAWING matching the pattern DRW-{componentName})
+* Drawing derivative (e.g. DRAWING) (search patterns) (e.g. first find DRAWING matching the pattern DRW-{componentName})
 * Drawing derivatives (e.g. PDF / DXF / DWG) based on the found DRAWING
 
 For each type of mapping you can select one or more (depending on the type) of option:
