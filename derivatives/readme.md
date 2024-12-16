@@ -66,7 +66,8 @@ It is important to note the following logic:
   * No new drawings will be generated in the source.
   * A new DRAWING BOM Row will be created in the BOM view in SharpSync as  child of each item (assemblies + parts).
   * This created row will be read only and will not be included as part of bom submission.
-  * When processing derivatives, the application will search for an existing drawing using the search pattern specified in the DRAWING pattern (exact match).
+  * The DRAWING derivatives can be configured in the DERIVATIVES menu but can only be added to a DRAWING BOM Row.
+  * When processing derivatives, the application will search for an existing drawing using the search pattern specified in the DRAWING file pattern (exact match).
   * The application will then make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link + file (in the case of online CAD file system (e.g. SolidWorks PDM))
 * When mapping drawing derivatives [checkbox `FOR DRAWINGS`] (e.g. PDF / DXF ):
   * Drawing derivatives can be configured in the DERIVATIVES menu but can only be added to DRAWING BOM Rows as defined above.
