@@ -22,10 +22,10 @@ Select an individual datasource to view the configuration setup for that source.
 |Inventor|CAD|single-directional|:white_check_mark:|[Documentation](inventor/markdown/readme.md)|
 |MS Dynamics|ERP|bi-directional|[In progress]|[Documentation](ms-dynamics/readme.md)|
 |NetSuite|ERP|bi-directional|:white_check_mark:|[Documentation](netsuite/readme.md)|
-|Odoo|ERP|bi-directional|:white_check_mark:|[Documentation](odoo/readme.md)|
-|Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](onshape/markdown/onshape-setup.md)|
+|Odoo|ERP|bi-directional|:white_check_mark:|[Documentation](https://sharpsync.gitbook.io/sharpsync/data-sources/odoo)|
+|Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](https://app.gitbook.com/o/2ddcQaFxORlAw4mWBlB5/s/cO2KdHJXVWdQ1ou1L85s/data-sources/onshape)|
 |PropelPLM|PDM|bi-directional|:white_check_mark:|[Documentation](propel/readme.md)|
-|SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](swpdm/markdown/swxpdm-setup.md)|
+|SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](https://app.gitbook.com/o/2ddcQaFxORlAw4mWBlB5/s/cO2KdHJXVWdQ1ou1L85s/data-sources/solidworks-pdm)|
 |SOLIDWORKS|CAD|single-directional|:white_check_mark:|[Documentation](swx/readme.md)|
 
    
