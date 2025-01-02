@@ -23,12 +23,11 @@ See also [Troubleshooting](datasources/troubleshooting_datasources.md)
  Important concepts:
  
 * [What is SharpSync](#what-is-sharpsync)
-* [Getting started](getting_started.md)
-* [Datasources](datasources/readme.md)
-* [Property mappings: Setup](propertymapping/readme.md)
-* [Property mappings: Rules](propertymapping/markdown/rules.md)
-* [Derivatives](derivatives/readme.md)
-* [Subscriptions](subscriptions.md)
+* [Getting started, registration](https://sharpsync.gitbook.io/sharpsync/fundamentals/onboarding/registration)
+* [Datasources](https://sharpsync.gitbook.io/sharpsync/data-sources/netsuite)
+* [Property mappings: Setup](https://sharpsync.gitbook.io/sharpsync/fundamentals/property-mappings)
+* [Property mappings: Rules](https://sharpsync.gitbook.io/sharpsync/fundamentals/rule-templates)
+* [Subscriptions](https://sharpsync.gitbook.io/sharpsync/fundamentals/onboarding/subscription)
 
 
 ## What is SharpSync?
