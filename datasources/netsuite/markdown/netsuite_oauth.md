@@ -29,6 +29,9 @@ To create a new integration record do the following:
   * Authorization Code Grant
   * Restlets
   * Rest Web Services
+* Uncheck the boxes for:
+  * TBA: Authorization Flow
+* Paste the following OAuth 2.0 Redirect URI: `https://app.sharpsync.net/callback-oauth`
 * Get the consumer key (clientId) and consumer secret (client secret) - this will be used later.
 
 Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
