@@ -13,7 +13,7 @@ Select an individual datasource to view the configuration setup for that source.
 |NetSuite|ERP|bi-directional|:white_check_mark:|[Documentation](https://sharpsync.gitbook.io/sharpsync/data-sources/netsuite)|
 |Odoo|ERP|bi-directional|:white_check_mark:|[Documentation](https://sharpsync.gitbook.io/sharpsync/data-sources/odoo)|
 |Onshape|CAD|bi-directional|:white_check_mark:|[Documentation](https://sharpsync.gitbook.io/sharpsync/data-sources/onshape)|
-|PropelPLM|ERP/PLM|bi-directional|:white_check_mark:|[Documentation](datasources/propel/readme.md)|
+|PropelPLM|ERP/PLM|bi-directional|:white_check_mark:|[Documentation](https://sharpsync.gitbook.io/sharpsync/data-sources/propelplm)|
 |SOLIDWORKS|PDM|bi-directional|:white_check_mark:|[Documentation](https://sharpsync.gitbook.io/sharpsync/data-sources/solidworks-pdm)|
 |SOLIDWORKS|CAD|single-directional|:white_check_mark:|[Documentation](datasources/swx/readme.md)|
 
